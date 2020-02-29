@@ -1,0 +1,44 @@
+.bundled-products {
+    h2 {
+        font-family: 'Source Sans Pro', arial, sans-serif;
+        font-size: px-to-rem(24px);
+        font-weight: 600;
+        color: $black;
+        margin-bottom: 1rem;
+    }
+
+    .product-tile {
+        .sales-price {
+            font-size: px-to-rem(21px);
+        }
+
+        .standard-price {
+            font-size: px-to-rem(14px);
+        }
+    }
+
+    @media ($breakpoint-s) {
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: px-to-rem(-16px);
+        }
+
+        .product-tile {
+            width: calc(50% - #{px-to-rem(16px)});
+            margin-right: px-to-rem(16px);
+        }
+    }
+
+    @media ($breakpoint-m) {
+        .product-tile {
+            width: calc(33.33% - #{px-to-rem(16px)});
+        }
+    }
+
+    @media ($breakpoint-ml) {
+        .product-tile {
+            width: calc(50% - #{px-to-rem(16px)});
+        }
+    }
+}

@@ -1,0 +1,275 @@
+/* ============================================================================
+   Hero Banner
+   ============================================================================ */
+
+$ns: c-hero-banner;
+
+.#{$ns} {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $mine-shaft;
+    display: block;
+    padding: px-to-rem(34px) 0 px-to-rem(15px);
+    position: relative;
+
+    @media ($breakpoint-ml) {
+        padding: px-to-rem(60px) 0;
+    }
+
+    &:hover {
+        color: $mine-shaft;
+    }
+
+    &__wrapper {
+        @media ($breakpoint-ml) {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__content {
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            text-align: right;
+            width: 50%;
+        }
+    }
+
+    &__heading {
+        font-family: $font-family-tertiary;
+        font-size: px-to-rem(47px);
+        line-height: 0.87;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(60px);
+            line-height: 0.82;
+            max-width: px-to-rem(465px);
+        }
+
+        @media ($breakpoint-lg) {
+            font-size: px-to-rem(70px);
+            max-width: px-to-rem(647px);
+        }
+    }
+
+    &__body {
+        color: $mine-shaft;
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(20px);
+        font-weight: 500;
+        letter-spacing: px-to-em(0.2px);
+        line-height: 1.35;
+        margin-top: px-to-rem(4px);
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(24px);
+            line-height: 1.33;
+            margin-top: px-to-rem(6px);
+            margin-left: 0;
+            margin-right: 0;
+            max-width: px-to-rem(405px);
+            text-align: right;
+        }
+
+        @media ($breakpoint-lg) {
+            max-width: px-to-rem(647px);
+        }
+    }
+
+    &__links {
+        @media ($breakpoint-ml) {
+            margin-top: px-to-rem(42px);
+        }
+
+        ul {
+            @include pxl-list-flat();
+        }
+
+        // Targeting Content Asset Links
+        a,
+        span {
+            @extend .c-button;
+            background-color: $hibiscus;
+            border: 0;
+            font-size: px-to-rem(20px);
+            font-weight: 700;
+            letter-spacing: px-to-em(0.6px);
+            position: absolute;
+            top: initial;
+            bottom: px-to-rem(30px);
+            left: px-to-rem(15px);
+            transition: background-color .25s ease;
+            width: calc(100% - #{px-to-rem(30px)});
+
+            &:hover {
+                @media ($breakpoint-ml) {
+                    background-color: $maroon-flush;
+                    border: 3px solid $maroon-flush;
+                }
+            }
+
+            @media ($breakpoint-ml) {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: auto;
+            }
+
+            &:hover {
+                @media ($breakpoint-ml) {
+                    left: px-to-rem(3px);
+                }
+            }
+        }
+    }
+
+    &__image-wrapper {
+        line-height: 1;
+        margin: px-to-rem(20px) px-to-rem(20px) px-to-rem(90px) px-to-rem(20px);
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            margin-bottom: 0;
+            margin-top: 0;
+            text-align: right;
+            width: 50%;
+        }
+
+        @media ($breakpoint-lg) {
+            text-align: center;
+        }
+    }
+
+    &__image {
+        display: inline-block;
+    }
+}
+
+/* Modifiers
+   ============================================================================ */
+.#{$ns}--secondary {
+    background-position: center bottom;
+    color: $kaitoke-green;
+    padding-top: 0;
+
+    &:hover {
+        color: $kaitoke-green;
+    }
+
+    .#{$ns} {
+
+        &__wrapper {
+            @media ($breakpoint-ml) {
+                display: flex;
+                    align-items: flex-start;
+                    flex-direction: row;
+            }
+        }
+
+        &__content {
+            text-align: left;
+            padding-bottom: px-to-rem(45px);
+
+            @media ($breakpoint-ml) {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                text-align: left;
+                padding-top: px-to-rem(62px);
+                padding-bottom: px-to-rem(65px);
+            }
+        }
+
+        &__heading {
+            font-family: $font-family-secondary;
+            font-size: px-to-rem(24px);
+            font-weight: 500;
+            letter-spacing: px-to-em(1px);
+            line-height: 1.42;
+
+            @media ($breakpoint-ml) {
+                font-size: px-to-rem(24px);
+            }
+        }
+
+        &__body {
+            color: $dove-gray;
+            font-family: $font-family-primary;
+            font-size: px-to-rem(16px);
+            letter-spacing: px-to-em(0.3px);
+            line-height: 1.69;
+            margin-top: px-to-rem(10px);
+            text-align: left;
+
+            @media ($breakpoint-ml) {
+                font-size: px-to-rem(16px);
+                max-width: px-to-rem(473px);
+                text-align: left;
+            }
+
+            @media ($breakpoint-lg) {
+                max-width: px-to-rem(540px);
+            }
+        }
+
+        &__links {
+            font-family: $font-family-secondary;
+            margin-top: px-to-rem(36px);
+
+            @media ($breakpoint-ml) {
+                margin-top: px-to-rem(27px);
+            }
+
+            a,
+            span {
+                @extend .c-button--secondary;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+
+                @media ($breakpoint-ml) {
+                    width: auto;
+                }
+
+                &:hover {
+                    @media ($breakpoint-ml) {
+                        left: px-to-rem(-3px);
+                    }
+                }
+            }
+        }
+
+        &__image-wrapper {
+            margin-bottom: 0;
+            margin-top: 0;
+            position: relative;
+            text-align: center;
+
+            @media ($breakpoint-ml) {
+                margin-top: px-to-rem(30px);
+                margin-left: px-to-rem(40px);
+                margin-right: px-to-rem(40px);
+            }
+
+            @media ($breakpoint-lg) {
+                margin-top: 0;
+            }
+        }
+
+        &__image {
+            display: inline-block;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.ca-redirect {
+    p {
+        margin-bottom: px-to-rem(30px);
+    }
+
+    > div {
+        a {
+            display: block;
+            width: 100%;
+            min-width: px-to-rem(100px);
+            text-align: center;
+            margin: 0 auto px-to-rem(30px) auto;
+        }
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        max-width: px-to-rem(110px);
+        height: auto;
+        margin: 0 auto px-to-rem(15px) auto;
+    }
+
+    @media (min-width: 22.5em) {
+        text-align: center;
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a {
+                width: calc(50% - #{px-to-rem(15px)});
+                margin: 0;
+            }
+        }
+    }
+}

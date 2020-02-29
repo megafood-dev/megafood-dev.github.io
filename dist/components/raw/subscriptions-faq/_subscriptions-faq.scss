@@ -1,0 +1,22 @@
+.subscriptions-faq {
+    margin-bottom: px-to-rem(40px);
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: px-to-rem(28px);
+        line-height: 1.3;
+        text-transform: uppercase;
+        text-align: center;
+        color: $zuccini;
+        margin-bottom: px-to-rem(24px);
+    }
+
+    @media ($breakpoint-lg) {
+        h2 {
+            font-size: px-to-rem(48px);
+            max-width: px-to-rem(709px);
+            margin: 0 auto px-to-rem(65px) auto;
+        }
+    }
+}

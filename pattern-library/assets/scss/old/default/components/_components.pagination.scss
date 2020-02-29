@@ -1,0 +1,64 @@
+/* ============================================================================
+   Pagination
+   ============================================================================ */
+
+$ns: c-pagination;
+
+.#{$ns} {
+    text-align: center;
+
+    &__results-count {
+        display: none;
+    }
+
+    &__wrapper {
+        align-items: center;
+        display: inline-flex;
+        list-style: none;
+        margin-left: auto;
+    }
+
+    &__item {
+        padding-right: px-to-rem(8px);
+        padding-left: px-to-rem(8px);
+    }
+
+    &__link {
+        color: $dove-gray;
+        font-size: px-to-rem(19px);
+        transition: color 100ms ease-out;
+
+        &:hover {
+            color: $kaitoke-green;
+            text-decoration: none;
+        }
+    }
+
+    &__current-page {
+        color: $kaitoke-green;
+    }
+
+    &__nav {
+        &--prev,
+        &--next {
+            vertical-align: middle;
+
+            path {
+                fill: $dove-gray;
+                stroke: transparent;
+            }
+
+            &:hover path {
+                fill: $kaitoke-green;
+            }
+        }
+
+        &--prev {
+            transform: rotate(90deg);
+        }
+
+        &--next {
+            transform: rotate(-90deg);
+        }
+    }
+}

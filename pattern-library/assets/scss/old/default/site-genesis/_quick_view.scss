@@ -1,0 +1,146 @@
+.js {
+	.ui-dialog-content {
+		.product-col-1 {
+			padding: px-to-rem(13px) 1%;
+			width: 39%;
+
+			.product-image {
+				max-width: 100%;
+			}
+		}
+
+		.product-col-2 {
+			padding: px-to-rem(20px) 0;
+			width: 58%;
+		}
+
+		.pdp-main {
+			.product-set-list {
+				height: px-to-rem(500px);
+				overflow: auto;
+			}
+		}
+	}
+
+	.zoomPad {
+		position: relative;
+		float: left;
+		z-index: 99;
+		cursor: crosshair;
+		width: 100%;
+	}
+
+	.zoomPreload {
+		-moz-opacity: 0.8;
+		opacity: 0.8;
+		filter: alpha(opacity = 80);
+		color: #333;
+		font-size: px-to-rem(12px);
+		text-decoration: none;
+		border: 1px solid #ccc;
+		background-color: $white;
+		padding: px-to-rem(8px);
+		text-align: center;
+		background-image: url(../images/zoomloader.gif);
+		background-repeat: no-repeat;
+		background-position: 43px 30px;
+		z-index: 110;
+		width: px-to-rem(90px);
+		height: px-to-rem(43px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: px-to-rem(100px);
+		height: px-to-rem(49px);
+	}
+
+	.zoomPup {
+		overflow: hidden;
+		background-color: $white;
+		-moz-opacity: 0.6;
+		opacity: 0.6;
+		filter: alpha(opacity = 60);
+		z-index: 120;
+		position: absolute;
+		border: 1px solid #ccc;
+		z-index: 101;
+		cursor: crosshair;
+	}
+
+	.zoomOverlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: $white;
+		z-index: 5000;
+		width: 100%;
+		height: 100%;
+		display: none;
+		z-index: 101;
+	}
+
+	.zoomWindow {
+		position: absolute;
+		left: 110%;
+		top: px-to-rem(40px);
+		background: $white;
+		z-index: 6000;
+		height: auto;
+		z-index: 10000;
+		z-index: 110;
+	}
+
+	.zoomWrapper {
+		position: relative;
+		border: 1px solid #999;
+		z-index: 110;
+	}
+
+	.zoomWrapperTitle {
+		display: block;
+		background: #999;
+		color: $white;
+		height: px-to-rem(18px);
+		line-height: 1.125;
+		width: 100%;
+		overflow: hidden;
+		text-align: center;
+		font-size: px-to-rem(10px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 120;
+		-moz-opacity: 0.6;
+		opacity: 0.6;
+		filter: alpha(opacity = 60);
+	}
+
+	.zoomWrapperImage {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		z-index: 110;
+		
+        img {
+			border: 0px;
+			display: block;
+			position: absolute;
+			z-index: 101;
+		}
+	}
+    
+	.zoomIframe {
+		z-index: -1;
+		filter: alpha(opacity = 0);
+		-moz-opacity: 0.80;
+		opacity: 0.80;
+		position: absolute;
+		display: block;
+	}
+}
+
+.quickview-nav {
+	.quickview-next {
+		float: right;
+	}
+}

@@ -1,0 +1,429 @@
+/* ============================================================================
+Accordion Consumer Landing - Currently used for accordion-consumer-landing.isml
+============================================================================ */
+
+$ns: c-accordion-consumer-landing;
+
+.c-accordion-consumer-landing{
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #3b3b3b;
+    display: block;
+    padding-top: px-to-rem(31px);
+    padding-bottom: px-to-rem(16px);
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    counter-reset: section; 
+
+    @media ($breakpoint-ml) {
+        padding-top: px-to-rem(60px);
+        padding-bottom: px-to-rem(45px);
+    }
+
+    a {
+        color: #636363;
+        text-decoration: underline;
+        -webkit-text-decoration-color: #60AB0B;
+        text-decoration-color: #60AB0B;
+    }
+
+    b {
+        color: black;
+        font-weight: 500;
+        font-size: px-to-rem(18px);
+        line-height: 1.5;
+
+        &.header, &.green{
+            display: block;
+            margin-bottom: 1rem;
+
+        }
+
+        &.green{
+            color: #2f7532;
+            margin-top: 1rem;
+            margin-bottom: 0;
+            font-size: px-to-rem(16px);
+            font-family: Northwoods-Bold;
+            font-weight: initial;
+            line-height: 1.5;
+
+            a {
+                color: #2f7532; 
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            -webkit-text-decoration-color: #60AB0B;
+            text-decoration-color: #60AB0B;
+            color: black;
+        }
+    }
+
+    h2 {
+        font-size: px-to-rem(18px);
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: Montserrat;
+        margin-bottom: 0.5rem;
+    }
+    
+    hr {
+        clear: both;
+        margin: 2em 0;
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #d8d8d8;
+        padding: 0; 
+    }
+
+    div.answer {
+        padding: .25em 1em 0 0;
+    }
+
+    .innerVideo {
+        background-color: #4c851b;
+        color: white;
+        margin: 1rem 0 2rem;
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .videoFooter {
+            padding: px-to-rem(28px) px-to-rem(30px) px-to-rem(14px);
+            position: relative;
+            font-family: Northwoods-Bold;
+            font-size: px-to-rem(16px);
+            line-height: 1;
+            text-align: center;
+
+
+            @media ($breakpoint-ml) {
+                padding: px-to-rem(14px) px-to-rem(30px);
+                font-size: px-to-rem(21px);
+                text-align: left;
+            }
+
+            sub {
+                display: block;
+                font-size: px-to-rem(13px);
+                line-height: px-to-rem(21px);
+                font-weight: normal;
+
+                @media ($breakpoint-ml) {
+                    font-size: px-to-rem(16px);
+                }
+            }
+
+            .watchBtn {
+                position: absolute;
+                right: px-to-rem(50px);
+                top: px-to-rem(-33px);
+                padding: 0 2rem;
+                z-index: 3;
+                background: white;
+                color: #4c851b;
+                border-radius: px-to-rem(25px);
+                height: px-to-rem(50px);
+                box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
+                font-family: Dosis;
+                font-size: px-to-rem(19px);
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: px-to-rem(50px);
+                letter-spacing: normal;
+                color: #417505;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:before {
+                    display: inline-block;
+                    content: ' ';
+                    background-image: url(../images/interface/play-small.svg);
+                    background-size: px-to-rem(19px) px-to-rem(19px);
+                    background-position: 50%;
+                    height: px-to-rem(19px);
+                    width: px-to-rem(19px);
+                    margin: 0;
+                    padding-right: 2rem;
+                    margin-left: -0.5rem;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    top: px-to-rem(2px);
+                }
+            }
+        }
+
+    }
+
+    ul, ol{
+        list-style: initial;
+        margin-left: 1.1rem;
+
+        &.checkboxList {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: px-to-rem(24px);
+
+            @media ($breakpoint-ml) {
+                margin-left: px-to-rem(24px);
+            }
+
+            li {
+                position: relative;
+                margin: 1.5em 0;
+                padding-left: px-to-rem(15px);
+                font-size: px-to-rem(16px);
+                color: #636363;
+                padding-left: px-to-rem(10px);
+
+                &::before{
+                    content: none;
+                }
+
+                input[type=checkbox] {
+                    position: absolute;
+                    left: 0;
+                    top: px-to-rem(4px);
+                    cursor: pointer;
+                    height: px-to-rem(24px);
+                    width: px-to-rem(24px);
+                    border-radius: 50%;
+                    background: white;
+                    border: 2px solid #dedede;
+                    background-position: 0px;
+                    background-repeat: no-repeat;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -o-appearance:none;
+                    appearance: none;
+
+                    @media ($breakpoint-ml) {
+                        left: px-to-rem(-24px);
+                        top: px-to-rem(4px);
+                    }
+
+                    &.is-active, &:checked {
+                        background-image: url(../images/interface/accordion-consumer-landing/filled.svg);
+                        border-width: 0;
+                    }
+                }
+                label {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    font-size: px-to-rem(16px);
+                    line-height: 1.5;
+                    cursor: pointer;
+                    color: #636363;
+                    display: inline-block;
+                    width: calc(100% - 21px);
+                    margin-left: px-to-rem(21px);
+                    margin-top: px-to-rem(5px);
+
+                    @media ($breakpoint-ml) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+        }
+
+        &.healthyGutList {
+            list-style:none;
+            margin-left: 0;
+
+            li {
+                clear: both;
+                margin: 2em 0;
+                color: #636363;
+                font-weight: 500;
+                font-size: px-to-rem(16px);
+                line-height: 1.5;
+                position: relative;
+                padding-left: 0;
+                min-height: px-to-rem(88px);
+
+
+                @media ($breakpoint-ml) {
+                    padding-left: px-to-rem(121px);
+                    margin: .5rem 0 2rem;
+                }
+
+                img {
+                    float: right;
+                    margin-top: 2rem;
+
+                    @media ($breakpoint-ml) {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: px-to-rem(100px);
+                        margin-top: 0;
+                    }
+                }
+
+                b.gutHeader {
+                    color: #2f7532;
+                    font-weight: 600;
+                    font-size: px-to-rem(16px);
+                }
+
+                a {
+                    color: #d47600;
+                    text-decoration: none;
+                    font-weight: 600;
+                    line-height: 1.5;
+                    padding-top: 0.5rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                        -webkit-text-decoration-color: #60AB0B;
+                        text-decoration-color: #60AB0B;
+                    }
+
+                    &.recipeLink {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &.yogalist {
+            li {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                &::before {
+                    content: none;
+                    width: 0;
+                    margin: 0;
+                }
+
+                @media ($breakpoint-ml) {
+                    flex-direction: row;
+                    margin-bottom: 1rem;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+
+                &:nth-child(2n) {
+                    @media ($breakpoint-ml) {
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                div {
+                    width: 100%;
+
+                    @media ($breakpoint-ml) {
+                        width: 65%;
+                    }
+
+                    b {
+                        display: block;
+                        color: #2f7532;
+                        font-weight: 600;
+                        margin-bottom: .5rem;
+                        font-size: px-to-rem(16px);
+                    }
+                }
+            }
+        }
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul {
+        list-style: none; /* Remove default bullets */
+        margin-left: 0;
+        font-size: px-to-rem(16px);
+        line-height: 1.5;
+
+        @media ($breakpoint-ml) {
+            margin-left: px-to-rem(29px);
+        }
+
+        &.indented {
+            margin-left: px-to-rem(28px);
+
+            @media ($breakpoint-ml) {
+                margin-left: px-to-rem(44px);
+            }
+
+            li::before {
+                width: px-to-rem(26px);
+                margin-left: px-to-rem(-26px);
+
+                @media ($breakpoint-ml) {
+                    width: px-to-rem(34px);
+                    margin-left: px-to-rem(-34px);
+                }
+            }
+        }
+        
+        li {
+            margin-bottom: px-to-rem(5px);
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            b {
+                font-size: px-to-rem(16px);
+            }
+        }
+
+        li::before {
+            content: "\2022";
+            color: #4c851b;
+            font-size: px-to-rem(22px);
+            font-weight: bold;
+            display: inline-block;
+            width: px-to-rem(26px);
+            margin-left: 0;
+
+            @media ($breakpoint-ml) {
+                font-size: px-to-rem(28px);
+                width: px-to-rem(29px);
+                margin-left: px-to-rem(-29px);
+                top: px-to-rem(3px);
+                position: relative;
+            }
+        }
+    }
+}
+
+#{ns} {
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: px-to-rem(42px);
+        line-height: 1.14;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(60px);
+            line-height: 1.2;
+        }
+    }
+
+    &__subTitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: px-to-rem(21px);
+        line-height: 1.29;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(30px);
+            line-height: 1.5;
+        }
+    }
+}

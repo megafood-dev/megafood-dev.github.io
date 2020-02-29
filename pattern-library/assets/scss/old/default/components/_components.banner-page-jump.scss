@@ -1,0 +1,76 @@
+/* ============================================================================
+Banner Page Jump - Currently used for banner-page-jump.isml
+============================================================================ */
+
+$ns: c-banner-page-jump;
+
+.#{$ns} {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #034e26;
+    text-align: center;
+
+    @media ($breakpoint-ml) {
+        background-position: center bottom;
+    }
+
+    h1, p {
+        color: $white;
+    }
+
+    &__wrapper {
+        padding-top: 5.3125rem;
+        padding-bottom: 1.8125rem;
+        
+        @media ($breakpoint-ml) {
+            padding-bottom: 2.25rem;
+        }
+    }
+
+    &__subTitle {
+        font-family: 'Northwoods-Bold';
+        font-size: px-to-rem(21px);
+        line-height: 1.29;
+        color: $white;
+        text-transform: uppercase;
+        padding-bottom: 2.375rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(30px);
+            line-height: 1.5;
+            padding-bottom: 1.775rem;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    &__body {
+        font-family: 'Montserrat',sans-serif;
+        font-size: px-to-rem(18px);
+        font-weight: 500;
+        line-height: 1.5;
+        color: $white;
+        padding-bottom: 2.25rem;
+        max-width: px-to-rem(821px);
+        margin: 0 auto;
+        
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(24px);
+            padding-bottom: 1.4375rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        object-fit: contain;
+        fill: $white;
+        margin: 0 auto;
+    }
+}

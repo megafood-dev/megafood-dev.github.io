@@ -1,0 +1,43 @@
+.tooltip {
+    cursor: help;
+    position: relative;
+}
+
+.tooltip-content {
+    display: none;
+}
+
+.ui-tooltip {
+    z-index: 99999999;
+    max-width: px-to-rem(500px);
+}
+
+.ui-tooltip.ui-widget-content {
+    background: $wild-sand;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    color: $dove-gray;
+}
+
+.ui-tooltip-content {
+    font-size: px-to-rem(12px);
+    padding: px-to-rem(20px);
+
+    @media ($breakpoint-ml) {
+        font-size: 1rem;
+        padding: px-to-rem(40px);
+    }
+
+    h3 {
+        font-size: px-to-rem(16px);
+        margin-bottom: px-to-rem(12px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(21px);
+        }
+    }
+
+    .promo {
+        text-align: right;
+        padding-bottom: 0.3rem;
+    }
+}

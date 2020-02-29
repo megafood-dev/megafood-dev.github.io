@@ -1,0 +1,12 @@
+.pdp-3pc {
+    padding: px-to-rem(48px) $gutter-sm 0 $gutter-sm;
+    margin-bottom: $bottom-margin;
+
+    @media ($breakpoint-ml) {
+        padding: px-to-rem(80px) px-to-rem(40px) 0 px-to-rem(40px);
+    
+        h2 {
+            text-align: center;
+        }
+    }
+}

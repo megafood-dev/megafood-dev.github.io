@@ -1,0 +1,75 @@
+/* ============================================================================
+   Search Form
+   ============================================================================ */
+
+/**
+ * Styles for search form to make a single
+ * input and a submit button with that is an icon
+ */
+
+$ns: c-form-search;
+
+$form-search-input-height: px-to-rem(40px);
+
+.#{$ns} {
+    display: block;
+    position: relative;
+    text-align: right;
+
+    // Search Form Input Field
+    &__input[type="search"] {
+        background-color: $gallery;
+        border: 1px solid $athens-gray;
+        border-radius: $form-search-input-height / 2;
+        box-sizing: border-box;
+        color: $tundora;
+        font-size: px-to-rem(16px);
+        font-family: $font-family-primary;
+        font-weight: 400;
+        height: $form-search-input-height;
+        padding: 0 px-to-rem(54px) 0 px-to-rem(20px);
+        transition: border .25s ease;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(14px);
+            width: px-to-rem(259px);
+        }
+
+        &::placeholder {
+            color: $mine-shaft;
+            font-weight: 500;
+        }
+
+        .appearance & {
+            appearance: none;
+        }
+    }
+
+    // Search Form Submit Button
+    [type="submit"] {
+        @include remove-button();
+    }
+
+    &__submit {
+        background-color: transparent;
+        border: 0;
+        display: inline-block;
+        height: px-to-rem(14px);
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        right: px-to-rem(20px);
+        transform: translateY(-50%);
+        transition: $transition-primary;
+
+        &:hover, &:focus {
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &-icon {
+            height: px-to-rem(14px);
+            width: px-to-rem(14px);
+        }
+    }
+}

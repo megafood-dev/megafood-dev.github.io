@@ -1,0 +1,33 @@
+.cta-highlight {
+    text-align: center;
+    padding: px-to-rem(32px) $gutter-sm;
+    border: 6px solid $saffron;
+    margin-bottom: px-to-rem(40px);
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: px-to-rem(30px);
+        color: $zuccini;
+        margin-bottom: px-to-rem(16px);
+    }
+
+    @media ($breakpoint-ml) {
+        padding: px-to-rem(40px) $gutter-sm;
+
+        h2 {
+            font-size: px-to-rem(40px);
+            margin-bottom: px-to-rem(24px);
+        }
+
+        .primary-cta {
+            font-size: px-to-rem(24px);
+            padding: px-to-rem(24px) px-to-rem(40px);
+        }
+    }
+
+    @media ($breakpoint-lg) {
+        padding: px-to-rem(63px) px-to-rem(210px) px-to-rem(56px) px-to-rem(210px);
+        margin-bottom: px-to-rem(69px);
+    }
+}

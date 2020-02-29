@@ -1,0 +1,55 @@
+/* ============================================================================
+   Utilities - Text
+   ============================================================================ */
+
+/**
+ * Text style classes make it easy to edit the style
+ * of a string of text
+ */
+
+.u-text-red {
+    color: red !important;
+}
+
+.u-text-white {
+    color: white !important;
+}
+
+.u-text-align-center {
+    text-align: center;
+}
+
+.u-text-align-center {
+    @include pxl-breakpoint-classes(('md'), 1) {
+       text-align: center !important;
+    }
+}
+
+.u-text-bold {
+    font-weight: 700;
+}
+
+.u-text-regular {
+    font-weight: 400 !important;
+}
+
+.u-text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.u-text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.u-text-alert {
+    color: $maroon-flush !important;
+}
+
+.u-text-strike-out {
+    opacity: .5;
+    text-decoration: line-through !important;
+}
+
+.u-text-promo {
+    color: $vida-loca !important;;
+}

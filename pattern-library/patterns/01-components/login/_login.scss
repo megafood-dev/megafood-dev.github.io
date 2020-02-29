@@ -1,0 +1,42 @@
+.login {
+    margin-bottom: px-to-rem(40px);
+
+    > div {
+        padding: $gutter-lg;
+        border: 1px solid $emperor;
+        border-bottom: none;
+
+        &:last-of-type {
+            border-bottom: 1px solid $emperor;
+        }
+    }
+
+    @media ($breakpoint-m) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+
+        > div {
+            width: columns(4, 12);
+            border-right: none;
+            border-bottom: 1px solid $emperor;
+
+            &:last-of-type {
+                border: 1px solid $emperor;
+            }
+        }
+
+        &.no-guest-checkout {
+            > div {
+                width: 50%;
+            }
+        }
+    }
+
+    @media ($breakpoint-lxl) {
+        &.no-guest-checkout {
+            padding: 0 14.5%;
+        }
+    }
+}

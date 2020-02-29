@@ -1,0 +1,38 @@
+.item-list {
+	margin-bottom: 1rem;
+
+	tr {
+		border-bottom: 1px solid $gainsboro;
+
+		&.last {
+			border: 0 none;
+		}
+		&.headings {
+			display: none;
+		}
+	}
+
+	td {
+		padding: 1rem;
+		vertical-align: top;
+	}
+}
+
+.product-list-item {
+    .name {
+        color: $kaitoke-green;
+        font-family: $font-family-secondary;
+        font-weight: 500;
+        font-size: px-to-rem(16px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(18px);
+        }
+    }
+}
+
+.item-quantity-details ul {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+}

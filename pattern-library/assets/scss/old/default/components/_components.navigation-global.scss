@@ -1,0 +1,182 @@
+/* ============================================================================
+   Global Navigation
+   ============================================================================ */
+
+/**
+ * Styles global navigation component
+ */
+
+$ns: c-navigation-global;
+
+.#{$ns} {
+    font-family: $font-family-secondary;
+    position: relative;
+    
+    @media ($breakpoint-ml) {
+        text-align: right;
+    }
+
+    // Global Navigation Wrapper
+    &__wrapper {
+        display: block;
+        padding-top: px-to-rem(15px);
+
+        @media ($breakpoint-ml) {
+            display: inline-flex;
+            justify-content: flex-end;
+            list-style: none;
+            padding-top: 0;
+            position: relative;
+            z-index: 10;
+        }
+    }
+
+    &__icon {
+        background-image: url('../images/header/plus.svg');
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: inline-block;
+        height: px-to-rem(25px);
+        float: right;
+        margin-right: px-to-rem(5px);
+        margin-top: px-to-rem(20px);
+        width: px-to-rem(25px);
+
+        @media ($breakpoint-ml) {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.is-active  {
+            background-image: url('../images/header/minus-orange.svg');
+        }
+    }
+
+    // Global Navigation Item
+    &__item {
+        border-bottom: 1px solid $athens-gray;
+        display: block;
+
+        @media ($breakpoint-ml) {
+            align-items: center;
+            border-bottom: 0;
+            display: flex;
+            height: 100%;
+            margin-top: px-to-rem(17px);
+            padding-top: px-to-rem(10px);
+        }
+
+        @media ($breakpoint-lg) {
+            margin-top: px-to-rem(21px);
+        }
+
+        & + & {
+            @media ($breakpoint-ml) {
+                margin-left: px-to-rem(18px);
+            }
+
+            @media ($breakpoint-lg) {
+                margin-left: px-to-rem(36px);
+            }
+        }
+
+        &:hover {
+            .#{$ns}__link {
+                color: $mango-tango-hover;
+            }
+
+            .c-dropdown {
+                @media ($breakpoint-ml) {
+                    opacity: 1;
+                    transition: all .25s ease .3s;
+                    visibility: visible;
+                }
+            }
+        }
+
+    }
+
+    // Dropdown Styles
+    .c-dropdown {
+        display: none;
+
+        @media ($breakpoint-ml) {
+            display: flex;
+            margin-top: px-to-rem(13px);
+            opacity: 0;
+            position: absolute;
+            left: px-to-rem(-58px);
+            top: $global-header-navigation-height;
+            transition: all .25s ease .3s;
+            visibility: hidden;
+        }
+
+
+        &--secondary {
+            left: initial;
+            right: 0;
+        }
+
+        &.is-active {
+            display: block;
+
+            @media ($breakpoint-ml) {
+                display: flex;
+            }
+        }
+
+    }
+
+
+    // Global Navigation Link
+    &__link {
+        display: inline-block;
+        font-size: px-to-rem(18px);
+        font-weight: 500;
+        padding-top: px-to-rem(15px);
+        padding-bottom: px-to-rem(15px);
+
+        @media ($breakpoint-ml) {
+            color: $kaitoke-green;
+            font-size: px-to-rem(14px);
+            letter-spacing: px-to-em(0.9px);
+            padding: 0 px-to-rem(15px) 0 0;
+            position: relative;
+            transition: all .25s ease .3s;
+
+            &:not(.blog)::after {
+                background-image: url('../images/header/icon-dropdown.svg');
+                background-repeat: no-repeat;
+                content: "";
+                display: block;
+                height: px-to-rem(4px);
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: px-to-rem(10px);
+            }
+
+            &.blog {
+                padding: 0;
+            }
+        }
+
+        @media ($breakpoint-lg) {
+            font-size: px-to-rem(18px);
+            letter-spacing: px-to-em(1.1px);
+            padding-right: px-to-rem(18px);
+        }
+
+        &.is-active {
+            color: $mango-tango-hover;
+
+            @media ($breakpoint-ml) {
+                color: $kaitoke-green;
+            }
+        }
+    }
+}

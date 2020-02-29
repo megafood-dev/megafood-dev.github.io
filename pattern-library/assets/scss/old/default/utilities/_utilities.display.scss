@@ -1,0 +1,28 @@
+/* ============================================================================
+   Utilities - Display
+   ============================================================================ */
+
+.u-display-none-mobile {
+    display: none !important;
+
+    @media ($breakpoint-ml) {
+        display: block !important;
+    }
+
+    &-secondary {
+        display: none !important;
+
+        @media ($breakpoint-ml) {
+            display: inline-block !important;
+        }
+    }
+
+}
+
+.u-display-none-desktop {
+    display: block !important;
+
+    @media ($breakpoint-ml) {
+        display: none !important;
+    }
+}

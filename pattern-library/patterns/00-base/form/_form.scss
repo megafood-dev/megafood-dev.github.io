@@ -1,0 +1,290 @@
+* {
+    &:focus {
+        outline: 2px solid $outline-color;
+    }
+
+    &:invalid {      
+        &:focus {
+         outline: 2px solid $outline-color-error;
+        }
+    }
+}
+
+.focus--mouse {
+    outline: none;
+}
+
+fieldset {
+    padding: 0;
+}
+
+legend, label {
+    display: block;
+    font-family: 'Source Sans Pro', arial, sans-serif;
+    font-weight: 600;
+    font-size: px-to-rem(16px);
+    line-height: 1.5;
+    color: $mine-shaft;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+legend {
+    margin-bottom: px-to-rem(16px);
+}
+
+[type="text"], [type="email"], [type="password"], [type="tel"], [type="url"], [type="number"], [type="search"], [type="date"], textarea, select {
+    display: block;
+    width: 100%;
+    max-width: $form-el-max-width;
+    font-size: px-to-rem(16px);
+    line-height: 1.5;
+    color: $mine-shaft;
+    background-color: $white;
+    padding: px-to-rem(14px) px-to-rem(16px);
+    border: 1px solid $dusty-gray;
+    margin-bottom: px-to-rem(32px);
+    border-radius: px-to-rem(3px);
+
+    &:disabled {
+        cursor: not-allowed;
+        border: 1px solid $alabaster;
+        color: $dove-gray;
+        background-color: $alabaster;
+    }
+}
+
+[type="file"]{
+    display: block;
+    font-size: px-to-rem(16px);
+    margin-bottom: px-to-rem(32px);
+}
+
+@supports ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+    [type="search"] {
+        -webkit-appearance: none;//to keep iOS legacy versions from severely rounding borders
+    }
+}
+
+textarea {
+    min-height: px-to-rem(110px);
+}
+
+::placeholder {
+    color: $dove-gray;
+}
+
+select {
+    height: px-to-rem(56px);
+    font-size: px-to-rem(16px);
+    border: 1px solid $dusty-gray;
+    border-radius: px-to-rem(3px);
+}
+
+//Custom select
+@supports (pointer-events: none) and ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-right: px-to-rem(12px) + (px-to-rem(16px) * 2);
+        background-image: url('../../assets/img/select-arrow.svg');
+        background-size: px-to-rem(12px) px-to-rem(7px);
+        background-position: right px-to-rem(16px) center;
+        background-repeat: no-repeat;
+    }
+}
+
+[type="checkbox"], [type="radio"] {
+    float: left;
+    position: absolute;
+    left: -999999rem;
+
+    + label {
+        position: relative;
+        padding-left: px-to-rem(29px);
+        margin-bottom: px-to-rem(16px);
+        font-size: px-to-rem(16px);
+        font-weight: normal;
+        line-height: 1.5;
+        color: $dove-gray;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: px-to-rem(3px);
+            left: 0;
+            height: px-to-rem(20px);
+            width: px-to-rem(20px);
+            background-color: $white;
+            border: 1px solid $dusty-gray;
+        }
+    }
+
+    &:focus {
+        + label {
+            outline: 1px solid $outline-color;
+        }
+
+        &.focus--mouse {
+            + label {
+                outline: none;
+            }
+        }
+    }
+
+    &:invalid {
+        &:focus {
+            + label {
+                outline: 1px solid $outline-color-error;
+            }
+        }
+    }
+
+    &:disabled {
+        + label {
+            cursor: not-allowed;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: px-to-rem(-1px);
+                left: px-to-rem(10px);
+                background-color: $dusty-gray;
+                height: px-to-rem(28px);
+                width: px-to-rem(1px);
+                transform: rotate(45deg);
+                clip-path: circle(1.25rem);
+            }
+        }
+    }
+
+    // &:last-of-type {
+    //     + label {
+    //         margin-bottom: px-to-rem(32px);
+    //     }
+    // }
+}
+
+[type="checkbox"] {
+    &:hover, &:focus {
+        + label {
+            &::before {
+                border: 2px solid $vidaLoca;
+            }
+        }
+    }
+
+    &:checked {
+        + label {
+            &::before {
+                background-color: $vidaLoca;
+                border-radius: px-to-rem(3px);
+            }
+
+            &::after {
+                content: '✓';
+                position: absolute;
+                top: px-to-rem(6.5px);
+                left: px-to-rem(4px);
+                font-size: px-to-rem(14px);
+                line-height: 1;
+                color: $white;
+            }
+        }
+    }
+}
+
+[type="radio"] {
+    + label {
+        &::before {
+            border-radius: 50%;
+        }
+    }
+
+    &:hover, &:focus {
+        + label {
+            &::before {
+                border: 1px solid $vidaLoca;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: px-to-rem(10px);
+                left: px-to-rem(6.5px);
+                height: px-to-rem(6px);
+                width: px-to-rem(6px);
+                background-color: $vidaLoca;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &:checked {
+        + label {
+            &::before {
+                background-color: $vidaLoca;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: px-to-rem(10px);
+                left: px-to-rem(6.5px);
+                height: px-to-rem(6px);
+                width: px-to-rem(6px);
+                background-color: $white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &:disabled {
+        + label {
+            &::after {
+                clip-path: circle(0.6rem);
+            }
+        }
+    }
+}
+
+[type="reset"] {
+    display: block;
+    @include remove-button();
+    font-size: px-to-rem(16px);
+    color: $emperor;
+    text-decoration: underline;
+    padding: px-to-rem(10px) 0;
+    border: none;
+
+    &:hover, &:focus {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+// [type="submit"], [type="button"] {
+//     @include button();
+//     text-transform: none;
+//     letter-spacing: normal;
+//     border-radius: px-to-rem(3px);
+
+//     &:disabled {
+//         color: $emperor;
+//         background-color: $alabaster;
+//     }
+// }
+
+// [type="submit"] {
+//     font-size: px-to-rem(18px);
+//     background-color: $zuccini;
+//     padding: px-to-rem(18.5px) px-to-rem(40px);
+
+//     &:hover, &:focus {
+//         background-color: $county-green;
+//     }
+// }

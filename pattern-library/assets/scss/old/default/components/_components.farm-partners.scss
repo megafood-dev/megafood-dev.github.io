@@ -1,0 +1,76 @@
+/* ============================================================================
+    Farm Partners
+    ============================================================================ */
+
+$ns: c-farm-partners;
+
+.#{$ns} {
+
+    &__heading {
+        @extend .c-banner-heading;
+        margin-top: px-to-rem(60px);
+    }
+
+    &__heading1 {
+        color: $apple;
+        font-size: px-to-rem(60px);
+        text-transform: lowercase;
+    }
+
+    &__heading2 {
+        color: $mine-shaft;
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(35px);
+    }
+
+    &__partner-list {
+        margin: 0 auto;
+        max-width: px-to-rem(1440px);
+        padding: 0 px-to-rem(50px);
+
+        button.slick-arrow {
+            background-color: transparent;
+            color: $sun;
+            cursor: pointer;
+            font-size: px-to-rem(30px);
+            position: absolute;
+            top: px-to-rem(350px);
+            z-index: 1;
+
+            span {
+                font-size: 0;
+            }
+        }
+
+        button.slick-prev {
+            left: 0;
+        }
+
+        button.slick-next {
+            right: 0;
+        }
+
+        .slick-dots {
+            text-align: center;
+
+            li {
+                display: inline-block;
+                cursor: pointer;
+                background-color: $light-gray;
+                font-size: 0;
+                width: px-to-rem(11px);
+                height: px-to-rem(11px);
+                border-radius: px-to-rem(6px);
+                margin-left: px-to-rem(10px);
+
+                button {
+                    display: none;
+                }
+            }
+
+            li.slick-active {
+                background-color: $sun;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/* ============================================================================
+Two Column Energy Consumer Landing - Currently used for two-column-content-bottom.isml
+============================================================================ */
+
+$ns: c-two-column-content-bottom;
+
+.#{$ns} {
+    padding-bottom: px-to-rem(94px);
+    padding-top: px-to-rem(56.5px);
+
+    @media ($breakpoint-ml) {
+        padding-bottom: px-to-rem(164px);
+        padding-top: 0;
+    }
+
+    .o-layout--flex {
+        flex-direction: column-reverse;
+
+        @media ($breakpoint-ml) {
+            flex-direction: row;
+        }
+    }
+
+    &__col-left,
+    &__col-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__col-left {
+        padding-top: 1rem;
+        
+        @media ($breakpoint-ml) {
+            padding-top: 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__body,
+    &__body-two,
+    &__body-three {
+        &:not(&__body-four){
+            padding-bottom: px-to-rem(32px);
+        }
+
+        @media ($breakpoint-ml) {
+            padding-right: 3.25rem;
+        }
+    }
+
+
+    &__text-bold {
+        font-family: Montserrat;
+        font-size: px-to-rem(20px);
+        font-weight: bold;
+        letter-spacing: px-to-em(2px);
+        text-align: left;
+        color: #1c5532;
+    }
+
+    &__text-light {
+        font-family: Montserrat;
+        font-size: px-to-rem(18px);
+        line-height: 1.33;
+        letter-spacing: px-to-em(1.8px);
+        text-align: left;
+        color: #1c5532;
+    }
+}

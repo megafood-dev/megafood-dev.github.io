@@ -1,0 +1,164 @@
+$ns: o-layout;
+
+/* Default/mandatory classes
+ * ============================================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+/**
+ * 1. Allows us to use the layout object on any type of element.
+ * 2. Dealing with the inline block spacing issue.
+ * 3. We need to defensively reset any box-model properties.
+ * 4. Use the negative margin trick for multi-row grids.
+ */
+
+.#{$ns} {
+    display: block; /* [1] */
+    font-size: 0; /* [2] */
+    margin: 0; /* [3] */
+    margin-left: -$setting-gutter; /* [4] */
+    padding: 0; /* [3] */
+    list-style: none; /* [1] */
+
+    /**
+     * 1. Allows us to manipulate grids vertically, with text-level properties, etc.
+     * 2. Gutters provided by left padding
+     * 3. Default item alignment is with the tops of each other, like most traditional grid/layout
+     *    system
+     * 4. By default, all layout items are full-width (mobile first).
+     */
+
+    &__item {
+        display: inline-block; /* [1] */
+        font-size: 1rem;
+        padding-left: $setting-gutter; /* [2] */
+        vertical-align: top; /* [3] */
+        width: 100%; /* [4] */
+    }
+
+}
+
+
+/* Modifier classes
+ * ============================================================================ */
+
+/**
+* Align all grid items to the middles of each other.
+*/
+
+.o-layout--middle {
+
+    > .o-layout__item {
+        vertical-align: middle;
+    }
+
+}
+
+.o-layout--inline {
+    display: inline-block;
+    margin-left: 0;
+    vertical-align: top;
+}
+
+/**
+ * Align all items in a flex grid
+ */
+.o-layout--flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media ($breakpoint-ml) {
+        flex-direction: row;
+    }
+}
+
+.o-layout--flex-only {
+    display: flex;
+}
+
+.o-layout--flex-row {
+	flex-direction: row;
+}
+
+.o-layout--flex-column {
+    flex-direction: column;
+}
+
+.o-layout--flex-no-wrap {
+    flex-wrap: nowrap;
+}
+
+.o-layout--flex-secondary {
+    display: flex;
+        flex-wrap: wrap;
+}
+
+.o-layout--flex-center {
+    align-items: center;
+}
+
+.o-layout--flex-justify-center {
+    justify-content: center;
+}
+
+.o-layout--flex-space-between {
+    justify-content: space-between;
+}
+
+.o-layout--flex-reverse {
+    @media ($breakpoint-ml) {
+        flex-direction: row-reverse;
+    }
+}
+
+.o-layout--container {
+    padding-right: px-to-rem(16px);
+    padding-left: px-to-rem(16px);
+    max-width: px-to-rem(1594px);
+    margin: 0 auto;
+
+    @media ($breakpoint-ml) {
+        padding-right: px-to-rem(90px);
+        padding-left: px-to-rem(90px);
+    }
+}
+
+.o-layout--col {
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.o-layout--col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.o-layout--col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.o-layout--col-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+.o-layout--col-2-md {
+    @media ($breakpoint-ml) {
+        flex: 0 0 15%;
+        max-width: 15%;
+    }
+}
+
+.o-layout--col-3-md {
+    @media ($breakpoint-ml) {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}

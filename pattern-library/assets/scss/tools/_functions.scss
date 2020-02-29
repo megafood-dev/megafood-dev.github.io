@@ -1,0 +1,14 @@
+//grid math helper
+@function columns($cols, $totalCols:12){//returns a % value that represents a certain amount of columns ($cols) of total columns ($totalCols)
+    @return percentage($cols / $totalCols);
+}
+
+//convert px value to rem value
+@function px-to-rem($px, $base:16px){
+  @return ($px / $base) * 1rem;
+}
+
+//convert px value to em value
+@function px-to-em($px, $base:16px){
+  @return ($px / $base) * 1em;
+}

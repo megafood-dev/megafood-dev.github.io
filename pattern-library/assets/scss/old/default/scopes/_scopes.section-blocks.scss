@@ -1,0 +1,24 @@
+/* ============================================================================
+   Section Blocks
+   ============================================================================ */
+
+$ns: s-section-blocks;
+
+.#{$ns} {
+    h2 {
+        letter-spacing: 0;
+        margin-bottom: px-to-rem(3px);
+    }
+
+    a {
+        color: $mango-tango;
+
+        &:hover {
+            color: $mango-tango-hover;
+        }
+    }
+
+    p + h2 {
+        margin-top: px-to-rem(30px);
+    }
+}

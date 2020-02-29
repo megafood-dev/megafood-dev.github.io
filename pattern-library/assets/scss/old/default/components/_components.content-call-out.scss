@@ -1,0 +1,118 @@
+/* ============================================================================
+Content Call Out
+============================================================================ */
+
+$ns: c-content-call-out;
+
+.#{$ns} {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $mine-shaft;
+    padding: px-to-rem(94px) px-to-rem(20px) px-to-rem(84px) px-to-rem(20px);
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+
+    @media ($breakpoint-ml) {
+        padding: px-to-rem(94px) 0;
+        text-align: left;
+    }
+
+    &:hover {
+        color: $mine-shaft;
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: px-to-rem(1152px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media ($breakpoint-ml) {
+            padding: 0;
+        }
+    }
+
+    &__heading {
+        color: $white;
+        font-family: 'Northwoods-Bold', $font-family-secondary;
+        font-size: px-to-rem(39px);
+        line-height: 1.15;
+        display: block;
+        margin-bottom: .5em;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media ($breakpoint-ml) {
+            line-height: normal;
+            padding-left: 0;
+            width: 68%;
+            font-size: px-to-rem(48px);
+        }
+
+        em {
+            font-family: $font-family-tertiary;
+            font-size: px-to-rem(70px);
+            font-style: normal;
+            text-transform: none;
+
+            @media ($breakpoint-lxl) {
+                font-size: px-to-rem(76px);
+            }
+        }
+    }
+
+    &__image-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+
+        @media ($breakpoint-ml) {
+            margin-bottom: 0;
+            margin-top: 0;
+            padding: 0;
+            width: 25%;
+            float: left;
+
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    &__body {
+        color: $white;
+        font-size: px-to-rem(21px);
+        margin-top: px-to-rem(27px);
+        font-family: 'Northwoods-Regular';
+        text-align: center;
+        max-width: px-to-rem(1000px);
+        line-height: 1.29;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(27px);
+            margin-top: px-to-rem(21px);
+            width: 100%;
+            clear: right;
+            line-height: normal;
+        }
+
+        .c-button--pill {
+            display: block;
+            width: 100%;
+            margin-bottom: 2em;
+
+            @media ($breakpoint-ml) {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__image {
+        display: inline-block;
+    }
+}

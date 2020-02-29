@@ -1,0 +1,69 @@
+/* ============================================================================
+   Page Header
+   ============================================================================ */
+
+$ns: c-page-header;
+
+.#{$ns} {
+    &__subhead {
+        font-size: px-to-rem(21px);
+        margin-bottom: px-to-rem(32px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(24px);
+        }
+    }
+}
+
+/* Modifiers
+   ============================================================================ */
+
+.#{$ns}--compact {
+    margin-bottom: px-to-rem(24px);
+}
+
+.#{$ns}--row {
+    margin-bottom: px-to-rem(32px);
+
+    @media ($breakpoint-ml) {
+        align-items: center;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+
+    .#{$ns} {
+        &__button {
+            @media ($breakpoint-ml) {
+                flex-shrink: 0;
+                margin-top: 0;
+                margin-left: auto;
+            }
+
+            &--mobile-hidden {
+                display: none;
+                margin-top: 0;
+
+                @media ($breakpoint-ml) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.#{$ns}--row-secondary {
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: 0;
+
+    .#{$ns} {
+        &__button {
+            margin-bottom: px-to-rem(3px);
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.nutrition-info {
+    position: relative;
+    background-color: $finn;
+    color: $white;
+    padding: px-to-rem(191px) $gutter-sm $bottom-margin $gutter-sm;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: px-to-rem(32px);
+        left: 50%;
+        height: px-to-rem(130px);
+        width: px-to-rem(129px);
+        background-image: url('../../assets/img/nutrition-with-ambition.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateX(-50%);
+    }
+    
+    h2, h3 {
+        color: $white;
+    }
+
+    .desc {
+        font-size: px-to-rem(21px);
+        max-width: px-to-rem(720px);//keeps text at good length for readability (80 chars per line)
+        margin-bottom: px-to-rem(48px);
+    }
+
+    .serving-info {
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    img {
+        display: block;
+        background-color: $white;
+        padding: px-to-rem(32px) 1rem;
+        margin-bottom: $bottom-margin;
+    }
+
+    p {
+        max-width: px-to-rem(550px);//keeps text at good length for readability (80 chars per line)
+    }
+
+    small {
+        display: block;
+        max-width: px-to-rem(550px);
+        margin-bottom: $bottom-margin;
+    }
+
+    a {
+        color: $white;
+        text-decoration: underline;
+
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
+
+    @media ($breakpoint-m) {
+        .serving-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            ul {
+                margin-right: px-to-rem(32px);
+            }
+        }
+    }
+
+    @media ($breakpoint-ml) {
+        padding: px-to-rem(60px) px-to-rem(40px);
+
+        &::before {
+            top: px-to-rem(47px);
+            left: auto;
+            right: px-to-rem(40px);
+            transform: none;
+        }
+
+        .desc {
+            max-width: 41rem;//prevents it from overlapping w/::before icon
+        }
+
+        img {
+            padding: 5rem;
+        }
+    }
+
+    @media ($breakpoint-lg) {
+        padding: px-to-rem(60px) px-to-rem(64px);
+
+        &::before {
+            right: px-to-rem(64px);
+            height: px-to-rem(150px);
+            width: px-to-rem(149.4px);
+        }
+
+        h2 {
+            font-size: px-to-rem(36px);
+        }
+
+        h3 {
+            font-size: px-to-rem(24px);
+        }
+
+        .desc {
+            font-size: px-to-rem(24px);
+            max-width: px-to-rem(821px);
+        }
+
+        img {
+            margin: 0 auto px-to-rem(40px) auto;
+        }
+    }
+}

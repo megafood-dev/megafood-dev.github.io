@@ -1,0 +1,62 @@
+/* ============================================================================
+   Product Set
+   ============================================================================ */
+
+$ns: c-product-set;
+
+.#{$ns} {
+    display: flex;
+    margin-bottom: px-to-rem(10px);
+
+    &__title {
+        color: $kaitoke-green;
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(24px);
+        font-weight: 500;
+        padding-top: px-to-rem(18px);
+        padding-bottom: px-to-rem(18px);
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        justify-content: center;
+    }
+
+    &__image-wrapper {
+        @include pxl-aspect-image-wrapper();
+        background-color: $wild-sand;
+        flex-shrink: 0;
+        margin-right: px-to-rem(20px);
+        position: relative;
+        width: px-to-rem(120px);
+    }
+
+    &__image {
+        @include pxl-aspect-image();
+        padding: px-to-rem(10px);
+    }
+
+    &__link{
+        color: $kaitoke-green;
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(20px);
+        font-weight: 500;
+        line-height: 0.75;
+        letter-spacing: px-to-em(0.8px);
+    }
+
+    &__subhead {
+        color: $jumbo;
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(15px);
+        font-weight: 500;
+        margin-bottom: px-to-rem(2px);
+    }
+
+    .c-pricing__price{
+        font-size: px-to-rem(20px);
+        margin-top: px-to-rem(10px);
+    }
+}

@@ -1,0 +1,15 @@
+.ui-dialog .ui-widget-header {
+    box-sizing: content-box;
+    min-height: px-to-rem(60px) !important;
+    padding: px-to-rem(20px) px-to-rem(20px) 0 px-to-rem(40px) !important;
+}
+
+.ui-dialog .ui-dialog-title {
+    @extend .beta;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    @extend .c-button;
+    @extend .c-button--small;
+    margin-top: 0;
+}

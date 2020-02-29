@@ -1,0 +1,98 @@
+.product-tile {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+
+    .product-img {
+        display: inline-block;
+        padding: px-to-rem(24px);
+        line-height: 1;
+        background-color: $alabaster;
+        margin-bottom: px-to-rem(24px);
+    }
+
+    h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: px-to-rem(21px);
+        font-weight: 600;
+        margin-bottom: px-to-rem(8px);
+    }
+
+    .desc {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: px-to-rem(16px);
+        color: $emperor;
+        margin-bottom: px-to-rem(8px);
+    }
+
+    .badge {
+        position: absolute;
+        top: px-to-rem(8px);
+        left: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: px-to-rem(16px);
+        text-transform: uppercase;
+        color: $white;
+        padding: px-to-rem(8px);
+        background-color: $zuccini;
+    }
+
+    .pricing {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: px-to-rem(21px);
+        font-weight: 600;
+        color: $black;
+        margin-bottom: px-to-rem(16px);
+
+        li {
+            margin-right: px-to-rem(8px);
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        span {
+            @include hide();
+        }
+    }
+
+    .product-standard-price {
+        display: none;
+    }
+
+    .product-promo {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: px-to-rem(16px);
+        color: $emperor;
+        margin-bottom: px-to-rem(8px);
+    }
+
+    .yotpo {
+        margin-bottom: px-to-rem(8px);
+    }
+
+    @media ($breakpoint-ml) {
+        .product-img {
+            margin-bottom: px-to-rem(32px);
+        }
+
+        h2, h3 {
+            font-size: px-to-rem(24px);
+            margin-bottom: 1rem;
+        }
+
+        .desc {
+            margin-bottom: 1rem;
+        }
+
+        .product-promo {
+            margin-bottom: 1rem;
+        }
+
+        .yotpo {
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+/* ============================================================================
+   Social Media Links Section - Currently Used in Relation with social-media-links.isml
+   ============================================================================ */
+
+$ns: c-social-media-links;
+
+.#{$ns} {
+    background-position: 80% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #034e26;
+
+    @media ($breakpoint-ml) {
+        background-position: center bottom;
+        min-height: px-to-rem(180px);
+    }
+
+    &__wrapper {
+        padding: 3rem px-to-rem(15px);
+
+        @media ($breakpoint-ml) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: px-to-rem(180px);
+        }
+    }
+
+    &__title {
+       font-family: 'Northwoods-Bold';
+       font-size: px-to-rem(30px);
+       line-height: 1.2;
+       color: $white;
+       text-align: center;
+       padding-bottom: 1.25rem;
+
+       @media ($breakpoint-ml) {
+            text-align: inherit;
+            padding-bottom: 0;
+       }
+    }
+
+    &__body {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 px-to-rem(15px);
+
+            @media ($breakpoint-ml) {
+                padding: 0 0 0 px-to-rem(35px);
+            }
+
+            li {
+                padding-right: px-to-rem(18px);
+                transition: all .1s cubic-bezier(.17,.67,.83,.67); 
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+                
+                &:last-child {
+                    padding-right: 0;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+$ns: c-subscription-form;
+
+.#{$ns} {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &__label {
+        color: $kaitoke-green;
+        display: block;
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(20px);
+        font-weight: 500;
+        letter-spacing: px-to-em(1px);
+        line-height: 1.4;
+        margin-bottom: px-to-rem(20px);
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(16px);
+            margin-bottom: px-to-rem(18px);
+        }
+
+        @media ($breakpoint-lg) {
+            font-size: px-to-rem(20px);
+        }
+    }
+
+    &__form-row {
+        display: flex;
+        position: relative;
+    }
+
+    //Dev note: These are !important'd for the sake of Klaviyo's aggressive styling injection
+    &__input[type="email"], input.dodLKg, input.hvCupJ, .isolda input, .ckpUNQ{
+        background-color: $gallery !important;
+        background-image: url('../images/icon-newsletter.svg') !important;
+        background-position: 15px center !important;
+        background-repeat: no-repeat !important;
+        background-size: 22px 16px !important;
+        border-radius: px-to-rem(18px) !important;
+        font-size: px-to-rem(16px) !important;
+        height: px-to-rem(40px) !important;
+        letter-spacing: px-to-em(0.56px) !important;
+        margin-left: auto !important;
+        padding-right: px-to-rem(127px) !important;
+        border-radius: px-to-rem(18px) 0 0 px-to-rem(18px) !important;
+        margin: 0 !important;
+        border-right: 0 !important;
+        padding: 0 !important;
+        min-height: initial !important;
+        border-width: 0 !important;
+        padding-left: px-to-rem(49px) !important;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(15px) !important;
+            margin-left: 0 !important;
+            width: px-to-rem(278px) !important;
+            padding-left: px-to-rem(49px) !important;
+        }
+
+        @media ($breakpoint-lg) {
+            font-size: px-to-rem(16px) !important;
+            width: px-to-rem(340px) !important;
+        }
+
+        &.error {
+            margin-bottom: px-to-rem(32px) !important;
+        }
+    }
+
+    .iXRngU{
+        position: absolute !important;
+        width: 94% !important;
+        top: px-to-rem(49px) !important;
+        background-color: #a61740 !important;
+        color: white !important;
+        display: block !important;
+        font-family: "Dosis",arial,sans-serif !important;
+        font-size: px-to-rem(16px) !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+        padding: px-to-rem(10px) !important;
+    }
+
+    &__button, .tPHTD, button {
+        background-color: $vida-loca !important;
+        border-top-right-radius: px-to-rem(20px) !important;
+        border-bottom-right-radius: px-to-rem(20px) !important;
+        border: 0 !important;
+        color: white !important;
+        font-family: $font-family-secondary !important;
+        font-size: px-to-rem(17px) !important;
+        font-weight: 700 !important;
+        height: px-to-rem(40px) !important;
+        letter-spacing: px-to-em(0.35px) !important;
+        padding-left: px-to-rem(20px) !important;
+        padding-right: px-to-rem(20px) !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &:hover {
+            color: white;
+            background-color: $kaitoke-green;
+        }
+    }
+
+    span.error, .ValidationMessage__Container-sc-1agouhi-0 {
+        @extend .c-alert;
+        position: absolute;
+        bottom: px-to-rem(-20px);
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+/* ============================================================================
+   Order Total
+   ============================================================================ */
+
+$ns: c-order-total;
+
+.#{$ns} {
+    border-top: 0;
+    display: table;
+    width: 100%;
+
+    @media ($breakpoint-ml) {
+        margin-top: px-to-rem(-7px);
+    }
+
+    &__body {
+        display: table-row-group;
+    }
+
+    &__row {
+        display: table-row;
+
+        & + & {
+            border-top: 0;
+            display: table-row;
+            padding-top: 0;
+        }
+
+    }
+
+    &__cell {
+        border-bottom: 0;
+        display: table-cell;
+        padding: px-to-rem(7px) 0 0;
+
+        &::before {
+            display: none;
+        }
+
+        &--large {
+            color: $mine-shaft;
+            font-weight: 700;
+            padding-top: px-to-rem(20px);
+        }
+
+    }
+
+    &__label {
+        padding-right: px-to-rem(10px);
+        width: 75%;
+    }
+
+    &__value {
+        padding-left: px-to-rem(10px);
+        text-align: right;
+        width: 25%;
+    }
+
+    &__link {
+        font-family: 'Montserrat', sans-serif;
+        font-size: px-to-rem(13px);
+        color: $kaitoke-green;
+        display: inline-block;
+        font-weight: 700;
+        margin-left: px-to-rem(4px);
+        text-transform: uppercase;
+    }
+
+    .c-content-block & {
+        margin-top: px-to-rem(-10px);
+    }
+}

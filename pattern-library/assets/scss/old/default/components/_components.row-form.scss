@@ -1,0 +1,66 @@
+/* ============================================================================
+   Form Rows
+   ============================================================================ */
+
+$ns: c-row-form;
+
+.#{$ns} {
+    position: relative;
+
+    &__label {
+        display: block;
+        margin-bottom: px-to-rem(6px);
+
+        &--inline {
+            display: inline; //Allows us to style box model properties
+        }
+    }
+
+    &__form-field-container {
+        .#{$ns}__label {
+            margin-right: px-to-rem(20px);
+        }
+    }
+
+    &__input {
+        &.error {
+            border-color: $error-color;
+            border-radius: px-to-rem(3px) px-to-rem(3px) 0 0;
+        }
+    }
+
+    &__tooltip {
+        position: absolute;
+        right: 0;
+
+        & + .#{$ns}__caption {
+            right: initial;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__button {
+        margin-top: px-to-rem(15px);
+    }
+
+    span.error,
+    &__error {
+        background-color: $error-color;
+        color: $white;
+        display: block;
+        font-size: .9rem;
+        padding: px-to-rem(9px);
+        width: 100%;
+        margin-top: px-to-rem(-32px);
+        margin-bottom: px-to-rem(32px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(14px);
+        }
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+}

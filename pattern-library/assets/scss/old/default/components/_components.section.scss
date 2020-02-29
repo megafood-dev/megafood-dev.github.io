@@ -1,0 +1,50 @@
+/* ============================================================================
+   Section
+   ============================================================================ */
+
+$ns: c-section;
+
+.#{$ns} {
+    border-bottom: 1px solid $athens-gray;
+    padding-bottom: px-to-rem(24px);
+    margin-bottom: px-to-rem(24px);
+
+    &__header {
+        @extend .beta;
+        padding-bottom: px-to-rem(16px);
+
+        @media ($breakpoint-lg) {
+            padding-bottom: px-to-rem(24px);
+        }
+    }
+
+    &__button-row {
+        margin-top: px-to-rem(30px);
+        text-align: right;
+
+        @media ($breakpoint-lg) {
+            margin-top: px-to-rem(40px);
+        }
+    }
+}
+
+
+/* Modifiers
+   ============================================================================ */
+.#{$ns}--no-border {
+    border-bottom: 0; 
+    padding-bottom: 0;
+}
+
+.#{$ns}--border-top {
+    border-top: 1px solid $athens-gray;
+    padding-top: px-to-rem(24px);
+}
+
+.#{$ns}--secondary {
+    .#{$ns} {
+        &__button-row {
+            text-align: left;
+        }
+    }
+}

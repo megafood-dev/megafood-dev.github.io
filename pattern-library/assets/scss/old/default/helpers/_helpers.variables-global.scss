@@ -1,0 +1,113 @@
+// ============================================================================
+// Global Variables
+// ============================================================================
+
+
+// Typography
+// ============================================================================
+$font-family-primary: 'Source Sans Pro', arial, sans-serif !default;
+$font-family-secondary: 'Dosis', arial, sans-serif !default;
+$font-family-tertiary: 'Virginia Sky', arial, sans-serif !default;
+$font-family-quaternary: 'Roboto', arial, sans-serif !default;
+$font-family-quinary: 'Montserrat', sans-serif !default;
+
+// Layout
+// ============================================================================
+$setting-gutter: px-to-rem(30px) !default;
+
+$em-base: 16px !default;
+
+
+// Color Names
+// ============================================================================
+
+// All color variable names should be named using
+// http://chir.ag/projects/name-that-color/
+//
+// For more information, please see https://davidwalsh.name/sass-color-variables-dont-suck
+
+// Greens
+$kaitoke-green: rgb(0, 76, 36) !default;
+$vida-loca: rgb(78, 132, 16) !default;
+$observatory: rgb(4, 133, 123) !default;
+$apple: rgb(105, 146, 58) !default;
+$teal: rgb(0, 131, 123) !default;
+$full-green: rgb(1, 103, 53) !default;
+$zuccini: rgb(3,78,38) !default;
+$green-leaf: rgb(65,117,5) !default;
+
+// Orange
+$mango-tango: rgb(212, 118, 0) !default;
+$mango-tango-hover: rgb(237, 121, 0) !default;
+$sun: rgb(250, 179, 25) !default;
+$golden-grass: rgb(226, 160, 32) !default;
+$fuel-yellow: rgb(240, 175, 49) !default;
+$pizza: rgb(187, 131, 21) !default;
+$squash: rgb(246, 178, 29) !default;
+$cream-can: rgb(244, 197, 101) !default;
+$tango: rgb(239, 116, 35) !default;
+$pumpkin: rgb(250,124,30) !default;
+
+// Yellows
+$dandelion: rgb(253, 209, 91) !default;
+$school-bus-yellow: rgb(253, 218, 0) !default;
+$cream-lighter: rgba(245,225,169,0.4);
+
+// Grays
+$wild-sand: rgb(245, 245, 245) !default;
+$gallery: rgb(239, 239, 239) !default;
+$mercury: rgb(227, 227, 227) !default;
+$athens-gray: rgb(225, 228, 232) !default;
+$light-gray: rgb(211, 211, 211) !default;
+$silver: rgb(203, 203, 203) !default;
+$gray: rgb(135, 135, 135) !default;
+$jumbo: rgb(112, 112, 112) !default;
+$dove-gray: rgb(99, 99, 99) !default;
+$scorpion: rgb(86, 86, 86) !default;
+$tundora: rgb(74, 74, 74) !default;
+$mine-shaft: rgb(59, 59, 59) !default;
+$gainsboro: rgb(231, 231, 231) !default;
+$corn: rgb(221, 162, 0) !default;
+
+// Whites
+$white-85: rgba(255, 255, 255, .85) !default;
+
+// Facebook Blue
+$facebook-blue: rgb(59, 89, 152);
+$facebook-blue-hover: rgb(65, 99, 170);
+
+// Purples
+$cardinal: rgb(166, 23, 64) !default;
+$hibiscus: rgb(172, 34, 101) !default;
+$maroon-flush: rgb(197, 37, 101) !default;
+$plum: rgb(156, 66, 152) !default;
+$plum-darker: rgb(140, 57, 133) !default;
+
+// Reds
+$alizarin-crimson: rgb(221, 29, 71) !default;
+$tall-poppy: rgb(176, 38, 56) !default;
+
+//Blues
+$san-marino: rgb(72, 100, 157) !default;
+
+// Animation
+// ============================================================================
+
+/// Primary transition
+/// @group Animation
+$transition-primary: all .25s ease !default;
+
+
+// Z-Index
+// ============================================================================
+
+$z-index-dialog: 9999;
+$z-index-header: 200;
+$z-index-main: 0;
+$z-index-tooltip: 999;
+
+
+/// Global Header Navigation Height
+/// @group styling
+/// This sets the height for the global header navigation. It is shared across multiple partials.
+$global-header-navigation-height: px-to-rem(52px) !default;

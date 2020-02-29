@@ -1,0 +1,21 @@
+//Tools (specific order)
+@import 'tools/_colors';
+@import 'tools/_fonts';
+@import 'tools/_functions';
+@import 'tools/_variables';
+@import 'tools/_mixins';
+@import 'tools/_animations';
+
+//Global
+@import 'global/_reset';
+@import 'global/_modern-normalize';
+@import 'global/_layout';
+@import 'global/_print';
+
+//Old styles
+@import 'old/default/style';
+
+//Patterns
+@import '../../patterns/00-base/**/*.scss';
+@import '../../patterns/02-templates/**/*.scss';
+@import '../../patterns/01-components/**/*.scss';

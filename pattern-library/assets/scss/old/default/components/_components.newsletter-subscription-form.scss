@@ -1,0 +1,115 @@
+/* ============================================================================
+   Content Call Out
+   ============================================================================ */
+
+$ns: c-newsletter-subscription;
+
+.#{$ns} {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $mine-shaft;
+    display: block;
+    padding-top: px-to-rem(60px);
+    padding-bottom: px-to-rem(45px);
+    position: relative;
+
+    &:hover {
+        color: $mine-shaft;
+    }
+
+    &::after {
+        background-image: url('../images/home/rugged-bottom-border.png');
+        content: ""; 
+        display: block;
+        height: px-to-rem(14px);
+        position: absolute;
+        z-index: 10;
+        bottom: px-to-rem(-7px);
+        width: 100%;
+    }
+
+    &__heading {
+        color: $zuccini;
+        font-family: 'Northwoods-Bold', $font-family-secondary;
+        font-size: px-to-rem(39px);
+        line-height: 1.15;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(48px);
+            line-height: normal;
+        }
+    }
+
+    &__body {
+        color: $zuccini;
+        font-size: px-to-rem(21px);
+        line-height: 1.29;
+        margin-top: px-to-rem(27px);
+        max-width: 100%;
+        text-align: center;
+        font-family: 'Northwoods-Regular';
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(27px);
+            margin-top: px-to-rem(21px);
+        }
+    }
+
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: px-to-rem(55px);
+
+        @media ($breakpoint-ml) {
+            flex-direction: row;
+            padding-top: px-to-rem(47px);
+        }
+
+        .c-button--pill {
+            margin: 0;
+
+            @media ($breakpoint-ml) {
+                margin-right: px-to-rem(33px);
+            }
+
+            &:first-child {
+                margin-bottom: px-to-rem(20px);
+
+                @media ($breakpoint-ml) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Modifiers
+   ============================================================================ */
+.c-subscription-form {
+    display: block;
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin-bottom: px-to-rem(16px);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: px-to-rem(16px);
+
+    input, button {
+        font-size: px-to-rem(16px) !important;
+        height: px-to-rem(38px) !important;
+    }
+}
+
+.c-subscription-form__input[type="email"] {
+    width: 100%;
+
+    @media ($breakpoint-ml) {
+        max-width: px-to-rem(486px);
+    }
+}

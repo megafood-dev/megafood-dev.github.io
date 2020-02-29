@@ -1,0 +1,91 @@
+/**
+ * Important flag needed here at times to overwrite the inline styles that
+ * jQuery UI inserts through JS.
+ */
+
+.ui-widget-overlay {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.ui-dialog {
+    background-color: white;
+    padding: 0;
+    max-width: calc(100% - #{px-to-rem(40px)}) !important;
+
+    &.is-video-modal {
+        background-color: transparent;
+
+        .ui-widget-header {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .ui-dialog-content {
+            padding: 0;
+        }
+
+        .ui-icon-closethick {
+            background-image: url("../images/icons/close-white.svg");
+        }
+
+        .ui-dialog-titlebar-close {
+            right: 0;
+        }
+    }
+
+    .ui-dialog-content {
+        width: 100% !important;
+
+        h2 {
+            margin-bottom: px-to-rem(30px);
+        }
+    }
+
+    .ui-widget-header {
+        height: px-to-rem(60px);
+        padding: px-to-rem(10px) px-to-rem(20px) px-to-rem(10px) px-to-rem(40px);
+        text-transform: uppercase;
+    }
+
+    .ui-dialog-title {
+        color: orange;
+        font-weight: 400;
+    }
+
+    .ui-icon-closethick {
+        background-image: url("../images/icons/close.svg");
+        background-repeat: no-repeat;
+        height: px-to-rem(22px);
+        width: px-to-rem(22px);
+        left: 0;
+        top: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .ui-dialog-titlebar-close {
+        background-color: transparent;
+        border: 0 none;
+        border-radius: 0;
+        height: px-to-rem(20px);
+        margin: 0;
+        opacity: 1;
+        padding: 0;
+        right: px-to-rem(20px);
+        top: px-to-rem(22px);
+        width: px-to-rem(22px);
+
+        span {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .ui-dialog-content {
+        padding: 0 px-to-rem(40px) px-to-rem(40px);
+    }
+}
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}

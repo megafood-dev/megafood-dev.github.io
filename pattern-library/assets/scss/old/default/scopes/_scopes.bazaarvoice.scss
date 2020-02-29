@@ -1,0 +1,11 @@
+$ns: 's-bazaarvoice-reviews';
+
+.#{$ns} {
+    &--summary {
+        margin-top: px-to-rem(12px);
+    }
+
+    &--category {
+        margin-bottom: px-to-rem(40px);
+    }
+}

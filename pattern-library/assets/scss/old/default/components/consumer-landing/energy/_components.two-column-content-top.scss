@@ -1,0 +1,90 @@
+/* ============================================================================
+Two Column Energy Consumer Landing - Currently used for two-column-content-top.isml
+============================================================================ */
+
+$ns: c-two-column-content-top;
+
+.#{$ns} {
+    padding-bottom: px-to-rem(113px);
+
+    @media ($breakpoint-ml) {
+        padding-bottom: px-to-rem(13px);
+    }
+
+    &__wrapper {
+        margin-bottom: px-to-rem(32px);
+        
+        @media ($breakpoint-ml) {
+            margin-bottom: px-to-rem(80px);
+        }
+    }
+
+    &__title {
+        font-family: Montserrat;
+        font-size: px-to-rem(26px);
+        font-weight: 600;
+        line-height: 1.19;
+        letter-spacing: px-to-em(2.6px);
+        text-align: center;
+        color: #074b26;
+        padding-bottom: px-to-rem(16.5px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(36px);
+            letter-spacing: px-to-em(3.6px);
+            padding-bottom: px-to-rem(52px);
+        }
+    }
+
+    &__body {
+        font-family: Montserrat;
+        font-size: px-to-rem(18px);
+        line-height: 1.67;
+        letter-spacing: px-to-em(1.8px);
+        text-align: center;
+        color: #074b26;
+        padding-bottom: px-to-rem(12px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(24px);
+            line-height: 1.25;
+            letter-spacing: px-to-em(2.4px);
+            padding-bottom: px-to-rem(42px);
+        }
+    }
+
+    &__btn {
+        margin: 0 auto;
+        font-size: px-to-rem(20px);
+        width: px-to-rem(284px);
+        height: px-to-rem(54px);
+        line-height: 2.9;
+        background-color: #004b24;
+        text-align: center;
+
+        a {
+            color: #ffffff;
+        }
+    }
+
+    &__img {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+
+        @media ($breakpoint-ml) {
+            margin: 0;
+        }
+    }
+
+    &__col-right {
+        padding-top: 1rem;
+        
+        @media ($breakpoint-ml) {
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

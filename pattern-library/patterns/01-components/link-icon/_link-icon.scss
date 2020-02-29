@@ -1,0 +1,31 @@
+.link-icon {
+    position: relative;
+    display: block;
+    padding-left: px-to-rem(38px);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    &.store {
+        &::before {
+            height: px-to-rem(22px);
+            width: px-to-rem(18px);
+            background-image: url('../../assets/img/location.svg');
+        }
+    }
+
+    &.email {
+        &::before {
+            height: px-to-rem(16px);
+            width: px-to-rem(22px);
+            background-image: url('../../assets/img/email.svg');
+        }
+    }
+}

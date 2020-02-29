@@ -1,0 +1,31 @@
+<section class="hp-banner {{position-classes}}" {{#if bkgd}}style="background-color: {{bkgd-color}};"{{/if}}>
+    {{#if overlay}}
+        <picture>
+            <source media="(min-width: 81.25em)" srcset="https://via.placeholder.com/1360x453">
+            <source media="(min-width: 57.563em)" srcset="https://via.placeholder.com/1299x433">
+            <source media="(min-width: 48em)" srcset="https://via.placeholder.com/920x306">
+            <source media="(min-width: 23.438em)" srcset="https://via.placeholder.com/767x511">
+            <img src="https://via.placeholder.com/374x249" alt="descriptive alt text here">
+        </picture>
+    {{else}}
+        <div>
+            <img srcset="https://via.placeholder.com/767x511 767w,
+                         https://via.placeholder.com/680x453 680w,
+                         https://via.placeholder.com/374x249 374w
+                        "
+                 sizes="(min-width: 48em) 50vw,
+                        (min-width: 23.438em) 100vw
+                       "
+                 src="https://via.placeholder.com/374x249"
+                 alt="descriptive alt text here">
+        </div>
+    {{/if}}
+
+    <div class="text {{#if bkgd}}bkgd{{/if}}" {{#if bkgd}}{{#if overlay}}style="background-color: {{bkgd-color}};"{{/if}}{{/if}}>
+        <div>
+            <h2>{{title}}</h2>
+            <p>{{description}}</p>
+            {{> @primary-cta text="Shop Now"}}
+        </div>
+    </div>
+</section>

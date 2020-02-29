@@ -1,0 +1,145 @@
+/* ============================================================================
+   Sweet Certifications
+   ============================================================================ */
+
+$ns: c-sweet-certifications;
+
+.#{$ns} {
+    position: relative;
+
+    &::after {
+        background-image: url('../images/home/rugged-bottom-border.png');
+        content: ""; 
+        display: block;
+        height: px-to-rem(14px);
+        position: absolute;
+        z-index: 10;
+        bottom: px-to-rem(-7px);
+        width: 100%;
+    }
+
+    &__content {
+        color: $kaitoke-green;
+        display: flex;
+        flex-direction: column-reverse;
+        font-family: $font-family-primary;
+        padding-bottom: px-to-rem(23px);
+        position: relative;
+        text-align: left;
+        width: 100%;
+
+        @media ($breakpoint-ml) {
+            flex-direction: column;
+            justify-content: center;
+            padding-top: px-to-rem(43px);
+        }
+
+        @media ($breakpoint-lg) {
+            align-items: center;
+            flex-direction: row;
+            padding-top: px-to-rem(13px);
+        }
+    }
+
+    &:hover {
+        color: $kaitoke-green;
+    }
+
+    &__body {
+        display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        @media ($breakpoint-lg) {
+            justify-content: flex-end;
+            max-width: calc(100% - #{px-to-rem(306px)});
+            text-align: right;
+        }
+    }
+
+    &__logo {
+        padding: px-to-rem(7px);
+        vertical-align: middle;
+
+        @media ($breakpoint-ml) {
+            padding: 0 px-to-rem(11px);
+        }
+    }
+
+    &__image {
+        display: block;
+        max-width: px-to-rem(54px);
+    }
+
+    &__heading {
+        @extend .c-banner-heading;
+        margin: px-to-rem(10px) auto 0;
+        position: relative;
+
+        @media ($breakpoint-lg) {
+            margin: 0 0 0 px-to-rem(42px);
+        }
+    }
+
+    &__heading1 {
+        @extend .c-banner-heading__one;
+        font-size: px-to-rem(60px);
+        line-height: 0.83;
+        position: relative;
+        top: px-to-rem(20px);
+        left: px-to-rem(30px);
+        transform: rotate(-11deg);
+        -webkit-transform: rotate(-11deg);
+
+        @media ($breakpoint-ml) {
+            left: px-to-rem(110px);
+            text-align: left;
+            top: 0;
+        }
+    }
+    &__heading2 {
+        @extend .c-banner-heading__two;
+        font-size: px-to-rem(80px);
+        line-height: 0.88;
+
+        @media ($breakpoint-ml) {
+            text-align: left;
+        }
+    }
+
+    &__links {
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(20px);
+        font-weight: 700;
+        letter-spacing: px-to-em(0.6px);
+        line-height: 1.35;
+        position: relative;
+        top: px-to-rem(-10px);
+        text-align: right;
+    }
+}
+
+.#{$ns}--secondary {
+    .#{$ns} {
+        &__heading {
+            order: 0;
+
+            @media ($breakpoint-lg) {
+                margin-right: px-to-rem(42px);
+                margin-left: 0;
+            }
+        }
+
+        &__body {
+            order: 1;
+        }
+    }
+}

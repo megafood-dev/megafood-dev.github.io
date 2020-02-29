@@ -1,0 +1,280 @@
+.block-content-group {
+    padding-bottom: px-to-rem(32px);
+
+    @media ($breakpoint-ml) {
+        padding-bottom: 0;
+    }
+}
+
+.header-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: px-to-rem(15px);
+    line-height: 1.67;
+    letter-spacing: px-to-em(3px);
+    color: #6f9948;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media ($breakpoint-ml) {
+        font-size: px-to-rem(38px);
+        line-height: 1.32;
+        letter-spacing: px-to-em(7.6px);
+    }
+
+    &__primary {
+        padding-bottom: px-to-rem(19px);
+
+        @media ($breakpoint-ml) {
+            padding-bottom: px-to-rem(28px);
+        }
+    }
+
+    &__secondary {
+        padding-bottom: px-to-rem(27px);
+
+        @media ($breakpoint-ml) {
+            padding-bottom: px-to-rem(66px);
+        }
+    }
+
+    &__tertiary {
+        padding-bottom: px-to-rem(34px);
+
+        @media ($breakpoint-ml) {
+            padding-bottom: px-to-rem(82px);
+        }
+    }
+
+    &__quaternary {
+        padding-bottom: px-to-rem(39px);
+
+        @media ($breakpoint-ml) {
+            padding-bottom: px-to-rem(91px);
+        }
+    }
+}
+
+.block-img {
+    &__grey-border-circle {
+        border-radius: 50%;
+        border: 2px solid $silver;
+    }
+}
+
+.block-title {
+    &__primary {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: px-to-rem(12px);
+        line-height: 1.33;
+        color: #1f5733;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: px-to-rem(20px);
+        padding-top: px-to-rem(7px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(24px);
+            padding-bottom: 0;
+            padding-top: px-to-rem(17px);
+        }
+    }
+
+    &__secondary {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: px-to-rem(11px);
+        line-height: 1.33;
+        color: #215734;
+        text-align: center;
+        padding-top: px-to-rem(13px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(22px);
+            padding-top: px-to-rem(27px);
+        }
+    }
+
+    &__tertiary {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: px-to-rem(10px);
+        line-height: 1.33;
+        text-align: center;
+        padding-top: px-to-rem(7px);
+        color: #393737;
+        padding-bottom: px-to-rem(20px);
+        text-transform: uppercase;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(19.5px);
+            padding-top: px-to-rem(17px);
+            padding-bottom: 0;
+        }
+    }
+}
+
+.block-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: px-to-rem(8px);
+    color: #4f4f4f;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.33;
+
+    @media ($breakpoint-ml) {
+        font-size: px-to-rem(16px);
+    }
+}
+
+.block-text {
+    &__primary {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: px-to-rem(11px);
+        text-align: center;
+        color: #4f4f4f;
+        padding-bottom: px-to-rem(12px);
+        padding-left: px-to-rem(60px);
+        padding-right: px-to-rem(60px);
+        line-height: 1.33;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(22px);
+            padding-bottom: px-to-rem(68px);
+            padding-left: 0;
+            padding-right: 0;
+            max-width: px-to-rem(1016px);
+            margin: 0 auto;
+        }
+    }
+
+    &__secondary {
+        font-family: 'Montserrat', sans-serif;
+        font-size: px-to-rem(8px);
+        color: #4f4f4f;
+        font-weight: 500;
+        padding-top: px-to-rem(15px);
+        line-height: 1.33;
+        max-width: px-to-rem(250px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(16px);
+            max-width: px-to-rem(316px);
+        }
+
+        &-bold {
+            font-family: 'Montserrat', sans-serif;
+            font-size: px-to-rem(8px);
+            font-weight: 600;
+            line-height: 1.33;
+            color: #4f4f4f;
+            text-align: left;
+            width: 100%;
+            max-width: px-to-rem(316px);
+
+            @media ($breakpoint-ml) {
+                font-size: px-to-rem(16px);
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 600;
+        color: #054a25;
+        text-decoration: underline;
+    }
+
+    &__container {
+        margin: 0 auto;
+        max-width: px-to-rem(768px);
+    }
+}
+
+.six-block-row {
+    padding-bottom: px-to-rem(40px);
+
+    @media ($breakpoint-ml) {
+        padding-bottom: px-to-rem(82px);
+    }
+
+    div {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-bottom: px-to-rem(22px);
+
+        @media ($breakpoint-ml) {
+            padding-left: 2.5625rem;
+            padding-right: 2.5625rem;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.explore-our-stories-block {
+    padding-right: 0.53125rem;
+    padding-left: 0.53125rem;
+    
+    @media ($breakpoint-ml) {
+        padding-right: 1.09375rem;
+        padding-left: 1.09375rem;
+    }
+
+    img {
+        max-width: px-to-rem(160px);
+        
+        @media ($breakpoint-ml) {
+            max-width: 100%;
+        }
+    }
+}
+
+.meet-our-experts-block {
+    padding-right: 0.375rem;
+    padding-left: 0.375rem;
+    
+    @media ($breakpoint-ml) {
+        padding-right: 1.1rem;
+        padding-left: 1.1rem;
+    }
+
+    img {
+        max-width: px-to-rem(110px);
+        
+        @media ($breakpoint-ml) {
+            max-width: 100%;
+        }
+    }
+}
+
+.start-shopping-block {
+    padding-right: 1.125rem;
+    padding-left: 1.125rem;
+
+    img {
+        max-width: px-to-rem(160px);
+        
+        @media ($breakpoint-ml) {
+            max-width: 100%;
+        }
+    }
+}
+
+.four-block-container {
+    padding-bottom: px-to-rem(20px);
+    
+    @media ($breakpoint-ml) {
+        padding-bottom: px-to-rem(100px);
+    }
+}
+
+.block-header-body-container {
+    padding-bottom: px-to-rem(20px);
+    padding-top: px-to-rem(25px);
+    
+    @media ($breakpoint-ml) {
+        padding-bottom: px-to-rem(130px);
+        padding-top: px-to-rem(60px);
+    }
+}

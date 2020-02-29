@@ -1,0 +1,295 @@
+/* ============================================================================
+Grid Products Graphical Asset
+============================================================================ */
+
+$ns: c-grid-products-graphical-asset;
+
+.#{$ns} {
+    &__item {
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media ($breakpoint-lg) {
+            margin-top: px-to-rem(30px);
+        }
+
+        &:nth-of-type(1) {
+            background-color: $maroon-flush;
+        }
+
+        &:nth-of-type(2) {
+            background-color: $plum-darker;
+        }
+
+        &:nth-of-type(3) {
+            background-color: $tango;
+        }
+
+        &:nth-of-type(4) {
+            background-color: $san-marino;
+        }
+
+        &:nth-of-type(5) {
+            background-color: $plum;
+        }
+
+        &:nth-of-type(6) {
+            background-color: $alizarin-crimson;
+        }
+
+        &:nth-of-type(7) {
+            background-color: $sun;
+        }
+
+        &:nth-of-type(8) {
+            background-color: $school-bus-yellow;
+        }
+    }
+
+    &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        padding: px-to-rem(24px);
+        position: relative;
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: px-to-rem(440px);
+        }
+    }
+
+    &__content-inner {
+        &.front {
+            top: 50%;
+            left: 50%;
+            padding: 0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+            @media ($breakpoint-ml) {
+                padding: 0;
+            }
+
+            img {
+                width: px-to-rem(218px);
+
+                @media ($breakpoint-ml) {
+                    width: px-to-rem(222px);
+                }
+            }
+        }
+    }
+
+    &__content-inner.front {
+        z-index: 1;
+    }
+
+    &__content-inner.back:not(:first-child) {
+        z-index: -1;
+    }
+
+    &__content-inner.back {
+        padding: 60px 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &:hover {
+        color: white;
+
+        @media ($breakpoint-ml) {
+            .c-grid-products-graphical-asset__content-inner.front {
+                z-index: -1;
+            }
+
+            .c-grid-products-graphical-asset__content-inner.back {
+                z-index: 1;
+            }
+        }
+    }
+
+    &__image-wrapper {
+        line-height: 1;
+        text-align: center;
+    }
+
+    &__heading {
+        font-family: 'Northwoods-Bold', $font-family-secondary;
+        font-size: px-to-rem(27px);
+        letter-spacing: px-to-em(1px);
+        text-align: center;
+        margin-bottom: px-to-rem(10px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(26px);
+        }
+
+        span {
+            display: block;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+    &__subheading {
+        font-family: 'Northwoods-Bold', $font-family-secondary;
+        font-size: px-to-rem(18px);
+        letter-spacing: px-to-em(1px);
+        text-align: center;
+    }
+
+    &__body--extended,
+    &__body {
+        font-family: 'Northwoods-Regular';
+        font-size: px-to-rem(16px);
+        line-height: 1.5;
+        max-width: px-to-rem(380px);
+    }
+
+    &__cta {
+        @media ($breakpoint-ml) {
+            margin-bottom: px-to-rem(30px);
+        }
+
+        .c-button--pill{
+            margin-top: px-to-rem(24px);
+        }
+    }
+
+    &__eyebrow-header{
+        font-size: px-to-rem(26px);
+        color: rgba(0, 0, 0, 0.35);
+        text-transform: uppercase;
+        font-weight: 500;
+        display: none;
+        
+        @media ($breakpoint-ml) {
+            display: block;
+        }
+    }
+}
+
+.c-grid-products-graphical-container{
+    .back .o-layout__item{
+        max-width: px-to-rem(360px);
+    }
+
+    .o-layout__item {
+        padding-left: 0;
+    }
+}
+
+.c-grid-products-graphical-container .o-wrapper.o-wrapper--full-width {
+    padding-right: 0;
+    max-width: 100%;
+}
+
+/* Modifiers
+============================================================================ */
+.#{$ns} {
+    &--button {
+        padding-bottom: px-to-rem(40px);
+        position: relative;
+        width: 100%;
+
+        @media ($breakpoint-lg) {
+            margin-top: px-to-rem(30px);
+        }
+    }
+
+    &__content-secondary,
+    &--secondary {
+        background: none;
+        background-position: center bottom;
+        background-repeat: repeat;
+        background-size: cover;
+        color: white;
+        font-family: $font-family-secondary;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    &__content-secondary {
+        min-height: px-to-rem(202px);
+    }
+
+    &--secondary {
+        min-height: px-to-rem(436px);
+
+        &.c-slot-container {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.c-grid-products__content-block {
+    .c-grid-products-graphical-asset__heading {
+        font-size: px-to-rem(48px);
+        text-transform: uppercase;
+    }
+
+    .c-grid-products-graphical-asset__body {
+        font-size: px-to-rem(27px);
+        text-transform: uppercase;
+
+        p {
+            font-family: 'Northwoods-Regular';
+            font-size: px-to-rem(16px);
+        }
+    }
+}
+
+@media screen and (min-width: 57.5625em) {
+    .o-layout--flex {
+        flex-direction: row;
+    }
+
+    .asset--secondary {
+        max-width: none;
+    }
+
+    ._image-wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 68.75em) {
+    .asset--secondary ._content {
+        position: relative;
+        width: 100%;
+    }
+
+    .c-slot-container.c-grid-products-graphical-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .c-slot-container--secondary {
+        background-color: none;
+    }
+}
+
+@media screen and (min-width: 68.75em) and (max-width: 87.5em) {
+    .#{$ns} {
+        &__heading {
+            font-size: px-to-rem(20px) !important;
+        }
+
+        &__content-inner.back {
+            padding: px-to-rem(40px) 0;
+        }
+    }
+}   

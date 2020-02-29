@@ -1,0 +1,161 @@
+/* ============================================================================
+   Product Block
+   ============================================================================ */
+
+$ns: c-product-block;
+
+.#{$ns} {
+    display: flex;
+    align-items: flex-start;
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    // Product Block Image Wrapper
+    &__image-wrapper {
+        @include pxl-aspect-image-wrapper();
+        background-color: $wild-sand;
+        margin-right: px-to-rem(20px);
+        position: relative;
+        width: px-to-rem(67px);
+    }
+
+    // Product Block Image
+    &__image {
+        @include pxl-aspect-image();
+        padding: px-to-rem(6px);
+    }
+
+    // Product Block Content
+    &__content {
+        width: calc(100% - #{px-to-rem(87px)});
+
+        @media ($breakpoint-lg) {
+            max-width: px-to-rem(261px);
+            width: calc(100% - #{px-to-rem(90px)});
+        }
+    }
+
+    // Product Block Header
+    &__header {
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(17px);
+        font-weight: 500;
+        line-height: 1.2;
+
+        &-link {
+            color: $kaitoke-green;
+
+            &:hover {
+                color: $vida-loca;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__variants,
+    &__promo {
+        margin-top: px-to-rem(5px);
+    }
+
+    // Product Block Promo
+    &__promo {
+        color: $kaitoke-green;
+        font-weight: 500;
+    }
+
+    // Product Block Row
+    &__row {
+        display: flex;
+        font-size: px-to-rem(15px);
+    }
+
+    // Product Block Item
+    &__item {
+
+        // Product Block Right Aligned Item
+        &-right {
+            margin-left: auto;
+        }
+    }
+
+    // Product Block Price
+    &__price {
+        color: $vida-loca;
+        font-size: px-to-rem(15px);
+        font-weight: 600;
+    }
+
+    .og-offer {
+        width: 100%;
+        padding-left: px-to-rem(87px);
+    }
+}
+
+/* Modifiers
+   ============================================================================ */
+
+.#{$ns}--bundle {
+    padding-left: 0;
+
+    @media ($breakpoint-lg) {
+        padding-left: px-to-rem(67px);
+    }
+}
+
+.#{$ns}--mobile {
+    position: relative;
+
+    .#{$ns} {
+        &__image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media ($breakpoint-lg) {
+                position: relative;
+            }
+        }
+
+        &__content {
+            margin-left: px-to-rem(92px);
+
+            @media ($breakpoint-lg) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.#{$ns}--content-only { 
+    .#{$ns} {
+        &__content {
+            margin-left: px-to-rem(92px);
+
+            @media ($breakpoint-lg) {
+                margin-left: px-to-rem(110px);
+            }
+        }
+    }
+}
+
+.#{$ns}--full-width {
+    max-width: none;
+    width: 100%;
+
+    .og-offer {
+        padding-left: 0;
+    }
+}
+
+.#{$ns}--tertiary {
+    margin-bottom: px-to-rem(10px);
+
+    .#{$ns} {
+
+        &__image-wrapper {
+            width: px-to-rem(80px);
+        }
+    }
+}

@@ -1,0 +1,219 @@
+/* ============================================================================
+   Dropdowns
+   ============================================================================ */
+
+$ns: c-dropdown;
+
+.#{$ns} {
+    background-color: $white;
+    font-family: $font-family-secondary;
+    text-align: left;
+
+    @media ($breakpoint-ml) {
+         border: 1px solid $athens-gray;
+         border-bottom: none;
+    }
+
+    &::after {
+        background-image: url('../images/header/bg-border-ragged.png');
+        background-position: center bottom;
+        background-repeat: repeat-x;
+        content: "";
+        display: block;
+        height: px-to-rem(13px);
+        position: absolute;
+        bottom: px-to-rem(-8px);
+        width: 100%;
+    }
+
+    // Dropdown Wrapper
+    &__wrapper {
+        padding-bottom: px-to-rem(15px);
+
+        ul:last-child li:last-child {
+            border-bottom: 0;
+        }
+
+        @media ($breakpoint-ml) {
+            padding: px-to-rem(36px) 0 px-to-rem(30px) px-to-rem(54px);
+            display: flex;
+        }
+    }
+
+    &__section {
+        display: none;
+        margin-left: px-to-rem(15px);
+
+        @media ($breakpoint-ml) {
+            display: block;
+            margin-left: 0;
+        }
+
+        &.is-active {
+            display: block;
+        }
+
+        .#{$ns}__section {
+            margin-top: px-to-rem(10px);
+
+            @media ($breakpoint-ml) {
+                margin-top: 0;
+            }
+        }
+
+        &--secondary {
+            @media ($breakpoint-ml) {
+                display: flex;
+            }
+
+            &.is-active {
+                @media ($breakpoint-ml) {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    // Dropdown Item Wrapper
+    &__item-wrapper,
+    ul{
+        list-style: none;
+
+        @media ($breakpoint-ml) {
+            margin-right: px-to-rem(40px);
+        }
+    }
+
+    h2 {
+        font-size: px-to-rem(18px);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(32px);
+            margin-bottom: px-to-rem(17px);
+
+            &:hover {
+                cursor: default;
+            }
+        }
+
+
+        &.is-active {
+            color: $mango-tango-hover;
+
+            @media ($breakpoint-ml) {
+                color: $kaitoke-green;
+            }
+        }
+
+        .c-navigation-global__icon {
+            margin-top: px-to-rem(3px);
+        }
+    }
+
+    // Dropdown Item
+    &__item, li {
+        padding-top: px-to-rem(15px);
+        padding-bottom: px-to-rem(15px);
+
+        @media ($breakpoint-ml) {
+            padding: px-to-rem(8px) 0 px-to-rem(13px);
+        }
+
+        &:not(:last-child) {
+            border-bottom: solid 1px $athens-gray;
+
+            @media ($breakpoint-ml) {
+                border-bottom: 0;
+            }
+        }
+
+        // Dropdown Child Item
+        &--child {
+            font-size: px-to-rem(13px);
+            margin-bottom: px-to-rem(9px);
+        }
+    }
+
+    // Dropdown Feature Categories
+    &__feature {
+        display: none;
+        max-width: px-to-rem(315px);
+        padding: px-to-rem(35px) px-to-rem(35px) px-to-rem(30px) 0;
+
+        @media ($breakpoint-ml) {
+            display: block;
+        }
+
+        a {
+            color: $mango-tango;
+            display: block;
+            font-size: px-to-rem(20px);
+            font-weight: bold;
+            letter-spacing: px-to-em(0.6px);
+            text-align: center;
+            white-space: normal !important;
+
+            &:hover {
+                color: $mango-tango-hover;
+            }
+        }
+        p {
+            color: $gray;
+            font-size: px-to-rem(20px);
+            font-weight: 500;
+            text-align: center;
+        }
+     }
+
+    // Dropdown Link
+    &__link,
+    a {
+        color: $kaitoke-green;
+        font-size: px-to-rem(17px);
+        font-weight: 500;
+        letter-spacing: px-to-em(1px);
+
+        &:hover {
+            color: $mango-tango-hover;
+        }
+
+        @media ($breakpoint-ml) {
+            white-space: nowrap;
+        }
+    }
+
+    // Dropdown Level
+    &__level {
+        list-style: none;
+        margin-top: px-to-rem(9px);
+    }
+}
+
+/* Modifier classes
+ * ============================================================================ */
+
+/**
+ * A modifier set up to align the dropdown to the left
+ * of the wrapper
+ */
+
+.#{$ns}--left {
+    @media ($breakpoint-lxl) {
+        left: 0;
+    }
+}
+
+/**
+ * A modifier set up to align the dropdown to the right
+ * of the wrapper
+ */
+
+.#{$ns}--right {
+    @media ($breakpoint-lxl) {
+        right: 0;
+    }
+}

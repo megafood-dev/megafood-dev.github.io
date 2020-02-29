@@ -1,0 +1,123 @@
+.benefits {
+    background-color: $wild-sand;
+    text-align: center;
+    padding: px-to-rem(24px) $gutter-sm px-to-rem(51px) $gutter-sm;
+    margin: 0 (-$gutter-sm) px-to-rem(40px) (-$gutter-sm);
+
+    img {
+        display: block;
+        max-width: px-to-rem(121px);
+        margin: 0 auto px-to-rem(24px) auto;
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: px-to-rem(28px);
+        text-transform: uppercase;
+        color: $zuccini;
+        max-width: px-to-rem(600px);
+        margin: 0 auto px-to-rem(34px) auto;
+    }
+
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: px-to-rem(18px);
+        text-transform: uppercase;
+    }
+
+    ul {
+        max-width: px-to-rem(400px);
+        margin: 0 auto;
+    }
+
+    li {
+        margin-bottom: px-to-rem(34px);
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: px-to-rem(18px);
+        color: $emperor;
+        margin-bottom: 0;
+    }
+
+    @media ($breakpoint-m) {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        padding: px-to-rem(51px) ($gutter-sm);
+
+        > div {
+            width: calc(50% - (#{$gutter-sm}/2));
+            max-width: px-to-rem(420px);
+            align-self: center;
+        }
+
+        img {
+            margin: 0 0 px-to-rem(51px) 0;
+        }
+
+        h2 {
+            font-size: px-to-rem(32px);
+            max-width: none;
+            margin: 0;
+        }
+
+        ul {
+            width: calc(50% - (#{$gutter-sm}/2));
+            margin: 0;
+        }
+    }
+
+    @media ($breakpoint-ml) {
+        padding: px-to-rem(120px) ($gutter-lg);
+        margin: 0 (-$gutter-lg) px-to-rem(51px) (-$gutter-lg);
+    
+        > div {
+            width: calc(50% - (#{$gutter-lg}/2));
+        }
+
+        ul {
+            width: calc(50% - (#{$gutter-lg}/2));
+        }
+    }
+
+    @media ($breakpoint-lg) {
+        justify-content: flex-start;
+        margin-bottom: px-to-rem(80px);
+
+        > div {
+            max-width: px-to-rem(486px);
+            margin-right: 9.13%;
+        }
+
+        ul {
+            width: 36.96%;
+        }
+
+        h2 {
+            font-size: px-to-rem(48px);
+        }
+
+        h3, p {
+            font-size: px-to-rem(24px);
+            line-height: 1.33;
+        }
+    }
+
+    @media ($breakpoint-lxl) {
+        padding: px-to-rem(120px) 1000%;
+        margin: 0 -1000% px-to-rem(80px) -1000%;
+
+        img {
+            max-width: px-to-rem(242px);
+        }
+    }
+}

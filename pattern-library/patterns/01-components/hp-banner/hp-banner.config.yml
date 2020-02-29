@@ -1,0 +1,64 @@
+title: HP Banner
+status: done
+variants: [
+  {
+    "name": "default",
+    "status": "done",
+    "context": {
+      "title": "Overlay Center",
+      "description": "Some descriptive text here.",
+      "position-classes": "overlay center",
+      "bkgd": false,
+      "bkgd-color": "",
+      "overlay": true
+    }
+  },
+  {
+    "name": "overlay left",
+    "status": "done",
+    "context": {
+      "title": "Overlay Left",
+      "description": "Some descriptive text here.",
+      "position-classes": "overlay left",
+      "bkgd": true,
+      "bkgd-color": "#732e4a",
+      "overlay": true
+    }
+  },
+  {
+    "name": "overlay right",
+    "status": "done",
+    "context": {
+      "title": "Overlay Right",
+      "description": "Some descriptive text here.",
+      "position-classes": "overlay right",
+      "bkgd": false,
+      "bkgd-color": "",
+      "overlay": true
+    }
+  },
+  {
+    "name": "left",
+    "status": "done",
+    "context": {
+      "title": "Left",
+      "description": "Some descriptive text here.",
+      "position-classes": "left",
+      "bkgd": false,
+      "bkgd-color": "",
+      "overlay": false
+    }
+  },
+  {
+    "name": "right",
+    "status": "done",
+    "context": {
+      "title": "Right",
+      "description": "Some descriptive text here.",
+      "position-classes": "right",
+      "bkgd": true,
+      "bkgd-color": "#5C8118",
+      "overlay": false
+    }
+  }
+]

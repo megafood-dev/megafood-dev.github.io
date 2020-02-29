@@ -1,0 +1,13 @@
+.serving-details {
+    list-style-type: none;
+    margin-bottom: px-to-rem(24px);
+
+    li {
+        font-size: px-to-rem(18px);
+        letter-spacing: px-to-em(0.4px);
+    }
+
+    span {
+        color: #4e8410;
+    }
+}

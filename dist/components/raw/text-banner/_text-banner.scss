@@ -1,0 +1,41 @@
+.text-banner {
+    background-color: $zuccini;
+    color: $white;
+    font-family: 'Montserrat', sans-serif;
+    padding: px-to-rem(72px) $gutter-sm;
+    margin-bottom: px-to-rem(32px);
+
+    h1 {
+        color: $white;
+    }
+
+    .header {
+        @extend h1;
+        color: $white;
+    }
+
+    .eyebrow {
+        @extend p;
+        color: $white;
+        margin-bottom: px-to-rem(24px);
+    }
+
+    .button {
+        margin-right: px-to-rem(8px);
+        margin-bottom: px-to-rem(8px);
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+    @media ($breakpoint-m) {
+        padding: px-to-rem(72px) calc(100% + #{$gutter-lg});
+        margin-left: -100%;
+        margin-right: -100%;
+    
+        p {
+            max-width: px-to-rem(661px);
+        }
+    }
+}

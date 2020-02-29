@@ -1,0 +1,101 @@
+/* ============================================================================
+Content Slider Energy Consumer Landing - Currently used for content-slider.isml
+============================================================================ */
+
+$ns: c-content-slider;
+
+.#{$ns} {
+    padding-bottom: 2rem;
+
+    &__section-title {
+        font-family: Montserrat;
+        font-size: px-to-rem(24px);
+        font-weight: 600;
+        line-height: 1.81;
+        letter-spacing: px-to-em(2.4px);
+        text-align: center;
+        color: #074b26;
+        padding-bottom: px-to-rem(39px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(36px);
+            line-height: 1.5;
+            letter-spacing: px-to-em(3.6px);
+            padding-bottom: px-to-rem(69px);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 1rem;
+        color: #074b26;
+    }
+
+    &__foreground-img {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        max-width: px-to-rem(300px);
+    }
+
+    &__slides {
+        margin: 0 auto;
+        max-width: px-to-rem(1440px);
+        padding: 0 px-to-rem(50px);
+
+        button.slick-arrow {
+            background-color: transparent;
+            color: $sun;
+            cursor: pointer;
+            font-size: px-to-rem(30px);
+            position: absolute;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            height: 90%;
+
+            span {
+                font-size: 0;
+            }
+        }
+
+        button.slick-prev {
+            left: 0;
+        }
+
+        button.slick-next {
+            right: 0;
+        }
+
+        .slick-dots {
+            text-align: center;
+            padding-top: 2.0625rem;
+
+            li {
+                display: inline-block;
+                cursor: pointer;
+                background-color: $light-gray;
+                font-size: 0;
+                width: px-to-rem(11px);
+                height: px-to-rem(11px);
+                border-radius: px-to-rem(6px);
+                margin-left: px-to-rem(10px);
+
+                button {
+                    display: none;
+                }
+            }
+
+            li.slick-active {
+                background-color: $sun;
+            }
+        }
+    }
+
+    &__slide {
+        @media ($breakpoint-ml) {
+            margin: 0 px-to-rem(15px);
+        }
+    }
+}

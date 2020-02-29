@@ -1,0 +1,35 @@
+.bonus-product-list {
+	.quantity-error {
+		display: none;
+	}
+
+	.bonus-product-list-footer {
+		@extend %clearfix;
+        border-top: 1px solid $wild-sand;
+        padding-top: 1rem;
+		padding-bottom: 1rem;
+		.add-to-cart-bonus {
+			float: right;
+		}
+	}
+
+	.selected-bonus-item {
+		margin: 1rem 0;
+		position: relative;
+		.item-name {
+			font-weight: bold;
+		}
+		.remove-link {
+			cursor: pointer;
+		}
+	}
+}
+
+.bonus-discount-container {
+	.promo-details {
+		display: none;
+		&.visible {
+			display: block;
+		}
+	}
+}

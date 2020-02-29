@@ -1,0 +1,93 @@
+.side-nav {
+    @extend details;
+
+    .side-nav-btn {
+        @include remove-button();
+        position: relative;
+        display: block;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: px-to-rem(16px);
+        line-height: 1.5;
+        color: $zuccini;
+        list-style-type: none;
+        padding: px-to-rem(12px) $gutter-sm px-to-rem(12px) ($gutter-sm + px-to-rem(20px));
+        margin-bottom: 0;
+        cursor: pointer;
+
+        &::before {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: px-to-rem(24px);
+            padding-right: px-to-rem(20px);
+        }
+    }
+
+    .side-nav-title {
+        display: none;
+    }
+
+    &.open {
+        background-color: $wild-sand;
+        padding-bottom: px-to-rem(12px);
+
+        .side-nav-btn {
+            &::before {
+                content: '-';
+            }
+        }
+    }
+
+    nav {
+        padding-left: ($gutter-sm + px-to-rem(20px));
+    }
+
+    ul {
+        margin-left: 0;
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        padding: px-to-rem(8px) 0;
+
+        &.is-active {
+            color: $mango-tango-hover;
+        }
+
+        &.link-icon {
+            padding-left: px-to-rem(38px);
+        }
+    }
+
+    @media ($breakpoint-ml) {
+        padding: 0;
+        border: none;
+        margin-bottom: $bottom-margin;
+
+        .side-nav-btn {
+            display: none;
+        }
+
+        .side-nav-title {
+            display: block;
+            font-size: px-to-rem(24px);
+            font-weight: 500;
+            padding: 0;
+            margin-bottom: px-to-rem(16px);
+
+            &::before {
+                content: none;
+            }
+        }
+
+        nav {
+            display: block;
+            padding-left: 0;
+        }
+    }
+}

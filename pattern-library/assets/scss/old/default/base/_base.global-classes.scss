@@ -1,0 +1,61 @@
+main, #main {
+    position: relative;
+    z-index: $z-index-main;
+}
+
+html,
+body {
+    // Needed for drawer menu
+    overflow-x: hidden;
+}
+
+body {
+    right: 0;
+    transition: right 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    @media ($breakpoint-lxl) {
+        transition: none;
+    }
+
+    &::before {
+        background-color: rgba(42, 35, 25, 0);
+        content: "";
+        display: none;
+        height: 100%;
+        position: absolute;
+            z-index: 10000;
+        width: 100%;
+
+        @media ($breakpoint-lxl) {
+            display: none;
+        }
+    }
+
+}
+
+
+html.is-active {
+    background-color: white;
+
+    body {
+        background-color: white;
+        height: 100%;
+        position: relative;
+        right: px-to-rem(235px);
+        width: 100%;
+
+        @media ($breakpoint-lxl) {
+            height: auto;
+            right: 0;
+        }
+
+        &::before {
+            background-color: rgba(42, 35, 25, .7);
+            display: block;
+
+            @media ($breakpoint-lxl) {
+                display: none;
+            }
+        }
+    }
+}

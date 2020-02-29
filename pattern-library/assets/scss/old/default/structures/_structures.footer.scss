@@ -1,0 +1,175 @@
+$ns: st-footer;
+
+.#{$ns} {
+    padding-bottom: px-to-rem(27px);
+
+    &__store-finder {
+        background-color: $wild-sand;
+        margin-bottom: px-to-rem(8px);
+        padding-top: px-to-rem(30px);
+        padding-bottom: px-to-rem(24px);
+    }
+
+    &__wrapper {
+        padding-top: px-to-rem(5px);
+        position: relative;
+
+        @media ($breakpoint-ml) {
+            margin-top: px-to-rem(50px);
+        }
+    }
+
+    &__subscription-wrapper {
+        @media ($breakpoint-ml) {
+            display: flex;
+            padding-bottom: px-to-rem(15px);
+        }
+
+        @media ($breakpoint-lg) {
+            padding-bottom: px-to-rem(18px);
+        }
+    }
+
+    &__subscription {
+        @media ($breakpoint-ml) {
+            margin-top: px-to-rem(-6px);
+            margin-left: auto;
+        }
+
+        @media ($breakpoint-lg) {
+            margin-top: px-to-rem(-22px);
+        }
+    }
+
+    &__logo {
+        max-width: px-to-rem(218px);
+        width: 100%;
+
+        &-link {
+            display: none;
+
+            @media ($breakpoint-ml) {
+                display: block;
+            }
+        }
+    }
+
+    &__navigation {
+        padding-bottom: px-to-rem(30px);
+        letter-spacing: px-to-em(0.41px);
+
+        @media ($breakpoint-ml) {
+            padding-bottom: 0;
+            position: absolute;
+            top: px-to-rem(101px);
+        }
+
+        @media ($breakpoint-lg) {
+            top: px-to-rem(89px);
+        }
+
+        // Targeting HTML elements due to content asset
+        ul {
+            @include pxl-list-flat();
+
+            @media ($breakpoint-ml) {
+                @include pxl-list-inline();
+            }
+        }
+
+        li + li {
+            @media ($breakpoint-ml) {
+                margin-left: px-to-rem(26px);
+            }
+
+            @media ($breakpoint-lg) {
+                margin-left: px-to-rem(26px);
+            }
+        }
+
+        a {
+            border-bottom: 1px solid $athens-gray;
+            color: $kaitoke-green;
+            display: block;
+            font-family: $font-family-secondary;
+            font-size: px-to-rem(18px);
+            font-weight: 500;
+            padding-top: px-to-rem(15px);
+            padding-bottom: px-to-rem(15px);
+
+            &:hover {
+                color: $vida-loca;
+            }
+
+            @media ($breakpoint-ml) {
+                border-bottom: 0;
+                font-size: px-to-rem(16px);
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            @media ($breakpoint-lg) {
+                font-size: px-to-rem(18px);
+            }
+        }
+    }
+
+    &__bottom-block {
+        display: flex;
+        flex-direction: column;
+
+        @media ($breakpoint-ml) {
+            align-items: flex-start;
+            flex-direction: row-reverse;
+            margin-top: px-to-rem(42px);
+        }
+    }
+
+    &__social {
+        margin-top: px-to-rem(62px);
+
+        @media ($breakpoint-ml) {
+            margin-top: 0;
+        }
+
+        ul {
+            @include pxl-list-inline();
+            text-align: center;
+        }
+
+        li {
+            vertical-align: middle;
+
+            + li {
+                margin-left: px-to-rem(15px);
+            }
+        }
+
+        img {
+            display: block;
+        }
+    }
+
+    &__copyright {
+        color: $jumbo;
+        font-family: $font-family-primary;
+        font-weight: 400;
+        font-size: px-to-rem(13px);
+        letter-spacing: px-to-em(0.5px);
+        margin-top: px-to-rem(12px);
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            margin: 0 auto 0 0;
+            text-align: left;
+        }
+
+        a {
+            color: $jumbo;
+        }
+
+        div + div {
+            margin-top: px-to-rem(3px);
+        }
+    }
+}

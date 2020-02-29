@@ -1,0 +1,275 @@
+/* ============================================================================
+   Grid Graphical Asset
+   ============================================================================ */
+
+$ns: c-grid-graphical-asset;
+
+.#{$ns} {
+    margin-top: px-to-rem(-10px);
+
+    @media ($breakpoint-lg) {
+        margin-top: px-to-rem(-30px);
+    }
+
+    &__item {
+        border: 3px solid purple;
+        color: $kaitoke-green;
+        position: relative;
+        width: 45%;
+        margin-top: px-to-rem(10px);
+    }
+
+    &:hover {
+        color: $kaitoke-green;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__heading {
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(20px);
+        font-weight: 600;
+        letter-spacing: px-to-em(0.8px);
+        line-height: 1;
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(20px);
+        }
+    }
+
+    &__image-wrapper {
+        line-height: 1;
+        margin-bottom: 0;
+        text-align: center;
+
+        @media ($breakpoint-ml) {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        display: inline-block;
+    }
+
+    // Currently only relevant for grid-secondary-graphical-asset
+    &__body {
+        color: white;
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(22px);
+        font-weight: 500;
+        letter-spacing: px-to-em(0.5px);
+        line-height: 1.14;
+        margin: px-to-rem(10px) 0 px-to-rem(13px);
+        width: 90%;
+
+        @media ($breakpoint-lg) {
+            letter-spacing: px-to-em(0.8px);
+        }
+    }
+
+    &__links {
+        ul {
+            @include pxl-list-flat();
+
+            @media ($breakpoint-ml) {
+                @include pxl-list-inline();
+                text-align: center;
+            }
+        }
+
+        // Targeting Content Asset Links
+        a,
+        span {
+            @extend .c-button;
+            border: 0;
+            display: flex;
+            font-size: px-to-rem(20px);
+            font-weight: 700;
+            letter-spacing: px-to-em(0.6px);
+            transition: background-color .25s ease;
+
+            @media ($breakpoint-ml) {
+                width: auto;
+            }
+
+            &:hover {
+                @media ($breakpoint-ml) {
+                    left: px-to-rem(-3px);
+                }
+            }
+        }
+    }
+
+    &__action {
+        margin-top: px-to-rem(24px);
+    }
+}
+
+/* Modifiers
+   ============================================================================ */
+
+.#{$ns} {
+    &--button {
+        padding-bottom: px-to-rem(40px);
+        position: relative;
+        width: 100%;
+
+        @media ($breakpoint-lg) {
+            margin-top: px-to-rem(30px);
+        }
+    }
+
+    &--secondary {
+        background-position: center bottom;
+        background-repeat: repeat-x;
+        background-size: cover;
+        color: white;
+        font-family: Northwoods, $font-family-secondary;
+        display: block;
+        margin-top: px-to-rem(5px);
+        margin-bottom: px-to-rem(5px);
+        position: relative;
+        height: 90vw;
+        width: 90vw;
+
+        @media ($breakpoint-m) {
+            width: 100%;
+            max-width: none;
+            height: 47vw;
+        }
+        
+        @media ($breakpoint-lg) {
+            height: 23vw;
+            max-height: px-to-rem(315px);
+            min-width: px-to-rem(200px);
+            min-height: px-to-rem(200px); 
+        }
+
+        &:hover {
+            color: white;
+        }
+
+        .#{$ns} {
+            &__content {
+                background-position: center center;
+                background-size: cover;
+                margin: auto;
+                position: relative;
+                height: 100%;
+                width: 100%;
+
+                @media ($breakpoint-lg) {
+                    padding-bottom: px-to-rem(45px);
+                }
+
+                .o-layout__item {
+                    padding-left: 0;
+                }
+            }
+
+            &__image-wrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+            }
+
+            &__image {
+                max-width: 79%;
+            }
+
+            &__title {
+                color: $kaitoke-green;
+                font-family: 'Northwoods-Bold', $font-family-secondary;
+                font-size: px-to-rem(21px);
+                font-weight: normal;
+                line-height: 1;
+                margin: px-to-rem(19px) auto px-to-rem(10px);
+                position: relative;
+                width: 85%;
+
+                @include pxl-media(min-width 475px max-width (768px - 1), 6) {
+                    font-size: px-to-rem(28px);
+                    margin-top: px-to-rem(30px);
+                    width: 75%;
+                }
+
+                @include pxl-media(min-width 1100px max-width 1240px, 6) {
+                    font-size: px-to-rem(16px);
+                }
+
+                @include pxl-media(min-width 768px max-width (1100px - 1), 6) {
+                    font-size: px-to-rem(26px);
+                    margin-top: px-to-rem(30px);
+                    width: 90%;
+                }
+            }
+
+            &__body {
+                color: $kaitoke-green;
+                font-size: px-to-rem(18px);
+                line-height: 1.06;
+                letter-spacing: px-to-em(0.4px);
+                margin-top: 0;
+                position: relative;
+                width: 80%;
+
+                &-additional {
+                    display: none;
+
+                    @media ($breakpoint-lg) {
+                        display: inline;
+                    }
+                }
+
+                @include pxl-media(min-width 1100px max-width (1240px - 1), 6) {
+                    font-size: px-to-rem(14px);
+                }
+
+                @include pxl-media(min-width 921px max-width (1100px - 1), 6) {
+                    font-size: px-to-rem(24px);
+                }
+            }
+
+            &__link-wrapper {
+                color: $kaitoke-green;
+                font-family: $font-family-secondary;
+                font-size: px-to-rem(18px);
+                font-weight: bold;
+                text-align: right;
+                padding-right: 1rem;
+                position: absolute;
+                width: 100%;
+                bottom: 1rem;
+
+                @include pxl-media(min-width 921px max-width (1100px - 1), 6) {
+                    font-size: px-to-rem(24px);
+                }
+
+                @include pxl-media(min-width 1100px max-width 1240px, 6) {
+                    font-size: px-to-rem(14px);
+                }
+            }
+        }
+    }
+}
+
+.grid-graphical-asset-secondary-wrapper{
+    margin: 0 auto;
+    max-width: 81.25rem;
+    padding: 0 px-to-rem(15px);
+
+    .o-layout--flex {
+        @media ($breakpoint-m) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+$ns: c-mini-cart-count;
+
+.#{$ns} {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+
+    &__link {
+        align-items: flex-end;
+        display: flex;
+        height: 100%;
+        overflow: visible;
+        position: relative;
+
+        @media ($breakpoint-ml) {
+            align-items: flex-start;
+        }
+    }
+
+    &__icon {
+        fill: $mine-shaft;
+        height: px-to-rem(18px);
+        width: px-to-rem(19px);
+    }
+
+    &__label {
+        display: none;
+
+        @media ($breakpoint-ml) {
+            color: $mine-shaft;
+            display: inline-block;
+            font-family: $font-family-primary;
+            font-size: px-to-rem(17px);
+            font-weight: 600;
+            margin-left: px-to-rem(12px);
+        }
+    }
+
+    &__int {
+        background-color: $vida-loca;
+        border: 2px solid white;
+        border-radius: 100%;
+        color: white;
+        font-family: $font-family-primary;
+        font-size: px-to-rem(12px);
+        font-weight: 700;
+        height: px-to-rem(19px);
+        line-height: 1.25;
+        position: absolute;
+        top: px-to-rem(-8px);
+        left: px-to-rem(12px);
+        text-align: center;
+        width: px-to-rem(19px);
+    }
+}

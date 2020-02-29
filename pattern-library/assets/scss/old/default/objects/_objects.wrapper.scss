@@ -1,0 +1,46 @@
+$ns: o-wrapper;
+
+/* Default/mandatory classes
+ * ============================================================================ */
+
+/**
+ * 1. Allows us to use the layout object on any type of element.
+ * 2. Adds padding around page level wrapping elements (mobile first).
+ */
+
+.#{$ns} {
+    display: block; /* [1] */
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $site-max-width;
+    padding-right: $setting-gutter / 2; /* [2] */
+    padding-left: $setting-gutter / 2; /* [2] */
+    width: 100%; /* [1] */
+
+    @media ($breakpoint-ml) {
+        padding-right: $setting-gutter; /* [2] */
+        padding-left: $setting-gutter; /* [2] */
+    }
+}
+
+
+/* Modifier classes
+ * ============================================================================ */
+
+/**
+ * Add vertical margin to the wrapper
+ */
+
+.#{$ns}--vertical {
+    margin-top: $setting-gutter;
+    margin-bottom: $setting-gutter * 2;
+
+    @media ($breakpoint-ml) {
+        margin-top: $setting-gutter * 2;
+        margin-bottom: $setting-gutter * 4;
+    }
+}
+
+.#{$ns}--relative {
+    position: relative;
+}

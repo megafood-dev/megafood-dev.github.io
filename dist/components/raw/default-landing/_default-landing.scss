@@ -1,0 +1,17 @@
+.default-landing {
+    padding: 0 $gutter-sm;
+
+    @media ($breakpoint-ml) {
+        padding: 0 $gutter-lg;
+        margin: 0 auto;
+    }
+
+    @media ($breakpoint-lxl) {
+        padding: 0 8.33%;
+    }
+
+    @media ($breakpoint-xxl) {
+        max-width: $site-max-width;
+        padding: 0 px-to-rem(113px);
+    }
+}

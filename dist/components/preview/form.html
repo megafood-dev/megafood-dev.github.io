@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="MegaFood">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    
+    <title>Default | MegaFood Pattern Library</title>
+	
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<!--
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+	-->
+
+    <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
+    
+	<link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700|Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+
+    <link media="all" rel="stylesheet" href="../../assets/css/main.css">
+</head>
+<body>
+
+<form action="">
+    <label for="name">Text</label>
+    <input type="text" name="name" id="name" />
+
+    <label for="email">Email*</label>
+    <input type="email" name="input-email" id="email" required aria-required="true" />
+
+    <label for="input-url">URL</label>
+    <input type="url" name="input-url" id="input-url" aria-describedby="#hint-url" />
+    <p id="hint-url">Include "http://" or "https://" in the URL.</p>
+
+    <label for="input-password">Password</label>
+    <input type="password" name="input-password" id="input-password" />
+
+    <label for="input-search">Search</label>
+    <input type="search" name="input-search" id="input-search" results="5" disabled />
+
+    <fieldset>
+        <legend>Select Options</legend>
+        <input id="checkbox-1" name="test" type="checkbox" /><label for="checkbox-1">Checkbox 1</label>
+        <input id="checkbox-2" name="test" type="checkbox" /><label for="checkbox-2">Checkbox 2</label>
+    </fieldset>
+
+    <input type="radio" id="radio-1" name="radio-test" /><label for="radio-1">Radio 1</label>
+    <input type="radio" id="radio-2" name="radio-test" /><label for="radio-2">Radio 2</label>
+
+    <label for="zip">Text Zip</label>
+    <input type="text" name="zip" id="zip" />
+
+    <label for="input-tel">Tel*</label>
+    <input type="tel" name="input-tel" id="input-tel" placeholder="555-555-5555" required aria-required="true" /><!-- if erorr, `aria-invalid="true" aria-describedBy="error-1"` -->
+    <!-- <p id="error-1">Here's the error message.</p> -->
+
+    <label for="input-date">Date Picker</label>
+    <input type="date" name="input-date" id="input-date" />
+
+    <label for="input-file">Choose a File</label>
+    <input type="file" name="input-file" id="input-file" />
+
+    <label for="select">Select</label>
+    <select name="select-input" id="select">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+    </select>
+
+    <label for="textarea">Textarea</label>
+    <textarea name="textarea" id="textarea"></textarea>
+
+    <input type="submit" value="Submit" />
+
+    <input type="reset" value="Reset" />
+</form>
+
+
+<script src="../../assets/js/megafood.js"></script>
+<script src="../../assets/js/pattern-lib.js"></script><!-- These are only scripts that run in the PL. They should not be loaded on the MF site. -->
+</body>
+</html>
+

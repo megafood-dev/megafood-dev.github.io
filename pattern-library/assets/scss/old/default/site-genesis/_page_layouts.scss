@@ -1,0 +1,101 @@
+#primary {
+    @media ($breakpoint-ml) {
+        padding-left: px-to-rem(40px);
+        width: calc(100% - #{px-to-rem(275px)});
+    }
+
+    .full-width & {
+        margin-top: px-to-rem(15px);
+        padding-left: 0;
+        width: 100%;
+
+        @media ($breakpoint-ml) {
+            margin-top: px-to-rem(60px);
+            margin-bottom: px-to-rem(60px);
+        }
+
+        &.content-page {
+            margin-top: px-to-rem(30px);
+            margin-bottom: px-to-rem(120px);
+        }
+    }
+
+    .full-width--compressed & {
+        margin-top: px-to-rem(30px);
+    }
+
+    .secondary-wide & {
+        @media ($breakpoint-lg) {
+            width: calc(100% - #{px-to-rem(376px)});
+        }
+    }
+
+    .primary-focus & {
+        @media ($breakpoint-ml) {
+            padding-left: $setting-gutter;
+            padding-right: px-to-rem(40px);
+        }
+    }
+
+    &.content-page {
+        margin-bottom: px-to-rem(90px);
+    }
+}
+
+.content-page {
+    margin-bottom: px-to-rem(120px);
+}
+
+#secondary {
+    margin-bottom: px-to-rem(24px);
+
+    @media ($breakpoint-ml) {
+        margin-bottom: 0;
+        max-width: px-to-rem(275px);
+        width: 100%;
+    }
+
+    .secondary-wide & {
+        @media ($breakpoint-lg) {
+            max-width: px-to-rem(376px);
+        }
+    }
+
+    .primary-focus & {
+        padding-left: px-to-rem(30px);
+
+        @media ($breakpoint-ml) {
+            padding-left: 0;
+        }
+    }
+}
+
+.page-content {
+    &--no-breadcrumb {
+        margin-top: px-to-rem(15px);
+        margin-bottom: px-to-rem(30px);
+
+        @media ($breakpoint-ml) {
+            margin-top: px-to-rem(60px);
+            margin-bottom: px-to-rem(60px);
+        }
+
+        .pt_checkout & {
+            margin-top: px-to-rem(15px);
+
+            @media ($breakpoint-ml) {
+                margin-top: px-to-rem(30px);
+            }
+        }
+    }
+
+    &--no-margin {
+        margin-top: 0 !important;
+        padding: 0;
+
+        @media ($breakpoint-ml) {
+            padding-left: px-to-rem(30px);
+            padding-right: px-to-rem(30px);
+        }
+    }
+}

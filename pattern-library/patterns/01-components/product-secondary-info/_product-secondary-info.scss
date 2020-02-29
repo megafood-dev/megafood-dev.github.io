@@ -1,0 +1,77 @@
+.product-secondary-info {
+    padding-bottom: 62%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    > div {
+        padding: px-to-rem(40px) $gutter-sm 0 $gutter-sm;
+        background-color: $white;
+
+        > * {
+            max-width: px-to-rem(548px);//keeps line-length <= 80 chars
+        }
+    }
+
+    .sub-copy {
+        font-size: px-to-rem(21px);
+        margin-top: px-to-rem(8px);
+        margin-bottom: px-to-rem(32px);
+    }
+
+    h3 {
+        font-family: 'Source Sans Pro', arial, sans-serif;
+        font-weight: 600;
+        font-size: px-to-rem(16px);
+        color: $black;
+        padding-top: $bottom-margin;
+        border-top: 1px solid $alabaster;
+        margin-top: px-to-rem(32px);
+    }
+
+    img {
+        margin-top: px-to-rem(32px);
+    }
+
+    @media ($breakpoint-ml) {
+        display: block;
+        padding-right: 50%;
+        padding-bottom: 0;
+        background-size: cover;
+        background-position: bottom 50% right -25rem;
+
+        &.text-right {
+            padding-right: 0;
+            padding-left: 50%;
+            background-position: bottom 50% left -25rem;
+        }
+
+        > div {
+            padding: px-to-rem(40px) $gutter-lg px-to-rem(16px) $gutter-lg;
+        }
+
+        h3 {
+            border-top: none;
+        }
+
+        img {
+            margin-top: 0;
+        }
+    }
+
+    @media ($breakpoint-lg) {
+        background-position: bottom 50% right -22rem;
+
+        > div {
+            padding: px-to-rem(40px) px-to-rem(37px) px-to-rem(16px) px-to-rem(64px);
+        }
+
+        &.text-right {
+            background-position: bottom 50% left -22rem;
+
+            > div {
+                padding: 0 px-to-rem(64px) 0 px-to-rem(37px);
+            }
+        }
+    }
+}

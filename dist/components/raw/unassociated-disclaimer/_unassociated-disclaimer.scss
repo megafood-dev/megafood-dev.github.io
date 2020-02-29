@@ -1,0 +1,8 @@
+.unassociated-disclaimer {
+    display: block;
+    font-size: px-to-rem(13px);
+    padding: 1rem;
+    border: 1px solid $emperor;
+    margin: 1rem auto;
+    max-width: px-to-rem(463px);//to keep line length <= 80 chars
+}

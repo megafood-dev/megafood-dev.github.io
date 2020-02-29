@@ -1,0 +1,282 @@
+/* ============================================================================
+   MegaFood
+   ============================================================================ */
+
+/**
+ * MegaFood, by @pixelmedia
+ */
+
+/**
+ * CONTENTS
+ * ============================================================================
+ *
+ * RESETS
+ * Box-Sizing..........................A better box-sizing reset
+ * Normalize...........................While not a true reset, but gives level playing field
+ * Reset...............................A simple reset that compliments normalize
+ *
+ * HELPERS
+ * Variables Global....................Layout, Fonts, Colors, etc
+ * em..................................Mixin to convert px to em
+ * Strip Units.........................Strips the unit from the number
+ * String Replace......................Replace search with replace in string
+ * Is Even.............................Checks if a number is even
+ * Variables Media.....................Media query variables
+ * Breakpoint Classes..................Mixin class assigned values based on breakpoints
+ * Clearfix............................Mixin for micro clearfix
+ * Media...............................Mixin for media queries
+ * Headers.............................Mixin for headers
+ * Lists...............................Mixin for lists
+ * Visually Hidden.....................Mixin to hide using accessible method
+ *
+ * BASE SG
+ * Site Genesis........................Imports base site genesis styles
+ *
+ * BASE
+ * JS Media Flags......................Inserts content into pseudo element as a flag for JS
+ * Global Classes......................Styles global classes
+ * Typography..........................Base typography styles
+ * Form Elements.......................Base form elements styles
+ * Buttons.............................Base button styles to overwrite default browser styles
+ * Images..............................Responsive image
+ * Link................................Base link style
+ * Table...............................Base table style
+ *
+ * OBJECTS
+ * Wrapper.............................Page constraint object
+ * Layout..............................Generic layout module
+ *
+ * BASE SG
+ * Site Genesis........................Imports base site genesis styles
+ *
+ * COMPONENTS
+ * Button..............................Button component
+ * Form Block..........................Form block
+ * Navigation Global...................Global navigation found in header
+ * Dropdowns...........................Dropdowns for global navigation
+ * Form Search.........................Search global form found in header
+ * Mini Cart Count.....................Styles mini cart counter
+ * Store Finder Block..................Form for store finder
+ * Subscription Form...................Subscription form for opt-in newsletter
+ * Page Header.........................Styles page header blocks
+ * Content Block.......................Styles content blocks
+ * Icon Block..........................Icon block with link
+ * Navigation Block....................Styles list of navigation links
+ * Order Detail Block..................Styles displays of order history details
+ *
+ * STRUCTURES
+ * Header..............................Global header
+ * Footer..............................Global footer
+ *
+ * SCOPES
+ * Section blocks......................Section blocks
+ *
+ * UTILITIES
+ * Widths..............................Simple width helper classes
+ * Spacings............................Spacing utility classes
+ * Alignment...........................Float Items to the left and right
+ * Visually Hidden.....................Accessibily hides content
+ * Text................................Allows to add key text styles to strings of text
+ * Lists...............................Adds classes for list helpers
+ *
+ */
+
+
+// HELPERS
+// ============================================================================
+@import 'helpers/helpers.fonts';
+@import 'helpers/helpers.variables-global';
+@import 'helpers/helpers.strip-units';
+@import 'helpers/helpers.str-replace';
+@import 'helpers/helpers.is-even';
+@import 'helpers/helpers.breakpoint-classes';
+@import 'helpers/helpers.media';
+@import 'helpers/helpers.headers';
+@import 'helpers/helpers.lists';
+@import 'helpers/helpers.aspect-image';
+
+
+// THIRD PARTY
+// ============================================================================
+
+// This includes third party styles for third party plugins.
+
+@import 'vendors/jquery-ui';
+@import 'vendors/slick';
+
+// BASE SG
+// ============================================================================
+
+// This includes the base SG styles in order that we may share variables and only output 1
+// stylesheet for production
+
+@import 'site-genesis/site-genesis';
+
+
+// BASE
+// ============================================================================
+
+// Please Note: All partials inside the base directory should be namespaced with base.
+
+/**
+ * Base files are more like normalizing partials. They are the only place where it is is ok to
+ * style properties based on an HTML element. If a partial falls outside of the base directory,
+ * you should not be styling HTML elements, only classes. The only excepion to this case is if
+ * it is a scope or a component that deals with content assets or slots.
+ */
+@import 'base/base.js-media-flags';
+@import 'base/base.global-classes';
+@import 'base/base.typography';
+
+
+// OBJECTS
+// ============================================================================
+
+// Please Note: All partial filenames inside this directory should be namespaced with objects.
+
+/**
+ * Objects are used in any number of unrelated contexts to the one you can currently see it in.
+ * Making modifications to these types of class could potentially have knock-on effects in a lot of
+ * other unrelated places. Tread carefully. Due to this when working with objects it is very
+ * important that you follow the open/closed principle. For more details please see
+ * https://en.wikipedia.org/wiki/Open/closed_principle.
+ *
+ * Please namespace all object classes with o-.
+ */
+
+@import 'objects/objects.layout';
+@import 'objects/objects.wrapper';
+
+
+// COMPONENTS
+// ============================================================================
+
+// Please Note: All partials inside the components directory should be namespaced with components.
+
+/**
+ * Components are concrete, implementation-specific pieces of UI. All of the changes you make to
+ * its styles should be detectable in the context you're currently looking at. Modifying these
+ * styles should be safe and have no side effects.
+ *
+ * Please namespace all component classes with c-.
+ *
+ * Do not remove the {{COMPONENTS}} Sass comment below as it is needed to scaffold
+ * out components.
+ */
+
+//{{COMPONENTS}}//
+
+//energy consumer landing page
+@import "components/consumer-landing/energy/_components.content-slider.scss";
+@import "components/consumer-landing/energy/_components.energy-accordion.scss";
+@import "components/consumer-landing/energy/_components.two-column-content-bottom.scss";
+@import "components/consumer-landing/energy/_components.two-column-content-top.scss";
+
+@import "components/_components.alerts.scss";
+@import "components/_components.button.scss";
+@import "components/_components.row-form.scss";
+@import "components/_components.form-block.scss";
+@import 'components/_components.banner-heading.scss';
+@import 'components/components.navigation-global.scss';
+@import 'components/components.dropdowns.scss';
+@import 'components/components.form-search.scss';
+@import 'components/components.mini-cart-count';
+@import 'components/components.store-finder-block';
+@import 'components/components.subscription-form';
+@import 'components/components.email-signup';
+@import 'components/components.page-header';
+@import 'components/components.content-block';
+@import 'components/components.order-detail-block';
+@import 'components/components.order-total';
+@import 'components/components.order-total';
+@import 'components/components.cart-table';
+@import 'components/components.product-block';
+@import 'components/components.section';
+@import "components/components.slot-container.scss";
+@import 'components/components.progress-steps';
+@import 'components/components.refinements';
+@import 'components/components.hero-banner';
+@import "components/components.banner-coming-soon.scss";
+@import "components/components.banner-page-jump.scss";
+@import "components/components.content-section.scss";
+@import "components/components.product-slider.scss";
+@import "components/components.social-media-links.scss";
+@import "components/components.two-col-content.scss";
+@import "components/components.content-call-out.scss";
+@import 'components/components.grid-products-graphical-asset';
+@import 'components/components.newsletter-subscription-form';
+@import 'components/components.grid-graphical-asset';
+@import 'components/components.sweet-certifications';
+@import 'components/components.pricing';
+@import 'components/components.promotions';
+@import 'components/components.search-suggestion';
+@import 'components/components.product-set';
+@import 'components/components.featured-action-block';
+@import 'components/components.accordion-consumer-landing';
+@import 'components/components.jquery-ui';
+@import 'components/components.pagination';
+@import 'components/components.farm-partners';
+@import 'components/components.multi-section-page';
+@import 'components/_serving-details';
+@import 'components/_cart-coupon-form';
+@import 'components/_checkout-steps';
+@import 'components/_address-suggestion';
+@import 'components/_og';
+
+
+// Structures
+// ============================================================================
+
+// Please Note: All partials inside the components directory should be namespaced with structures.
+
+/**
+ * Like components, structures are concrete, implementation-specific pieces of UI. All of the changes you make to
+ * its styles should be detectable in the context you're currently looking at. Modifying these
+ * styles should be safe and have no side effects. The difference between structures and components
+ * is that structures are made up of multiple components.
+ *
+ * Please namespace all component classes with st-.
+ */
+
+@import 'structures/structures.header';
+@import 'structures/structures.footer';
+
+
+// SCOPES
+// ============================================================================
+
+// Please Note: All partial filenames inside this directory should be namespaced with scopes.
+
+/**
+ * Scopes create a new styling context. These should be used sparingly. they can be open to abuse
+ * and lead to poor CSS if not used wisely. The primary use case for scopes within an SFCC standup
+ * is to provide styles within a content asset or content slot. The secondary use case is when
+ * styling an SG component in order to easily style the SG classes that are in place.
+ *
+ * Please namespace all scope classes with s-
+ */
+
+ @import "scopes/_scopes.navigation-utility";
+ @import "scopes/_scopes.section-blocks";
+ @import "scopes/_scopes.content";
+ @import "scopes/_scopes.bazaarvoice";
+
+
+// UTILITIES
+// ============================================================================
+
+// Please Note: All partial filenames inside this directory should be namespaced with utilities.
+
+/**
+ * Utilities have a very specific role (often providing only one declaration) and should not be
+ * bound onto or changed. They can be reused and are not tied to any specific piece of UI.
+ *
+ * Please namespace all utility classes with u-
+ */
+
+@import 'utilities/utilities.widths';
+@import 'utilities/utilities.display';
+@import 'utilities/utilities.spacings';
+@import 'utilities/utilities.align';
+@import 'utilities/utilities.text';
+@import 'utilities/utilities.lists';

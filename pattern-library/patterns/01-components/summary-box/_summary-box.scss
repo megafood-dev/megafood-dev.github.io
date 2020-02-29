@@ -1,0 +1,38 @@
+.summary-box {
+    padding: px-to-rem(16px) $gutter-sm;
+    background-color: #efefef;
+    margin-bottom: $bottom-margin;
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+        padding-bottom: px-to-rem(16px);
+        margin-bottom: px-to-rem(16px);
+
+        a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: px-to-rem(13px);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: $gutter-sm;
+        }
+    }
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: px-to-rem(18px);
+        line-height: 1;
+        color: #3b3b3b;
+    }
+
+    .c-product-block {
+        margin-bottom: px-to-rem(16px);
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

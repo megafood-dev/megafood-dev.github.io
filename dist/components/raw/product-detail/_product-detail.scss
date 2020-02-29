@@ -1,0 +1,260 @@
+.product-detail {
+    border-bottom: 1px solid $alabaster;
+
+    .details {
+        padding: 0 $gutter-sm px-to-rem(48px) $gutter-sm;
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: px-to-rem(26px);
+        color: $zuccini;
+        margin-bottom: px-to-rem(8px);
+    }
+
+    .blurb {
+        font-size: px-to-rem(21px);
+        line-height: 1.43;
+        color: $black;
+        max-width: px-to-rem(720px);//keeps text at good length for readability (80 chars per line)
+        margin-bottom: px-to-rem(8px);
+    }
+
+    .yotpo {
+        margin-bottom: px-to-rem(16px);
+    }
+
+    .pricing {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+        margin-left: 0;
+        font-family: 'Montserrat', sans-serif;
+        color: $black;
+        margin-bottom: px-to-rem(32px);
+
+        li {
+            margin-right: px-to-rem(16px);
+        }
+
+        span {
+            @include hide();
+        }
+    }
+
+    .sales-price {
+        font-size: px-to-rem(26px);
+        font-weight: 600;
+    }
+
+    .standard-price {
+        font-size: px-to-rem(16px);
+        text-decoration: line-through;
+    }
+
+    .og-offer {
+        margin-bottom: px-to-rem(32px);
+    }
+
+    .details-subheader {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: px-to-rem(16px);
+        font-weight: 600;
+        color: $black;
+        margin-bottom: px-to-rem(8px);
+    }
+
+    .variations {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            width: 100%;
+            max-width: px-to-rem(100px);
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+
+            > * {
+                display: block;
+                font-size: px-to-rem(21px);
+                font-weight: 600;
+                color: $mine-shaft;
+                padding: px-to-rem(10.5px) px-to-rem(32px);
+                text-align: center;
+                border: 2px solid $dusty-gray;
+                border-radius: px-to-rem(3px);
+            }
+        }
+        
+        a {
+            &:hover, &:focus {
+                border-color: $vidaLoca;
+            }
+        }
+
+        .selected {
+            a {
+                color: $vidaLoca;
+                border-color: $vidaLoca;
+            }
+        }
+
+        .disabled {
+            cursor: not-allowed;
+            color: $gray;
+            border-color: $alabaster-light;
+            background-color: $alabaster-light;
+        }
+    }
+
+    .serving-info {
+        font-size: px-to-rem(16px);
+        color: $black;
+        margin-top: px-to-rem(-8px);
+        margin-bottom: px-to-rem(32px);
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .pdpForm {
+        input {
+            max-width: px-to-rem(175px);
+        }
+
+        [type="submit"] {
+            display: inline-block;
+            font-size: px-to-rem(21px);
+            font-weight: 600;
+            text-align: center;
+            padding: px-to-rem(16px) px-to-rem(40px);
+            color: $white;
+            background-color: $vidaLoca;
+            width: 100%;
+            max-width: px-to-rem(443px);
+            border: none;
+            border-radius: px-to-rem(3px);
+            margin-bottom: px-to-rem(32px);//change to 16 when get facts link
+            transition: all 0.3s ease;
+
+            &:hover, &:focus {
+                color: $white;
+                background-color: $celtic;
+                cursor: pointer;
+            }
+
+            &[disabled]{
+                color: $white;
+                background-color: $gray;
+
+                &:hover, &:focus {
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+
+    .facts {
+        display: block;
+        text-align: center;
+        color: $vidaLoca;
+        width: 100%;
+        padding: px-to-rem(16px) px-to-rem(40px);
+        max-width: px-to-rem(443px);
+        margin-bottom: px-to-rem(32px);
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    @media ($breakpoint-ml) {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        > div {
+            width: 50%;
+
+            // &:first-of-type {
+            //     position: -webkit-sticky;//for safari
+            //     position: sticky;
+            //     top: 0;
+            // }
+        }
+
+        .details {
+            padding: px-to-rem(32px) px-to-rem(76px) px-to-rem(48px) px-to-rem(48px);
+        }
+
+        .pdpForm {
+            [type="submit"] {
+                max-width: px-to-rem(405px);
+            }
+        }
+
+        .facts {
+            max-width: px-to-rem(405px);
+        }
+    }
+
+    @media ($breakpoint-lg) {
+        .details {
+            padding-top: px-to-rem(60px);
+        }
+
+        h1 {
+            font-size: px-to-rem(36px);
+        }
+
+        .blurb {
+            font-size: px-to-rem(24px);
+        }
+
+        .sales-price {
+            font-size: px-to-rem(36px);
+        }
+
+        .variations {
+            a {
+                font-size: px-to-rem(24px);
+                padding-top: px-to-rem(8px);
+                padding-bottom: px-to-rem(8px);
+            }
+        }
+
+        .pdpForm {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+
+            > div {
+                margin-right: 1rem;
+
+                &:last-of-type {
+                    flex-grow: 1;
+                    margin-right: 0;
+                }
+            }
+
+            input {
+                width: 100%;
+                min-width: px-to-rem(175px);
+                max-width: none;
+            }
+        }
+
+        .facts {
+            text-align: right;
+            padding: 0;
+            width: auto;
+            max-width: none;
+        }
+    }
+}

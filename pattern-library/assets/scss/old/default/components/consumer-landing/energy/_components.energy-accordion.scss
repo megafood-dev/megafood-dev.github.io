@@ -1,0 +1,249 @@
+/* ============================================================================
+Accordion Energy Consumer Landing - Currently used for energy-accordion.isml
+============================================================================ */
+
+$ns: c-energy-accordion;
+
+.#{$ns} {
+    padding-bottom: px-to-rem(32px);
+
+    @media ($breakpoint-ml) {
+        padding-bottom: px-to-rem(77px);
+    }
+
+    &__section-title {
+        font-family: Montserrat;
+        font-size: px-to-rem(24px);
+        font-weight: 600;
+        line-height: 1.81;
+        letter-spacing: px-to-em(2.4px);
+        text-align: center;
+        color: #074b26;
+        padding-bottom: px-to-rem(18.5px);
+        text-transform: uppercase;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(36px);
+            line-height: 1.5;
+            letter-spacing: px-to-em(3.6px);
+            padding-bottom: px-to-rem(55px);
+        }
+    }
+
+    &__section-title:not(:first-child) {
+        margin-top: px-to-rem(32px);
+        
+        @media ($breakpoint-ml) {
+            margin-top: px-to-rem(80px);
+        }
+    }
+
+    &__section-subtitle {
+        font-family: Montserrat;
+        font-size: px-to-rem(12px);
+        line-height: 1.67;
+        letter-spacing: px-to-em(1.7px);
+        text-align: center;
+        color: #074b26;
+        padding-bottom: px-to-rem(23px);
+        max-width: px-to-rem(857px);
+        margin: 0 auto;
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(18px);
+            letter-spacing: px-to-em(1.8px);
+            padding-bottom: px-to-rem(61px);
+        }
+    }
+
+    &__link {
+        font-family: Montserrat;
+        font-size: px-to-rem(13px);
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 0.46;
+        letter-spacing: px-to-em(1.3px);
+        color: #074b26;
+        text-transform: uppercase;
+        padding: px-to-rem(9px) 0 px-to-rem(11px) px-to-rem(18px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(24px);
+            line-height: 0.46;
+            letter-spacing: px-to-em(2.4px);
+        }
+    }
+
+    &__body {
+        margin-bottom: 0;
+        display: block;
+        overflow: hidden;
+        border-radius: 0 0 0 px-to-rem(20px);
+        font-size: px-to-rem(16px);
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #636363;
+        position: relative;
+        max-width: 100%;
+    }
+
+    &__text-bold-dark-green {
+        font-family: Montserrat;
+        font-size: px-to-rem(24px);
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: px-to-em(2.4px);
+        text-align: left;
+        color: #074b26;
+        padding-bottom: px-to-rem(15px);
+        max-width: px-to-rem(570px);
+
+        @media ($breakpoint-ml) {
+            padding-bottom: px-to-rem(11px);
+        }
+    }
+
+    &__text-reg-grey {
+        font-family: Montserrat;
+        font-size: px-to-rem(14px);
+        line-height: 1.71;
+        letter-spacing: px-to-em(0.7px);
+        text-align: left;
+        color: #393b3a;
+
+        @media ($breakpoint-ml) {
+            max-width: px-to-rem(570px);
+        }
+    }
+
+    &__text-bold-grey {
+        font-family: Montserrat;
+        font-size: px-to-rem(18px);
+        font-weight: 600;
+        line-height: 1.67;
+        letter-spacing: px-to-em(0.9px);
+        text-align: left;
+        color: #393b3a;
+
+        @media ($breakpoint-ml) {
+            max-width: px-to-rem(570px);
+        }
+    }
+
+    &__text-reg-green,
+    &__text-reg-green a {
+        font-family: Montserrat;
+        font-size: px-to-rem(14px);
+        line-height: 1.71;
+        letter-spacing: px-to-em(0.7px);
+        text-align: left;
+        color: #6d9846;
+
+        @media ($breakpoint-ml) {
+            max-width: px-to-rem(570px);
+        }
+    }
+
+    &__text-italic-dark-green {
+        font-family: Montserrat;
+        font-size: px-to-rem(48px);
+        font-weight: 300;
+        font-style: italic;
+        line-height: 0.83;
+        letter-spacing: px-to-em(2.4px);
+        text-align: left;
+        color: #064b24;
+
+        @media ($breakpoint-ml) {
+            max-width: px-to-rem(570px);
+        }
+    }
+
+    &__text-small-dark-gray {
+        font-family: Montserrat;
+        font-size: px-to-rem(10px);
+        color: #636363;
+
+        @media ($breakpoint-ml) {
+            max-width: px-to-rem(570px);
+        }
+    }
+
+    &__link-small-green {
+        font-family: Montserrat;
+        font-size: px-to-rem(10px);
+        color: #6d9846;
+
+        @media ($breakpoint-ml) {
+            max-width: px-to-rem(570px);
+        }
+    }
+
+    &__btn {
+        height: px-to-rem(42px);
+        font-size: px-to-rem(20px);
+        line-height: 2.1;
+        background-color: #004b24;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 px-to-rem(50px);
+
+        @media ($breakpoint-ml) {
+            width: px-to-rem(284px);
+            padding: 0;
+        }
+
+        a {
+            color: #ffffff;
+        }
+    }
+
+    &__img {
+        margin: 0 auto;
+        padding-bottom: px-to-rem(37px);
+
+        @media ($breakpoint-ml) {
+            margin: 0;
+        }
+    }
+
+    &__col-left,
+    &__col-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__col-right {
+        align-items: center;
+
+        @media ($breakpoint-ml) {
+           justify-content: center;
+        }
+    }
+
+    &__col-left {
+        padding-top: 1rem;
+
+        @media ($breakpoint-ml) {
+            padding-top: 0;
+        }
+    }
+
+    ol {
+        list-style: none;
+        counter-reset: counter;
+
+        li {
+            counter-increment: counter;
+
+            &::before {
+                content: counter(counter) ". ";
+                font-size: px-to-rem(10px);
+            }
+        }
+    }
+}

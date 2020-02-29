@@ -1,0 +1,159 @@
+//------------------------------------------------------------------------------
+// Button & Link Helpers
+//------------------------------------------------------------------------------
+@mixin button(){
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: px-to-rem(18px);
+    font-weight: 600;
+    letter-spacing: px-to-em(4px);
+    line-height: 1.11;
+    text-transform: uppercase;
+    text-align: center;
+    padding: px-to-rem(16px) px-to-rem(40px);
+    color: $white;
+    background-color: $vidaLoca;
+    border: none;
+    margin-bottom: px-to-rem(16px);
+    transition: all 0.3s ease;
+
+    &:hover, &:focus {
+        color: $white;
+        background-color: $holly;
+        cursor: pointer;
+    }
+
+    &[disabled]{
+        color: $tundora;
+        background-color: $gallery;
+
+        &:hover, &:focus {
+            text-decoration: none;
+            cursor: not-allowed;
+        }
+    }
+}
+
+@mixin remove-button(){
+    letter-spacing: normal;
+    color: $emperor;
+    background-color: transparent;
+    border: none;
+
+    &:hover, &:focus {
+        color: $emperor;
+        background-color: transparent;
+    }
+}
+
+
+//------------------------------------------------------------------------------
+// Display
+//------------------------------------------------------------------------------
+@mixin hide(){//allows content to be read by screen readers but hides it visually for sighted users
+    position: absolute;
+    clip: rect(0 0 0 0);
+    border: 0;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+}
+
+@mixin show(){//shows content that has previously been hidden with hide()
+    position: relative;
+    left: auto;
+    clip: unset;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+@mixin remove-button(){
+    font-weight: inherit;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: left;
+    padding: 0;
+    color: #636363;
+    background-color: transparent;
+
+    &:hover, &:focus {
+        background-color: transparent;
+    }
+}
+
+
+//------------------------------------------------------------------------------
+// CSS Shapes
+//------------------------------------------------------------------------------
+@mixin x-icon($position: 'right', $color: $x-color, $hover-color: $x-color-hover){
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        background-color: $color;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::before {
+        @if $position == 'right' {
+            right: px-to-rem(9px);
+        } @else {
+            left: px-to-rem(9px);
+        }
+        height: px-to-rem(20px);
+        width: px-to-rem(2px);
+    }
+
+    &::after {
+        @if $position == 'right' {
+            right: 0;
+        } @else {
+            left: 0;
+        }
+        height: px-to-rem(2px);
+        width: px-to-rem(20px);
+    }
+
+    &:hover, &:focus {
+        &::before, &::after {
+            background-color: $hover-color;
+        }
+    }
+}
+
+@mixin arrow($direction: 'right', $color: $black){
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        height: px-to-rem(12px);
+        width: px-to-rem(2px);
+        background-color: $color;
+    }
+
+    &::before {
+        top: calc(50% - #{px-to-rem(8px)});
+
+        @if $direction == 'right' {
+            transform: rotate(-45deg) translateX(#{px-to-rem(2px)});
+        } @else {
+            transform: rotate(45deg) translateX(#{px-to-rem(-2px)});
+        }
+    }
+
+    &::after {
+        top: calc(50% - #{px-to-rem(3px)});
+
+        @if $direction == 'right' {
+            transform: rotate(45deg) translateX(#{px-to-rem(2px)});
+        } @else {
+            transform: rotate(-45deg) translateX(#{px-to-rem(-2px)});
+        }
+    }
+}

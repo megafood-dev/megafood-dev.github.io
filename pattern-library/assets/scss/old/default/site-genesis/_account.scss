@@ -1,0 +1,94 @@
+.acct-list {
+    color: $mine-shaft;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    li {
+        border: 2px solid $wild-sand;
+        list-style-type: none;
+        padding: px-to-rem(20px);
+        position: relative;
+        width: 100%;
+
+        &.default {
+            background-color: $wild-sand;
+            border: 0;
+            margin-top: 1em;
+        }
+    }
+
+    li + li {
+        margin-top: px-to-rem(20px);
+    }
+
+    &__section-header {
+        font-family: $font-family-secondary;
+        font-size: px-to-rem(21px);
+        font-weight: 700;
+        letter-spacing: 0;
+        margin-bottom: px-to-rem(15px);
+
+        @media ($breakpoint-ml) {
+            font-size: px-to-rem(24px);
+        }
+
+        & + .mini-address {
+            margin-top: px-to-rem(14px);
+        }
+    }
+
+    &__actions {
+        font-size: px-to-rem(14px);
+        font-weight: 600;
+        margin-top: px-to-rem(20px);
+        margin-left: px-to-rem(-6px);
+
+        @media ($breakpoint-lg) {
+            margin-top: 0;
+            position: absolute;
+            top: px-to-rem(16px);
+            right: px-to-rem(20px);
+        }
+
+        button {
+            background-color: transparent;
+            font-weight: 600;
+            padding: 0;
+            height: px-to-rem(14px);
+            line-height: 1 !important;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__link {
+        color: $mango-tango;
+        margin-right: px-to-rem(4px);
+        margin-left: px-to-rem(6px);
+
+        &:hover {
+            color: $mango-tango-hover;
+            text-decoration: none;
+        }
+    }
+
+    a,
+    .button-text {
+        line-height: 2rem;
+        padding-right: 0.2rem;
+    }
+
+    .mini-address {
+
+        &__title {
+            font-weight: 700;
+        }
+    }
+
+    .cc-type {
+        font-weight: 700;
+    }
+}

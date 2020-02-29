@@ -1,0 +1,28 @@
+//Colors
+@import '_colors';
+
+//Max-widths
+$site-max-width: px-to-rem(1440px);
+$form-el-max-width: px-to-rem(875px);
+
+//Spacing
+$gutter-sm: px-to-rem(16px);
+$gutter-m: px-to-rem(24px);
+$gutter-lg: px-to-rem(32px);
+$gutter-xl: px-to-rem(40px);
+$bottom-margin: px-to-rem(24px);
+
+//Breakpoints
+$breakpoint-xxs: 'min-width: 18.75em';//~300px
+$breakpoint-xs: 'min-width: 20em';//~320px
+$breakpoint-s: 'min-width: 23.438em';//~375px
+// $breakpoint-ssm: 'min-width: 26.25em';//~420px
+$breakpoint-sm: 'min-width: 29.688em';//~475px
+$breakpoint-ms: 'min-width: 33.75em';//~540px
+$breakpoint-m: 'min-width: 48em';//~768px
+$breakpoint-ml: 'min-width: 57.563em';//~921px
+$breakpoint-lg: 'min-width: 68.75em';//~1100px
+$breakpoint-lxl: 'min-width: 77.5em';//~1240px
+$breakpoint-xl: 'min-width: 81.25em';//~1300px
+$breakpoint-xxl: 'min-width: 85em';//~1360px
+$breakpoint-xxxl: 'min-width: 90em';//~1440px

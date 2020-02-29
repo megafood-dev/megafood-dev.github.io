@@ -1,0 +1,100 @@
+.product-certifications {
+    padding: px-to-rem(32px) 0 px-to-rem(8px) $gutter-sm;
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: px-to-rem(21px);
+        font-weight: 600;
+        line-height: 1.43;
+        color: $black;
+        text-align: center;
+        padding-right: $gutter-sm;
+        margin-bottom: px-to-rem(24px);
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        width: calc(50% - #{$gutter-sm});
+        max-width: px-to-rem(135px);
+        text-align: center;
+        margin-right: $gutter-sm;
+        margin-bottom: px-to-rem(24px);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: px-to-rem(8px);
+    }
+
+    span {
+        display: block;
+        font-size: px-to-rem(13px);
+        line-height: 1.38;
+        text-align: center;
+        color: $zuccini;
+        min-height: px-to-rem(38px);
+        width: 100%;
+    }
+
+    @media ($breakpoint-xxs) {
+        li {
+            width: calc(33.33% - #{$gutter-sm});
+        }
+    }
+
+    @media ($breakpoint-s) {
+        li {
+            width: calc(25% - #{$gutter-sm});
+        }
+    }
+
+    @media ($breakpoint-ms) {
+        li {
+            width: calc(20% - #{$gutter-sm});
+        }
+    }
+
+    @media ($breakpoint-m) {
+        li {
+            width: calc(16.66% - #{$gutter-sm});
+        }
+    }
+
+    @media ($breakpoint-ml) {
+        padding: px-to-rem(32px) $gutter-xl 0 $gutter-xl;
+
+        ul {
+            margin-right: -$gutter-xl;
+        }
+
+        li {
+            width: calc(14.285% - #{$gutter-xl});
+            margin-right: $gutter-xl;
+            margin-bottom: px-to-rem(32px);
+        }
+    }
+
+    @media ($breakpoint-lg) {
+        li {
+            width: calc(12.5% - #{$gutter-xl});
+        }
+    }
+
+    @media ($breakpoint-xl) {
+        li {
+            width: calc(11.11% - #{$gutter-xl});
+        }
+    }
+
+    @media ($breakpoint-xxxl) {
+        padding: px-to-rem(32px) px-to-rem(176px) 0 px-to-rem(176px);
+    }
+}

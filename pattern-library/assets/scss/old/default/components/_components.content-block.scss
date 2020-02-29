@@ -1,0 +1,20 @@
+/* ============================================================================
+   Content Block
+   ============================================================================ */
+
+$ns: c-content-block;
+
+.#{$ns} {
+    &--instructional {
+        background-color: $cream-lighter;
+        color: $tundora;
+        font-size: 1.1rem;
+        margin-bottom: px-to-rem(32px);
+        padding: px-to-rem(16px) 0 px-to-rem(14px);
+        text-align: center;
+    }
+
+    &__section{
+        font-family: $font-family-quinary;
+    }
+}

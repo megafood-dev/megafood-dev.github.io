@@ -1,0 +1,56 @@
+/* ============================================================================
+    Slot Container
+    ============================================================================ */
+
+$ns: c-slot-container;
+
+.#{$ns} {
+    padding-top: px-to-rem(30px);
+    padding-bottom: px-to-rem(30px);
+
+    @media ($breakpoint-ml) {
+        padding-top: px-to-rem(45px);
+        padding-bottom: px-to-rem(45px);
+    }
+
+    @media ($breakpoint-lg) {
+        padding-top: px-to-rem(60px);
+        padding-bottom: px-to-rem(60px);
+    }
+
+    &__item {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.c-grid-products-graphical-container{
+        padding-top: 0;
+    }
+}
+
+.#{$ns}--secondary {
+    background-color: $wild-sand;
+    position: relative;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        background-repeat: repeat-x;
+        content: "";
+        display: block;
+        height: px-to-rem(14px);
+        position: absolute;
+        width: 100%;
+    }
+
+    &::before {
+        background-image: url('../images/rugged-edge-gray-top.png');
+        top: px-to-rem(-7px);
+    }
+
+    &::after {
+        background-image: url('../images/rugged-edge-gray-bottom.png');
+        bottom: px-to-rem(-10px);
+    }
+}

@@ -1,0 +1,35 @@
+.product-slider {
+    background-color: $alabaster;
+    padding: 1.5rem 1.5rem 4.5rem 1.5rem;
+    margin-bottom: px-to-rem(32px);
+
+    img {
+        &:not(:first-of-type) {
+            display: none;
+        }
+    }
+
+    @media ($breakpoint-ml) {
+        margin-bottom: 0;
+
+        &.slider {
+            .prev {
+                left: px-to-rem(24px);
+            }
+
+            .next {
+                right: px-to-rem(24px);
+            }
+        }
+    }
+}
+
+.js {
+    .product-slider {
+        img {
+            &:not(:first-of-type) {
+                display: block;
+            }
+        }
+    }
+}
