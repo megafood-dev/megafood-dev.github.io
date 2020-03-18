@@ -69,6 +69,10 @@ $st-header__padding-top: px-to-rem(22px) !default;
     &__promo {
         font-size: px-to-rem(15px);
         font-weight: 600;
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     &__logo-block {

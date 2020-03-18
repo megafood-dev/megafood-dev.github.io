@@ -81,6 +81,7 @@ $ns: c-grid-products-graphical-asset;
             }
 
             img {
+                display: inline-block;
                 width: px-to-rem(218px);
 
                 @media ($breakpoint-ml) {

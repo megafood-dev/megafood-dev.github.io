@@ -71,15 +71,12 @@ $ns: c-newsletter-subscription;
         .btn {
             margin: 0;
 
-            @media ($breakpoint-ml) {
-                margin-right: px-to-rem(33px);
-            }
-
             &:first-child {
                 margin-bottom: px-to-rem(20px);
 
                 @media ($breakpoint-ml) {
                     margin-bottom: 0;
+                    margin-right: px-to-rem(33px);
                 }
             }
         }

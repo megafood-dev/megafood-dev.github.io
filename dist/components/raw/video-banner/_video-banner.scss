@@ -38,9 +38,10 @@
             content: '\25b6';
         }
 
-        &:hover,
-        &:focus {
+        &:hover, &:focus {
             color: $zuccini;
+            background-color: $white;
+            border: 2px solid $gray;
             width: px-to-rem(80px);
             height: px-to-rem(80px);
         }
