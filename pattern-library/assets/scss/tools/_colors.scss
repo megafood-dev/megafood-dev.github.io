@@ -1,33 +1,40 @@
 //Neutrals
 $white: #fff;
-$alabaster-light: #fafafa;
+$alabaster-light: #fafafa;//remove and use $alabaster
 $alabaster: #f7f7f7;
-$wild-sand: #f5f5f5;
-$gallery: #efefef;
-$alto: #d7d7d7;
+$wild-sand: #f5f5f5;//remove and use $alabaster
+$gallery: #efefef;//remove and use $alabaster
+$alto: #d7d7d7;//remove
 $dusty-gray: #949494;
-$gray: #919191;
+$gray: #919191;//remove and use $dusty-gray
 $dove-gray: #707070;
 $emperor: #4f4f4f;
-$tundora: #4a4a4a;
-$mine-shaft: #2e2e2e;
+$tundora: #4a4a4a;//remove and use $emperor instead
+$mine-shaft: #2e2e2e;//change all $black text to this
 $black: #000;
 
 //Greens
-$vidaLoca: #5C8118;
-$zuccini: #054a25;
-$kaitokeGreen: #004c24;
-$county-green: #003418;
-$celtic: #142e1c;
-$holly: #021a0d;
+$gray-nurse: #e7ece9;//remove
+$vidaLoca: #5C8118;//change name to $basil
+$zuccini: #054a25;//rename to $primary-green
+$kaitokeGreen: #004c24;//remove and use $vidaLoca
+$county-green: #003418;//rename to $primary-green-hover
+$celtic: #142e1c;//will phase out
+$holly: #021a0d;//will phase out
+//should only be $zuccini (headers, btns, etc.), $vidaLoca (add to cart btn), and $county-green (hover states)
 
 //Yellows
-$saffron: #f1b434;
+$saffron: #f1b434;//will phase out
+$turmeric: #bd5a00;
 
 //Reds
 $grenadier: #d22c01;
-$finn: #732e4a;
+$finn: #732e4a;//change color name to $beet
+$beet-hover: #541730;
 
+//Blues
+$facebook-blue: #3b5898;
+$facebook-blue-hover: darken($facebook-blue, 10%);
 
 //Forms
 $outline-color: $vidaLoca;

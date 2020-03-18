@@ -40,10 +40,6 @@ $ns: c-row-form;
         }
     }
 
-    &__button {
-        margin-top: px-to-rem(15px);
-    }
-
     span.error,
     &__error {
         background-color: $error-color;

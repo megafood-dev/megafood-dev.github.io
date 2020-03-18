@@ -3,9 +3,8 @@ $ns: c-email-signup;
 .c-email-signup{
     background-size: cover;
     background-position: 50% 50%;
-    color: white;
+    color: $white;
     padding: px-to-rem(88px) px-to-rem(18px);
-    font-family: Northwoods, sans-serif;
 
     @media ($breakpoint-ml) {
         padding: px-to-rem(140px) 0;
@@ -24,14 +23,12 @@ $ns: c-email-signup;
         }
     }
     &__title{
-        color: #fff;
-        font-family: Northwoods-Bold, sans-serif;
+        color: $white;
         font-size: px-to-rem(30px);
         line-height: 1.15;
         display: block;
         text-align: center;
         text-transform: uppercase;
-
 
         @media ($breakpoint-ml) {
             line-height: normal;
@@ -45,8 +42,6 @@ $ns: c-email-signup;
         margin-top: 21px;
         clear: right;
         line-height: 1.5;
-        font-weight: 500;
-        font-family: 'Montserrat', sans-serif;
         width: 100%;
 
         @media ($breakpoint-ml) {
@@ -77,26 +72,14 @@ $ns: c-email-signup;
                 padding: 0 !important;
             }
 
-            input::placeholder {
-                color: black;
-                opacity: 1;
-            }
-
-            button {
-                background-color: #004b24 !important;
-            }
-
             .ftqUBw.ftqUBw.ftqUBw.ftqUBw.ftqUBw.ftqUBw .ql-editor strong,
             .ftqUBw.ftqUBw.ftqUBw.ftqUBw.ftqUBw.ftqUBw .ql-editor span{
-                font-family: 'Montserrat' !important;
                 font-size: px-to-rem(21px) !important;
-                font-weight: bold !important;
                 font-style: normal !important;
                 font-stretch: normal !important;
                 line-height: 1.52 !important;
-                letter-spacing: px-to-em(-0.3px) !important;
                 text-align: center !important;
-                color: #ffffff !important;
+                color: $white !important;
             }
         }
     }

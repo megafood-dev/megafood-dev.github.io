@@ -27,15 +27,6 @@
         padding: px-to-rem(40px);
     }
 
-    h3 {
-        font-size: px-to-rem(16px);
-        margin-bottom: px-to-rem(12px);
-
-        @media ($breakpoint-ml) {
-            font-size: px-to-rem(21px);
-        }
-    }
-
     .promo {
         text-align: right;
         padding-bottom: 0.3rem;

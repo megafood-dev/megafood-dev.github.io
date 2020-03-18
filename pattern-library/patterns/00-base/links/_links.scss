@@ -1,12 +1,17 @@
 a {
-    font-weight: 600;
+    font-weight: 600;//remove when add underline
     color: $vidaLoca;
     text-decoration: none;
+    // text-decoration: underline;//add when do link base styles
     transition: all .25s ease;
 
     &:hover, &:focus {
-        // text-decoration: underline;
+        color: $zuccini;
         cursor: pointer;
         transition: all .25s ease;
+    }
+
+    &[disabled] {
+        color: $dove-gray;
     }
 }

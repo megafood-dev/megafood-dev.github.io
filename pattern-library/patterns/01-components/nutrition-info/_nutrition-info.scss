@@ -22,6 +22,10 @@
         color: $white;
     }
 
+    h3 {
+        @include secondary-font(600);
+    }
+
     .desc {
         font-size: px-to-rem(21px);
         max-width: px-to-rem(720px);//keeps text at good length for readability (80 chars per line)
@@ -39,11 +43,14 @@
         }
     }
 
-    img {
-        display: block;
+    .img {
         background-color: $white;
         padding: px-to-rem(32px) 1rem;
         margin-bottom: $bottom-margin;
+
+        img {
+            margin: 0 auto;
+        }
     }
 
     p {
@@ -53,6 +60,7 @@
     small {
         display: block;
         max-width: px-to-rem(550px);
+        color: $white;
         margin-bottom: $bottom-margin;
     }
 
@@ -91,7 +99,7 @@
             max-width: 41rem;//prevents it from overlapping w/::before icon
         }
 
-        img {
+        .img {
             padding: 5rem;
         }
     }
@@ -105,21 +113,19 @@
             width: px-to-rem(149.4px);
         }
 
-        h2 {
-            font-size: px-to-rem(36px);
-        }
-
-        h3 {
-            font-size: px-to-rem(24px);
-        }
-
         .desc {
             font-size: px-to-rem(24px);
-            max-width: px-to-rem(821px);
+            max-width: px-to-rem(800px);
         }
 
-        img {
-            margin: 0 auto px-to-rem(40px) auto;
+        .img {
+            margin-bottom: px-to-rem(40px);
+        }
+    }
+
+    @media ($breakpoint-lxl) {
+        .desc {
+            max-width: px-to-rem(821px);
         }
     }
 }

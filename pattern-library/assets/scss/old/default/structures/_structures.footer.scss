@@ -56,7 +56,6 @@ $ns: st-footer;
 
     &__navigation {
         padding-bottom: px-to-rem(30px);
-        letter-spacing: px-to-em(0.41px);
 
         @media ($breakpoint-ml) {
             padding-bottom: 0;
@@ -91,9 +90,7 @@ $ns: st-footer;
             border-bottom: 1px solid $athens-gray;
             color: $kaitoke-green;
             display: block;
-            font-family: $font-family-secondary;
             font-size: px-to-rem(18px);
-            font-weight: 500;
             padding-top: px-to-rem(15px);
             padding-bottom: px-to-rem(15px);
 
@@ -152,10 +149,7 @@ $ns: st-footer;
 
     &__copyright {
         color: $jumbo;
-        font-family: $font-family-primary;
-        font-weight: 400;
         font-size: px-to-rem(13px);
-        letter-spacing: px-to-em(0.5px);
         margin-top: px-to-rem(12px);
         text-align: center;
 

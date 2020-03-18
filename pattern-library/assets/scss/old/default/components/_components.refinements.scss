@@ -34,9 +34,7 @@ $ns: c-refinement;
     }
 
     &.category-refinement,
-    .category-header {
-        font-family: 'Montserrat', sans-serif;
-        
+    .category-header {        
         @media ($breakpoint-ml) {
             margin-bottom: 0;
         }
@@ -69,11 +67,10 @@ $ns: c-refinement;
                 a {
                     position: relative;
                     display: block;
-                    font-family: 'Source Sans Pro', arial, sans-serif;
                     font-size: px-to-rem(16px);
-                    font-weight: normal;
                     line-height: 1.5;
                     color: $dove-gray;
+                    font-weight: 400;
                     padding: 0 0 0 px-to-rem(29px);
                     margin-bottom: px-to-rem(20px);
                     cursor: pointer;

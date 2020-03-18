@@ -11,9 +11,6 @@
     }
 
     h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: px-to-rem(28px);
         text-transform: uppercase;
         color: $zuccini;
         max-width: px-to-rem(600px);
@@ -21,13 +18,13 @@
     }
 
     h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 700;
+        @include secondary-font(600);
         font-size: px-to-rem(18px);
         text-transform: uppercase;
     }
 
     ul {
+        list-style-type: none;
         max-width: px-to-rem(400px);
         margin: 0 auto;
     }
@@ -41,8 +38,7 @@
     }
 
     p {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
+        @include secondary-font(500);
         font-size: px-to-rem(18px);
         color: $emperor;
         margin-bottom: 0;
@@ -108,7 +104,6 @@
 
         h3, p {
             font-size: px-to-rem(24px);
-            line-height: 1.33;
         }
     }
 

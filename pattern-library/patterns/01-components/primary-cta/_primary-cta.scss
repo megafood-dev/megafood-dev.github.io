@@ -1,3 +1,7 @@
 .primary-cta {
-    @include button();
+    background-color: $vidaLoca;
+
+    &:hover, &:focus {
+        background-color: $zuccini;
+    }
 }

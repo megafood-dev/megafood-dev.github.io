@@ -158,7 +158,9 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"video-banner"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube.com/embed/qxJU4PYuNP0"</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allow</span>=<span class="hljs-string">"accelerometer; encrypted-media; gyroscope; picture-in-picture"</span> <span class="hljs-attr">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ytplayer"</span> <span class="hljs-attr">data-ytid</span>=<span class="hljs-string">"qxJU4PYuNP0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://img.youtube.com/vi/qxJU4PYuNP0/maxresdefault.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"YouTube video player"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Play<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
         
     </code>
@@ -168,7 +170,9 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-c5f65c096c47e3fadc7e33c86d3f0364-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"video-banner"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube.com/embed/qxJU4PYuNP0"</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allow</span>=<span class="hljs-string">"accelerometer; encrypted-media; gyroscope; picture-in-picture"</span> <span class="hljs-attr">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ytplayer"</span> <span class="hljs-attr">data-ytid</span>=<span class="hljs-string">"qxJU4PYuNP0"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://img.youtube.com/vi/qxJU4PYuNP0/maxresdefault.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{alt-text}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>Play<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -178,7 +182,9 @@
     <code class="Code Code--lang-json">
         
             
-            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            <pre>{
+  <span class="hljs-attr">"alt-text"</span>: <span class="hljs-string">"YouTube video player"</span>
+}</pre>
             
         
     </code>
@@ -195,13 +201,93 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
+                <option value="file-9f5c230b8687961e646d968bd908b249">_video-banner.js</option>
+                
                 <option value="file-1415ce5c099929497c948f9b24b97a66">_video-banner.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-1415ce5c099929497c948f9b24b97a66" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-9f5c230b8687961e646d968bd908b249" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-meta">'use strict'</span>;
+
+MF.videoBannerYoutube = {
+    <span class="hljs-attr">init</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-comment">// Load the IFrame Player API code asynchronously.</span>
+        <span class="hljs-keyword">var</span> tag = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'script'</span>);
+        tag.src = <span class="hljs-string">'https://www.youtube.com/player_api'</span>;
+        <span class="hljs-keyword">var</span> firstScriptTag = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'script'</span>)[<span class="hljs-number">0</span>];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        <span class="hljs-comment">// YouTube player after the API code downloads.</span>
+        <span class="hljs-keyword">var</span> player;
+
+        <span class="hljs-built_in">window</span>.onYouTubePlayerAPIReady = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> $playerSelector = $(<span class="hljs-string">'#ytplayer'</span>);
+            <span class="hljs-keyword">var</span> videoId = $playerSelector.data(<span class="hljs-string">'ytid'</span>);
+            <span class="hljs-keyword">var</span> $playButton = $playerSelector.siblings(<span class="hljs-string">'button'</span>);
+            <span class="hljs-keyword">var</span> $playPreloader = $playerSelector.siblings(<span class="hljs-string">'img'</span>);
+
+            <span class="hljs-keyword">if</span> ($playerSelector.length) {
+                player = <span class="hljs-keyword">new</span> YT.Player(<span class="hljs-string">'ytplayer'</span>, {
+                    <span class="hljs-attr">videoId</span>: videoId,
+                    <span class="hljs-attr">playerVars</span>: {
+                        <span class="hljs-attr">modestbranding</span>: <span class="hljs-number">0</span>,
+                        <span class="hljs-attr">controls</span>: <span class="hljs-number">1</span>,
+                        <span class="hljs-attr">rel</span>: <span class="hljs-number">0</span>
+                    },
+                    <span class="hljs-attr">events</span>: {
+                        <span class="hljs-string">'onReady'</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                            $playPreloader.addClass(<span class="hljs-string">'hidden'</span>);
+                        },
+                        <span class="hljs-string">'onStateChange'</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>)</span>{
+                            $playButton.toggleClass(<span class="hljs-string">'hidden'</span>, event.data === YT.PlayerState.PLAYING);
+                        },
+                    }
+                });
+            }
+
+            <span class="hljs-keyword">if</span> ($playButton.length) {
+                $playButton.on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                    player.playVideo();
+                    $(<span class="hljs-keyword">this</span>).off(<span class="hljs-string">'click'</span>).remove();
+                })
+            }
+        }
+    }
+};
+
+<span class="hljs-built_in">module</span>.exports = MF.imgBanner;
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/video-banner/_video-banner.js"><span>/components/raw/video-banner/_video-banner.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">pattern-library/patterns/01-components/video-banner/_video-banner.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.7 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-1415ce5c099929497c948f9b24b97a66" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -222,8 +308,65 @@
         <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
         <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
     }
+
+    <span class="hljs-selector-tag">button</span> {
+        <span class="hljs-attribute">display</span>: none;
+        <span class="hljs-attribute">justify-content</span>: center;
+        <span class="hljs-attribute">align-items</span>: center;
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">width</span>: px-to-rem(<span class="hljs-number">75px</span>);
+        <span class="hljs-attribute">height</span>: px-to-rem(<span class="hljs-number">75px</span>);
+        <span class="hljs-attribute">transform</span>:translateX(-<span class="hljs-number">50%</span>) translateY(-<span class="hljs-number">50%</span>);
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-left</span>: px-to-rem(<span class="hljs-number">4px</span>);
+        <span class="hljs-attribute">font-size</span>: px-to-rem(<span class="hljs-number">20px</span>);
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">color</span>: black;
+        <span class="hljs-attribute">background</span>: <span class="hljs-variable">$white</span>;
+        <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.1s</span> linear;
+        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+        <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+        <span class="hljs-attribute">pointer-events</span>: all;
+        <span class="hljs-attribute">cursor</span>: pointer;
+
+        &amp;<span class="hljs-selector-pseudo">::after</span> {
+            <span class="hljs-attribute">content</span>: <span class="hljs-string">'\25b6'</span>;
+        }
+
+        &amp;<span class="hljs-selector-pseudo">:hover</span>,
+        &amp;<span class="hljs-selector-pseudo">:focus</span> {
+            <span class="hljs-attribute">color</span>: <span class="hljs-variable">$zuccini</span>;
+            <span class="hljs-attribute">width</span>: px-to-rem(<span class="hljs-number">80px</span>);
+            <span class="hljs-attribute">height</span>: px-to-rem(<span class="hljs-number">80px</span>);
+        }
+
+        &amp;<span class="hljs-selector-class">.hidden</span> {
+            <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">pointer-events</span>: none;
+        }
+    }
+
+    <span class="hljs-selector-tag">img</span> {
+        <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+        <span class="hljs-attribute">position</span>: relative;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+        <span class="hljs-selector-tag">object</span>-fit: cover;
+
+        &amp;<span class="hljs-selector-class">.hidden</span> {
+            <span class="hljs-attribute">display</span>: none;
+        }
+    }
 }
-</pre>
+
+<span class="hljs-selector-class">.js</span> {
+    <span class="hljs-selector-class">.video-banner</span> {
+        <span class="hljs-selector-tag">button</span> {
+            <span class="hljs-attribute">display</span>: flex;
+        }
+    }
+}</pre>
                             </code>
                             
                         </div>
@@ -239,7 +382,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">231 Bytes</span>
+                    <span class="Meta-value">1.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -291,7 +434,13 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-c5f65c096c47e3fadc7e33c86d3f0364-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        <h2 id="markup">Markup</h2>
+<p>The youtube ID should be the ID itself, not a url.
+example: iDafle844;</p>
+<h2 id="accessibility">Accessibility</h2>
+<p>The custom play button won’t be visible until JS is loaded;
+The custom play button is removed from DOM once it’s clicked. Removing the play button from the DOM once it’s been pressed and making normal youtube video controls available once the video is playing. We want to make sure users have the ability to toggle the settings they need for the video, including play/pause, toggle captions, etc.</p>
+
         
     </div>
 </div>
@@ -350,7 +499,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #9b2242;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
 
 
 </div>
@@ -422,7 +571,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #9b2242;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
 
 
 </div>
@@ -494,7 +643,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #9b2242;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
 
 
 </div>
@@ -525,6 +674,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="back-link.html" data-pjax>
+                <span>Back Link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="base-styles.html" data-pjax>
                 <span>Base Styles</span>
                 
@@ -551,6 +724,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="benefits.html" data-pjax>
                 <span>Benefits</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="btn.html" data-pjax>
+                <span>Btn</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -671,6 +868,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="cta-highlight.html" data-pjax>
                 <span>Cta Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="fb-login-btn.html" data-pjax>
+                <span>Fb Login Btn</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -853,8 +1074,56 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="img-banner.html" data-pjax>
+                <span>Img Banner</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="legend-header.html" data-pjax>
                 <span>Legend Header</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="link.html" data-pjax>
+                <span>Link</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -967,6 +1236,134 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-picture-story">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Picture Story</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="picture-story--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="picture-story--reverse.html" data-pjax>
+                <span>Reverse</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-primary-alt-btn">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Primary Alt Btn</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="primary-alt-btn--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="primary-alt-btn--addition.html" data-pjax>
+                <span>Addition</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -1119,6 +1516,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="product-tile.html" data-pjax>
                 <span>Product Tile</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="reverse-btn.html" data-pjax>
+                <span>Reverse Btn</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #2a5236;" title="Done"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="secondary-btn.html" data-pjax>
+                <span>Secondary Btn</span>
                 
 
 <div class="Status Status--unlabelled">

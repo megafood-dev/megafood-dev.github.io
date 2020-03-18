@@ -14,18 +14,16 @@ $st-header__padding-top: px-to-rem(22px) !default;
 
         p {
             margin-right: px-to-rem(10px);
+            margin-bottom: 0;
         }
 
         button {
             @include remove-button();
             text-indent: -999999rem;
-            @include x-icon('right', #424345, lighten(#424345, 15%));
+            @include x-icon('right', $mine-shaft, $emperor);
             height: px-to-rem(24px);
             width: px-to-rem(20px);
-
-            &:hover {
-                cursor: pointer;
-            }
+            margin-bottom: 0;
         }
     }
 }
@@ -70,8 +68,7 @@ $st-header__padding-top: px-to-rem(22px) !default;
 
     &__promo {
         font-size: px-to-rem(15px);
-        font-weight: 700;
-        letter-spacing: px-to-em(0.5px);
+        font-weight: 600;
     }
 
     &__logo-block {

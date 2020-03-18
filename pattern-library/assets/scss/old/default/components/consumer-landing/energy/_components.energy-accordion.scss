@@ -12,20 +12,17 @@ $ns: c-energy-accordion;
     }
 
     &__section-title {
-        font-family: Montserrat;
+        @include secondary-font(600);
         font-size: px-to-rem(24px);
-        font-weight: 600;
         line-height: 1.81;
-        letter-spacing: px-to-em(2.4px);
         text-align: center;
-        color: #074b26;
+        color: $zuccini;
         padding-bottom: px-to-rem(18.5px);
         text-transform: uppercase;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(36px);
             line-height: 1.5;
-            letter-spacing: px-to-em(3.6px);
             padding-bottom: px-to-rem(55px);
         }
     }
@@ -39,39 +36,32 @@ $ns: c-energy-accordion;
     }
 
     &__section-subtitle {
-        font-family: Montserrat;
+        @include secondary-font(500);
         font-size: px-to-rem(12px);
         line-height: 1.67;
-        letter-spacing: px-to-em(1.7px);
         text-align: center;
-        color: #074b26;
+        color: $zuccini;
         padding-bottom: px-to-rem(23px);
         max-width: px-to-rem(857px);
         margin: 0 auto;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(18px);
-            letter-spacing: px-to-em(1.8px);
             padding-bottom: px-to-rem(61px);
         }
     }
 
     &__link {
-        font-family: Montserrat;
         font-size: px-to-rem(13px);
-        font-weight: 600;
         font-style: normal;
         font-stretch: normal;
         line-height: 0.46;
-        letter-spacing: px-to-em(1.3px);
-        color: #074b26;
         text-transform: uppercase;
         padding: px-to-rem(9px) 0 px-to-rem(11px) px-to-rem(18px);
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(24px);
             line-height: 0.46;
-            letter-spacing: px-to-em(2.4px);
         }
     }
 
@@ -85,20 +75,17 @@ $ns: c-energy-accordion;
         font-style: normal;
         font-stretch: normal;
         line-height: 1.5;
-        letter-spacing: normal;
         color: #636363;
         position: relative;
         max-width: 100%;
     }
 
     &__text-bold-dark-green {
-        font-family: Montserrat;
         font-size: px-to-rem(24px);
         font-weight: 600;
         line-height: 1.25;
-        letter-spacing: px-to-em(2.4px);
         text-align: left;
-        color: #074b26;
+        color: $zuccini;
         padding-bottom: px-to-rem(15px);
         max-width: px-to-rem(570px);
 
@@ -108,10 +95,8 @@ $ns: c-energy-accordion;
     }
 
     &__text-reg-grey {
-        font-family: Montserrat;
         font-size: px-to-rem(14px);
         line-height: 1.71;
-        letter-spacing: px-to-em(0.7px);
         text-align: left;
         color: #393b3a;
 
@@ -121,11 +106,9 @@ $ns: c-energy-accordion;
     }
 
     &__text-bold-grey {
-        font-family: Montserrat;
         font-size: px-to-rem(18px);
         font-weight: 600;
         line-height: 1.67;
-        letter-spacing: px-to-em(0.9px);
         text-align: left;
         color: #393b3a;
 
@@ -136,12 +119,10 @@ $ns: c-energy-accordion;
 
     &__text-reg-green,
     &__text-reg-green a {
-        font-family: Montserrat;
         font-size: px-to-rem(14px);
         line-height: 1.71;
-        letter-spacing: px-to-em(0.7px);
         text-align: left;
-        color: #6d9846;
+        color: $vidaLoca;
 
         @media ($breakpoint-ml) {
             max-width: px-to-rem(570px);
@@ -149,14 +130,11 @@ $ns: c-energy-accordion;
     }
 
     &__text-italic-dark-green {
-        font-family: Montserrat;
         font-size: px-to-rem(48px);
-        font-weight: 300;
         font-style: italic;
-        line-height: 0.83;
-        letter-spacing: px-to-em(2.4px);
+        line-height: 1.3;
         text-align: left;
-        color: #064b24;
+        color: $zuccini;
 
         @media ($breakpoint-ml) {
             max-width: px-to-rem(570px);
@@ -164,7 +142,6 @@ $ns: c-energy-accordion;
     }
 
     &__text-small-dark-gray {
-        font-family: Montserrat;
         font-size: px-to-rem(10px);
         color: #636363;
 
@@ -174,9 +151,7 @@ $ns: c-energy-accordion;
     }
 
     &__link-small-green {
-        font-family: Montserrat;
         font-size: px-to-rem(10px);
-        color: #6d9846;
 
         @media ($breakpoint-ml) {
             max-width: px-to-rem(570px);
@@ -184,21 +159,8 @@ $ns: c-energy-accordion;
     }
 
     &__btn {
-        height: px-to-rem(42px);
-        font-size: px-to-rem(20px);
-        line-height: 2.1;
-        background-color: #004b24;
-        text-align: center;
-        text-transform: uppercase;
-        padding: 0 px-to-rem(50px);
-
-        @media ($breakpoint-ml) {
-            width: px-to-rem(284px);
-            padding: 0;
-        }
-
         a {
-            color: #ffffff;
+            @include button();
         }
     }
 

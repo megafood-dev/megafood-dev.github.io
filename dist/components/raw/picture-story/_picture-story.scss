@@ -1,0 +1,59 @@
+.picture-story {
+    > div {
+        padding: px-to-rem(16px) $gutter-sm px-to-rem(40px) $gutter-sm;
+    }
+
+    h2 {
+        color: $zuccini;
+        
+        span {
+            display: block;
+            @include primary-font(400);
+            font-size: px-to-rem(21px);
+            color: $emperor;
+            margin-bottom: px-to-rem(16px);
+        }
+    }
+
+    @media ($breakpoint-m){
+        display: flex;
+
+        picture {
+            width: 50%;
+        }
+
+        > div {
+            width: 50%;
+            padding: px-to-rem(40px) px-to-rem(40px) px-to-rem(8px) px-to-rem(40px);
+        }
+
+        &.reverse {
+            > div {
+                order: 0;
+            }
+
+            > picture {
+                order: 1;
+            }
+        }
+    }
+
+    @media ($breakpoint-lg){
+        > div {
+            padding-top: px-to-rem(32px);
+        }
+
+        h2 {
+            span {
+                font-size: px-to-rem(24px);
+            }
+        }
+    }
+
+    @media ($breakpoint-xxxl){
+        > div {
+            padding-top: px-to-rem(48px);
+            padding-bottom: px-to-rem(16px);
+        }
+    }
+}

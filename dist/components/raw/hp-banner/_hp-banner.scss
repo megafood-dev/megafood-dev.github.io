@@ -13,35 +13,18 @@
             h2, p {
                 color: $white;
             }
-
-            .primary-cta {
-                color: $vidaLoca;
-                background-color: $white;
-                border: 2px solid transparent;
-
-                &:hover, &:focus {
-                    color: $white;
-                    background-color: transparent;
-                    border: 2px solid $white;
-                }
-            }
         }
     }
 
     h2 {
-        font-family: 'Montserrat', sans-serif;
         font-size: px-to-rem(20px);
-        line-height: 1.3;
-        font-weight: 600;
         text-transform: uppercase;
-        margin-bottom: 1rem;
     }
 
     p {
-        font-family: 'Montserrat', sans-serif;
+        @include secondary-font(600);
         font-size: px-to-rem(16px);
         line-height: 1.3;
-        font-weight: 600;
         margin-bottom: px-to-rem(24px);
     }
 
@@ -171,7 +154,6 @@
         .text {
             h2 {
                 font-size: px-to-rem(28px);
-                margin-bottom: px-to-rem(24px);
             }
 
             p {

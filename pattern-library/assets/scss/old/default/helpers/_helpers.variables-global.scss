@@ -2,15 +2,6 @@
 // Global Variables
 // ============================================================================
 
-
-// Typography
-// ============================================================================
-$font-family-primary: 'Source Sans Pro', arial, sans-serif !default;
-$font-family-secondary: 'Dosis', arial, sans-serif !default;
-$font-family-tertiary: 'Virginia Sky', arial, sans-serif !default;
-$font-family-quaternary: 'Roboto', arial, sans-serif !default;
-$font-family-quinary: 'Montserrat', sans-serif !default;
-
 // Layout
 // ============================================================================
 $setting-gutter: px-to-rem(30px) !default;
@@ -71,10 +62,6 @@ $corn: rgb(221, 162, 0) !default;
 
 // Whites
 $white-85: rgba(255, 255, 255, .85) !default;
-
-// Facebook Blue
-$facebook-blue: rgb(59, 89, 152);
-$facebook-blue-hover: rgb(65, 99, 170);
 
 // Purples
 $cardinal: rgb(166, 23, 64) !default;

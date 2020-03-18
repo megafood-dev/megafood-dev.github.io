@@ -1,6 +1,20 @@
 'use strict';
 
 MF.helpers = {
+    scrollTo: (target, topPadding) => {
+        topPadding = topPadding || 0;
+
+        if(typeof target == 'number'){
+            $('html, body').animate({
+                scrollTop: target - topPadding
+            }, 500);
+        } else {
+            $('html, body').animate({
+                scrollTop: target.offset().top - topPadding
+            }, 500);
+        }
+    },
+
     widthChanges: () => {//do things only when resize width
         MF.sideNav.init();
     },

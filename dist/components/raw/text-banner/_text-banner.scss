@@ -1,7 +1,6 @@
 .text-banner {
     background-color: $zuccini;
     color: $white;
-    font-family: 'Montserrat', sans-serif;
     padding: px-to-rem(72px) $gutter-sm;
     margin-bottom: px-to-rem(32px);
 
@@ -20,7 +19,7 @@
         margin-bottom: px-to-rem(24px);
     }
 
-    .button {
+    .btn {
         margin-right: px-to-rem(8px);
         margin-bottom: px-to-rem(8px);
     }
@@ -33,6 +32,10 @@
         padding: px-to-rem(72px) calc(100% + #{$gutter-lg});
         margin-left: -100%;
         margin-right: -100%;
+
+        h1, .header {
+            font-size: px-to-rem(48px);
+        }
     
         p {
             max-width: px-to-rem(661px);

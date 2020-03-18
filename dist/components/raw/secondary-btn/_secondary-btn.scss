@@ -1,0 +1,7 @@
+.secondary-btn {
+    background-color: $finn;
+
+    &:hover, &:focus {
+        background-color: $beet-hover;
+    }
+}

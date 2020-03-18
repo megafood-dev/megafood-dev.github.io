@@ -29,7 +29,6 @@ $ns: c-banner-page-jump;
     }
 
     &__subTitle {
-        font-family: 'Northwoods-Bold';
         font-size: px-to-rem(21px);
         line-height: 1.29;
         color: $white;
@@ -48,9 +47,8 @@ $ns: c-banner-page-jump;
     }
 
     &__body {
-        font-family: 'Montserrat',sans-serif;
+        @include secondary-font(500);
         font-size: px-to-rem(18px);
-        font-weight: 500;
         line-height: 1.5;
         color: $white;
         padding-bottom: 2.25rem;

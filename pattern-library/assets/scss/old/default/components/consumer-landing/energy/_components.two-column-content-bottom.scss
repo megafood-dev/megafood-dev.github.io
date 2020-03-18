@@ -55,20 +55,15 @@ $ns: c-two-column-content-bottom;
 
 
     &__text-bold {
-        font-family: Montserrat;
         font-size: px-to-rem(20px);
-        font-weight: bold;
-        letter-spacing: px-to-em(2px);
         text-align: left;
-        color: #1c5532;
+        color: $zuccini;
     }
 
     &__text-light {
-        font-family: Montserrat;
         font-size: px-to-rem(18px);
         line-height: 1.33;
-        letter-spacing: px-to-em(1.8px);
         text-align: left;
-        color: #1c5532;
+        color: $zuccini;
     }
 }

@@ -1,0 +1,20 @@
+.fb-login-btn {
+  position: relative;
+  background-color: $facebook-blue;
+  padding-left: px-to-rem(32px) + px-to-rem(22px) + px-to-rem(16px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: px-to-rem(32px);
+    background-image: url('../../assets/img/fb.svg');
+    height: px-to-rem(24px);
+    width: px-to-rem(22px);
+    transform: translateY(-50%);
+  }
+
+  &:hover, &:focus {
+    background-color: $facebook-blue-hover;
+  }
+}

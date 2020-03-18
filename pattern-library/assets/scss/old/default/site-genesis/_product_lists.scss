@@ -21,8 +21,6 @@
 .product-list-item {
     .name {
         color: $kaitoke-green;
-        font-family: $font-family-secondary;
-        font-weight: 500;
         font-size: px-to-rem(16px);
 
         @media ($breakpoint-ml) {

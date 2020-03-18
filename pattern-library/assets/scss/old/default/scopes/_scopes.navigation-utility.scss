@@ -3,7 +3,6 @@ $ns: s-navigation-utility;
 .#{$ns} {
     background-color: $vida-loca;
     color: $white-85;
-    letter-spacing: px-to-em(0.3px);
     line-height: 1;
     font-size: px-to-rem(14px);
     font-weight: 600;
@@ -34,17 +33,12 @@ $ns: s-navigation-utility;
         }
     }
 
-    li + li {
-        @media ($breakpoint-ml) {
-            margin-left: px-to-rem(21px);
-        }
-    }
-
     li {
         border-bottom: 1px solid $athens-gray;
 
         @media ($breakpoint-ml) {
             border-bottom: 0;
+            margin-left: px-to-rem(21px);
         }
         a {
             color: $white-85;
@@ -68,5 +62,11 @@ $ns: s-navigation-utility;
                 margin: 0;
             }
         }
+    }
+
+    img {
+        display: inline;
+        height: px-to-rem(12px);
+        width: px-to-rem(10px);
     }
 }

@@ -28,10 +28,7 @@ $ns: c-grid-graphical-asset;
     }
 
     &__heading {
-        font-family: $font-family-secondary;
         font-size: px-to-rem(20px);
-        font-weight: 600;
-        letter-spacing: px-to-em(0.8px);
         line-height: 1;
         text-align: center;
 
@@ -56,18 +53,11 @@ $ns: c-grid-graphical-asset;
 
     // Currently only relevant for grid-secondary-graphical-asset
     &__body {
-        color: white;
-        font-family: $font-family-secondary;
+        color: $white;
         font-size: px-to-rem(22px);
-        font-weight: 500;
-        letter-spacing: px-to-em(0.5px);
         line-height: 1.14;
         margin: px-to-rem(10px) 0 px-to-rem(13px);
         width: 90%;
-
-        @media ($breakpoint-lg) {
-            letter-spacing: px-to-em(0.8px);
-        }
     }
 
     &__links {
@@ -77,28 +67,6 @@ $ns: c-grid-graphical-asset;
             @media ($breakpoint-ml) {
                 @include pxl-list-inline();
                 text-align: center;
-            }
-        }
-
-        // Targeting Content Asset Links
-        a,
-        span {
-            @extend .c-button;
-            border: 0;
-            display: flex;
-            font-size: px-to-rem(20px);
-            font-weight: 700;
-            letter-spacing: px-to-em(0.6px);
-            transition: background-color .25s ease;
-
-            @media ($breakpoint-ml) {
-                width: auto;
-            }
-
-            &:hover {
-                @media ($breakpoint-ml) {
-                    left: px-to-rem(-3px);
-                }
             }
         }
     }
@@ -112,22 +80,11 @@ $ns: c-grid-graphical-asset;
    ============================================================================ */
 
 .#{$ns} {
-    &--button {
-        padding-bottom: px-to-rem(40px);
-        position: relative;
-        width: 100%;
-
-        @media ($breakpoint-lg) {
-            margin-top: px-to-rem(30px);
-        }
-    }
-
     &--secondary {
         background-position: center bottom;
         background-repeat: repeat-x;
         background-size: cover;
-        color: white;
-        font-family: Northwoods, $font-family-secondary;
+        color: $white;
         display: block;
         margin-top: px-to-rem(5px);
         margin-bottom: px-to-rem(5px);
@@ -187,9 +144,7 @@ $ns: c-grid-graphical-asset;
 
             &__title {
                 color: $kaitoke-green;
-                font-family: 'Northwoods-Bold', $font-family-secondary;
                 font-size: px-to-rem(21px);
-                font-weight: normal;
                 line-height: 1;
                 margin: px-to-rem(19px) auto px-to-rem(10px);
                 position: relative;
@@ -216,7 +171,6 @@ $ns: c-grid-graphical-asset;
                 color: $kaitoke-green;
                 font-size: px-to-rem(18px);
                 line-height: 1.06;
-                letter-spacing: px-to-em(0.4px);
                 margin-top: 0;
                 position: relative;
                 width: 80%;
@@ -240,7 +194,6 @@ $ns: c-grid-graphical-asset;
 
             &__link-wrapper {
                 color: $kaitoke-green;
-                font-family: $font-family-secondary;
                 font-size: px-to-rem(18px);
                 font-weight: bold;
                 text-align: right;

@@ -1,14 +1,6 @@
 .product-recommendations {
     padding: px-to-rem(48px) $gutter-sm 0 $gutter-sm;
 
-    h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: px-to-rem(26px);
-        color: $black;
-        margin-bottom: $bottom-margin;
-    }
-
     .slider {
         .slick-arrow {
             top: 30%;
@@ -75,7 +67,6 @@
 
     @media ($breakpoint-lg) {
         h2 {
-            font-size: px-to-rem(36px);
             margin-bottom: px-to-rem(48px);
         }
 

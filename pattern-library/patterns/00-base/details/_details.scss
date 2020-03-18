@@ -1,5 +1,4 @@
 details {
-    font-family: 'Montserrat', sans-serif;
     font-size: px-to-rem(16px);
     color: $emperor;
     padding: 0 $gutter-sm;
@@ -8,7 +7,7 @@ details {
 
     summary {
         position: relative;
-        font-weight: 600;
+        @include secondary-font(600);
         font-size: px-to-rem(16px);
         color: $zuccini;
         list-style-type: none;

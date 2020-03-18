@@ -10,9 +10,7 @@ $ns: c-product-set;
 
     &__title {
         color: $kaitoke-green;
-        font-family: $font-family-secondary;
         font-size: px-to-rem(24px);
-        font-weight: 500;
         padding-top: px-to-rem(18px);
         padding-bottom: px-to-rem(18px);
     }
@@ -40,18 +38,13 @@ $ns: c-product-set;
 
     &__link{
         color: $kaitoke-green;
-        font-family: $font-family-secondary;
         font-size: px-to-rem(20px);
-        font-weight: 500;
         line-height: 0.75;
-        letter-spacing: px-to-em(0.8px);
     }
 
     &__subhead {
         color: $jumbo;
-        font-family: $font-family-secondary;
         font-size: px-to-rem(15px);
-        font-weight: 500;
         margin-bottom: px-to-rem(2px);
     }
 

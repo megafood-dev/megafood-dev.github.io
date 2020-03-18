@@ -1,32 +1,49 @@
 //------------------------------------------------------------------------------
+// Fonts
+//------------------------------------------------------------------------------
+@mixin primary-font($weight: 400){
+    font-family: 'Source Sans Pro', arial, sans-serif;
+    font-weight: $weight;//available: 400, 600
+}
+
+@mixin secondary-font($weight: 400){
+    font-family: 'Montserrat',sans-serif;
+    font-weight: $weight;//available: 400, 500, 600, 700, or 800 (used: 400, 500, 600)
+}
+
+@mixin tertiary-font($weight: 600){
+    font-family: 'Orbi-Regular', serif;
+    font-weight: $weight;//available: 600
+}
+
+
+//------------------------------------------------------------------------------
 // Button & Link Helpers
 //------------------------------------------------------------------------------
 @mixin button(){
     display: inline-block;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    @include secondary-font(600);
     font-size: px-to-rem(18px);
-    font-weight: 600;
-    letter-spacing: px-to-em(4px);
-    line-height: 1.11;
-    text-transform: uppercase;
+    line-height: 1.5;
     text-align: center;
-    padding: px-to-rem(16px) px-to-rem(40px);
+    padding: px-to-rem(14.5px) px-to-rem(32px);
     color: $white;
-    background-color: $vidaLoca;
+    background-color: $zuccini;
     border: none;
+    border-radius: px-to-rem(3px);
     margin-bottom: px-to-rem(16px);
     transition: all 0.3s ease;
 
     &:hover, &:focus {
         color: $white;
-        background-color: $holly;
+        background-color: $county-green;
         cursor: pointer;
     }
 
-    &[disabled]{
-        color: $tundora;
-        background-color: $gallery;
+    &[disabled] {
+        color: $emperor;
+        background-color: $alabaster;
 
         &:hover, &:focus {
             text-decoration: none;
@@ -36,14 +53,41 @@
 }
 
 @mixin remove-button(){
-    letter-spacing: normal;
+    font-weight: inherit;
+    text-align: left;
     color: $emperor;
     background-color: transparent;
+    padding: 0;
     border: none;
+    margin-bottom: 0;
 
     &:hover, &:focus {
         color: $emperor;
         background-color: transparent;
+    }
+
+    &[disabled] {
+        color: $dove-gray;
+        background-color: transparent;
+    }
+}
+
+@mixin button-to-link(){//should match link base styles
+    @include remove-button();
+    @include primary-font(600);//change font-weight when add underline
+    color: $vidaLoca;
+    text-decoration: none;
+    // text-decoration: underline;//add when do link base styles
+    transition: all .25s ease;
+
+    &:hover, &:focus {
+        color: $zuccini;
+        cursor: pointer;
+        transition: all .25s ease;
+    }
+
+    &[disabled] {
+        color: $dove-gray;
     }
 }
 
@@ -70,19 +114,6 @@
     width: auto;
     height: auto;
     overflow: visible;
-}
-@mixin remove-button(){
-    font-weight: inherit;
-    letter-spacing: normal;
-    text-transform: none;
-    text-align: left;
-    padding: 0;
-    color: #636363;
-    background-color: transparent;
-
-    &:hover, &:focus {
-        background-color: transparent;
-    }
 }
 
 
@@ -131,7 +162,6 @@
     &::before, &::after {
         content: '';
         position: absolute;
-        left: 50%;
         height: px-to-rem(12px);
         width: px-to-rem(2px);
         background-color: $color;
@@ -141,9 +171,14 @@
         top: calc(50% - #{px-to-rem(8px)});
 
         @if $direction == 'right' {
+            left: 50%;
             transform: rotate(-45deg) translateX(#{px-to-rem(2px)});
-        } @else {
+        } @else if $direction == 'left' {
+            left: 50%;
             transform: rotate(45deg) translateX(#{px-to-rem(-2px)});
+        } @else {
+            left: calc(50% - #{px-to-rem(1px)});
+            transform: rotate(-45deg) translateX(#{px-to-rem(-6px)});
         }
     }
 
@@ -151,9 +186,60 @@
         top: calc(50% - #{px-to-rem(3px)});
 
         @if $direction == 'right' {
+            left: 50%;
             transform: rotate(45deg) translateX(#{px-to-rem(2px)});
-        } @else {
+        } @else if $direction == 'left' {
+            left: 50%;
             transform: rotate(-45deg) translateX(#{px-to-rem(-2px)});
+        } @else {
+            left: calc(50% - #{px-to-rem(1px)});
+            transform: rotate(45deg) translateX(#{px-to-rem(6px)});
+        }
+    }
+}
+
+@mixin link-arrow($direction: 'right', $color: $vidaLoca, $hover-color: $zuccini){
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 38%;
+        width: px-to-rem(2px);
+        background-color: $color;
+    }
+
+    &::before {
+        top: calc(50% - #{px-to-rem(4.5px)});
+
+        @if $direction == 'right' {
+            right: px-to-rem(3px);
+            transform: rotate(-45deg) translateX(#{px-to-rem(2px)});
+        }
+
+        @if $direction == 'left' {
+            left: px-to-rem(3px);
+            transform: rotate(45deg) translateX(#{px-to-rem(-2px)});
+        }
+    }
+
+    &::after {
+        top: calc(50% - #{px-to-rem(2.5px)});
+
+        @if $direction == 'right' {
+            right: px-to-rem(3px);
+            transform: rotate(45deg) translateX(#{px-to-rem(2px)});
+        }
+
+        @if $direction == 'left' {
+            left: px-to-rem(3px);
+            transform: rotate(-45deg) translateX(#{px-to-rem(-2px)});
+        }
+    }
+
+    &:hover, &:focus {
+        &::after, &::before {
+            background-color: $hover-color;
         }
     }
 }

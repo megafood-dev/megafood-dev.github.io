@@ -7,8 +7,6 @@ PL.slider = {
         const haveSlider = $('.pl-slider').length;
 
         if(haveSlider){
-            console.log('haveSlider');
-
             slick($('.pl-slider'), {
                 dots: true,
                 speed: 500,

@@ -1,0 +1,24 @@
+.primary-alt-btn {
+    color: $zuccini;
+    background-color: $white;
+    padding-top: px-to-rem(12.5px);
+    padding-bottom: px-to-rem(12.5px);
+    border: 2px solid $zuccini;
+
+    &:hover, &:focus {
+        color: $vidaLoca;
+        background-color: $white;
+        border-color: $vidaLoca;
+    }
+
+    &[disabled] {
+        color: $dove-gray;
+        background-color: $white;
+        border-color: $dove-gray;
+    }
+
+    span {
+        display: block;
+        font-size: px-to-rem(12px);
+    }
+}

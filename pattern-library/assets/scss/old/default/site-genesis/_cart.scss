@@ -4,13 +4,12 @@
     .price-sales {
         color: $dove-gray;
         display: inline;
-        font-family: $font-family-primary !important;
         font-size: 1rem !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
     }
 
     .price-promotion {
-        font-weight: 500;
+        font-weight: 600;
 
         .price-sales {
             color: $kaitoke-green;
@@ -23,6 +22,7 @@
 
     .price-unadjusted {
         display: block;
+
         span {
             text-decoration: line-through;
         }
@@ -30,6 +30,7 @@
 
     .price-adjusted-total {
         display: block;
+        
         span {
             color: $kaitoke-green;
         }
@@ -43,15 +44,7 @@
 
 // Cart Order Block
 .cart-order-block {
-    width: 100%;
-
-    @media ($breakpoint-ml) {
-        max-width: px-to-rem(300px);
-    }
-
     &--wide {
-        max-width: none;
-
         @media ($breakpoint-lg) {
             display: flex;
         }

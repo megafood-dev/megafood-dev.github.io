@@ -8,7 +8,7 @@ $ns: c-social-media-links;
     background-position: 80% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #034e26;
+    background-color: $zuccini;
 
     @media ($breakpoint-ml) {
         background-position: center bottom;
@@ -27,7 +27,6 @@ $ns: c-social-media-links;
     }
 
     &__title {
-       font-family: 'Northwoods-Bold';
        font-size: px-to-rem(30px);
        line-height: 1.2;
        color: $white;

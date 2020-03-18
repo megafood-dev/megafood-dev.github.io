@@ -1,8 +1,7 @@
 .breadcrumb {
     color: $jumbo;
-    font-family: $font-family-primary;
+    @include primary-font(400);
     font-size: px-to-rem(13px);
-    letter-spacing: px-to-em(0.5px);
     line-height: 1.8;
     margin: 0;
     padding-bottom: px-to-rem(18px);
@@ -38,7 +37,7 @@
     border-radius: px-to-rem(10px);
     display: inline-block;
     font-size: px-to-rem(12px);
-    font-weight: bold;
+    font-weight: 600;
     line-height: 1.667;
     margin: 0 px-to-rem(5px) px-to-rem(5px) 0;
     padding: 0 px-to-rem(10px);

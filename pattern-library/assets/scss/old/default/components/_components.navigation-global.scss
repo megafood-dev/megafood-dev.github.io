@@ -9,7 +9,6 @@
 $ns: c-navigation-global;
 
 .#{$ns} {
-    font-family: $font-family-secondary;
     position: relative;
     
     @media ($breakpoint-ml) {
@@ -142,7 +141,6 @@ $ns: c-navigation-global;
         @media ($breakpoint-ml) {
             color: $kaitoke-green;
             font-size: px-to-rem(14px);
-            letter-spacing: px-to-em(0.9px);
             padding: 0 px-to-rem(15px) 0 0;
             position: relative;
             transition: all .25s ease .3s;
@@ -167,7 +165,6 @@ $ns: c-navigation-global;
 
         @media ($breakpoint-lg) {
             font-size: px-to-rem(18px);
-            letter-spacing: px-to-em(1.1px);
             padding-right: px-to-rem(18px);
         }
 

@@ -70,6 +70,7 @@
 
     @media ($breakpoint-ml) {
         .slick-arrow {
+            padding: 0;
             height: px-to-rem(56px);
             width: px-to-rem(56px);
             border-radius: 50%;

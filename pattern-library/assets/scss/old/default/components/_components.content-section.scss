@@ -23,7 +23,6 @@ $ns: c-content-section;
     }
 
     &__title {
-        font-family: 'Northwoods-Bold';
         font-size: px-to-rem(33px);
         line-height: 1.2;
         color: #4e8410;
@@ -33,23 +32,13 @@ $ns: c-content-section;
             font-size: px-to-rem(48px);
             padding-bottom: 1.4375rem;
         }
-
-        span {
-            font-family: 'Northwoods';
-
-            @media ($breakpoint-ml) {
-                font-family: 'Northwoods-Bold';
-            }
-        }
     }
 
     &__subTitle {
-        font-family: 'Montserrat', sans-serif;
+        @include secondary-font(500);
         font-size: px-to-rem(18px);
-        font-weight: 500;
         line-height: 1.5;
-        letter-spacing: px-to-em(-0.3px);
-        color: #034e26;
+        color: $zuccini;
         padding-bottom: 3.25rem;
 
         @media ($breakpoint-ml) {
@@ -60,9 +49,8 @@ $ns: c-content-section;
     }
 
     &__introText {
-        font-family: 'Montserrat', sans-serif;
+        @include secondary-font(500);
         font-size: px-to-rem(16px);
-        font-weight: 500;
         color: #636363;
         line-height: 1.5;
 
@@ -96,19 +84,7 @@ $ns: c-content-section;
             flex-wrap: nowrap;
         }
 
-        .c-button--pill {
-            @media (max-width: 57.5em) {
-                width: 100%;
-                max-width: 21rem;
-            }
-
-            @media ($breakpoint-ml) {
-                max-width: 17rem;
-                margin-top: 0;
-                margin: 0;
-                padding: 0 1.5rem;
-            }
-
+        a {
             &:first-child {
                 @media ($breakpoint-ml) {
                     margin-right: 0.9375rem;
@@ -118,9 +94,8 @@ $ns: c-content-section;
     }
 
     &__bodyTwo {
-        font-family: 'Montserrat', sans-serif;
+        @include secondary-font(500);
         font-size: px-to-rem(16px);
-        font-weight: 500;
         color: #636363;
         line-height: 1.5;
         padding-top: 2rem;

@@ -42,20 +42,14 @@ $ns: c-search-suggestion;
 
         &-header {
             color: $kaitoke-green;
-            font-family: $font-family-secondary;
             font-size: px-to-rem(18px);
-            font-weight: 500;
-            letter-spacing: px-to-em(0.7px);
             margin-bottom: px-to-rem(20px);
         }
 
         &-hit {
             color: $tundora;
             display: block;
-            font-family: $font-family-secondary;
             font-size: px-to-rem(15px);
-            font-weight: 500;
-            letter-spacing: px-to-em(0.9px);
             margin-bottom: px-to-rem(10px);
 
             &:hover {
@@ -73,10 +67,7 @@ $ns: c-search-suggestion;
 
     &__search-phrase {
         color: $kaitoke-green;
-        font-family: $font-family-secondary;
         font-size: px-to-rem(18px);
-        font-weight: 500;
-        letter-spacing: px-to-em(0.7px);
         margin: 0 0 px-to-rem(20px) 0;
 
         a {

@@ -20,50 +20,38 @@ $ns: c-two-column-content-top;
     }
 
     &__title {
-        font-family: Montserrat;
+        @include secondary-font(600);
         font-size: px-to-rem(26px);
-        font-weight: 600;
         line-height: 1.19;
-        letter-spacing: px-to-em(2.6px);
         text-align: center;
-        color: #074b26;
+        color: $zuccini;
         padding-bottom: px-to-rem(16.5px);
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(36px);
-            letter-spacing: px-to-em(3.6px);
             padding-bottom: px-to-rem(52px);
         }
     }
 
     &__body {
-        font-family: Montserrat;
         font-size: px-to-rem(18px);
         line-height: 1.67;
-        letter-spacing: px-to-em(1.8px);
         text-align: center;
-        color: #074b26;
+        color: $zuccini;
         padding-bottom: px-to-rem(12px);
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(24px);
             line-height: 1.25;
-            letter-spacing: px-to-em(2.4px);
             padding-bottom: px-to-rem(42px);
         }
     }
 
     &__btn {
         margin: 0 auto;
-        font-size: px-to-rem(20px);
-        width: px-to-rem(284px);
-        height: px-to-rem(54px);
-        line-height: 2.9;
-        background-color: #004b24;
-        text-align: center;
-
+        
         a {
-            color: #ffffff;
+            @include button();
         }
     }
 

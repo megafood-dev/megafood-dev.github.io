@@ -1,9 +1,7 @@
 .bundled-products {
     h2 {
-        font-family: 'Source Sans Pro', arial, sans-serif;
+        @include primary-font(600);
         font-size: px-to-rem(24px);
-        font-weight: 600;
-        color: $black;
         margin-bottom: 1rem;
     }
 

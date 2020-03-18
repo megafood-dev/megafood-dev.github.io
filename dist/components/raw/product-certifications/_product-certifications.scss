@@ -2,14 +2,8 @@
     padding: px-to-rem(32px) 0 px-to-rem(8px) $gutter-sm;
 
     h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: px-to-rem(21px);
-        font-weight: 600;
-        line-height: 1.43;
-        color: $black;
         text-align: center;
         padding-right: $gutter-sm;
-        margin-bottom: px-to-rem(24px);
     }
 
     ul {

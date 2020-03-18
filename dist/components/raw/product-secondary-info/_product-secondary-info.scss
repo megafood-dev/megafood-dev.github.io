@@ -20,10 +20,7 @@
     }
 
     h3 {
-        font-family: 'Source Sans Pro', arial, sans-serif;
-        font-weight: 600;
         font-size: px-to-rem(16px);
-        color: $black;
         padding-top: $bottom-margin;
         border-top: 1px solid $alabaster;
         margin-top: px-to-rem(32px);
@@ -31,6 +28,12 @@
 
     img {
         margin-top: px-to-rem(32px);
+    }
+
+    p {
+        img {
+            display: inline;
+        }
     }
 
     @media ($breakpoint-ml) {
@@ -70,7 +73,7 @@
             background-position: bottom 50% left -22rem;
 
             > div {
-                padding: 0 px-to-rem(64px) 0 px-to-rem(37px);
+                padding: px-to-rem(40px) px-to-rem(64px) px-to-rem(16px) px-to-rem(37px);
             }
         }
     }

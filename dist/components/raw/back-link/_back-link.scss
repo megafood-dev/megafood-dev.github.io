@@ -1,0 +1,12 @@
+.back-link {
+    @include link-arrow('left');
+    padding-left: px-to-rem(16px);
+
+    &[disabled] {
+        cursor: not-allowed;
+
+        &::before, &::after {
+            background-color: $dove-gray;
+        }
+    }
+}

@@ -10,7 +10,8 @@ variants: [
       "position-classes": "overlay center",
       "bkgd": false,
       "bkgd-color": "",
-      "overlay": true
+      "overlay": true,
+      "button-class": "primary-cta"
     }
   },
   {
@@ -22,7 +23,8 @@ variants: [
       "position-classes": "overlay left",
       "bkgd": true,
       "bkgd-color": "#732e4a",
-      "overlay": true
+      "overlay": true,
+      "button-class": "reverse-btn"
     }
   },
   {
@@ -34,7 +36,8 @@ variants: [
       "position-classes": "overlay right",
       "bkgd": false,
       "bkgd-color": "",
-      "overlay": true
+      "overlay": true,
+      "button-class": "primary-cta"
     }
   },
   {
@@ -46,7 +49,8 @@ variants: [
       "position-classes": "left",
       "bkgd": false,
       "bkgd-color": "",
-      "overlay": false
+      "overlay": false,
+      "button-class": "primary-cta"
     }
   },
   {
@@ -58,7 +62,8 @@ variants: [
       "position-classes": "right",
       "bkgd": true,
       "bkgd-color": "#5C8118",
-      "overlay": false
+      "overlay": false,
+      "button-class": "reverse-btn"
     }
   }
 ]

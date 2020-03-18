@@ -57,13 +57,9 @@ $ns: c-order-total;
     }
 
     &__link {
-        font-family: 'Montserrat', sans-serif;
         font-size: px-to-rem(13px);
-        color: $kaitoke-green;
         display: inline-block;
-        font-weight: 700;
         margin-left: px-to-rem(4px);
-        text-transform: uppercase;
     }
 
     .c-content-block & {

@@ -110,10 +110,6 @@ $ns: c-cart-table;
         .cart-order-block__section {
             display: flex;
             justify-content: flex-end;
-
-            button {
-                max-width: px-to-rem(300px);
-            }
         }
     }
 }

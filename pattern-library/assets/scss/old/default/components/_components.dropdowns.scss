@@ -6,7 +6,6 @@ $ns: c-dropdown;
 
 .#{$ns} {
     background-color: $white;
-    font-family: $font-family-secondary;
     text-align: left;
 
     @media ($breakpoint-ml) {
@@ -75,8 +74,7 @@ $ns: c-dropdown;
     }
 
     // Dropdown Item Wrapper
-    &__item-wrapper,
-    ul{
+    &__item-wrapper, ul {
         list-style: none;
 
         @media ($breakpoint-ml) {
@@ -92,14 +90,12 @@ $ns: c-dropdown;
         }
 
         @media ($breakpoint-ml) {
-            font-size: px-to-rem(32px);
-            margin-bottom: px-to-rem(17px);
+            margin-bottom: px-to-rem(16px);
 
             &:hover {
                 cursor: default;
             }
         }
-
 
         &.is-active {
             color: $mango-tango-hover;
@@ -153,7 +149,6 @@ $ns: c-dropdown;
             display: block;
             font-size: px-to-rem(20px);
             font-weight: bold;
-            letter-spacing: px-to-em(0.6px);
             text-align: center;
             white-space: normal !important;
 
@@ -175,7 +170,6 @@ $ns: c-dropdown;
         color: $kaitoke-green;
         font-size: px-to-rem(17px);
         font-weight: 500;
-        letter-spacing: px-to-em(1px);
 
         &:hover {
             color: $mango-tango-hover;

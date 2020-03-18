@@ -80,7 +80,6 @@ $ns: c-banner-coming-soon;
 
     &__body {
         color: $zuccini;
-        font-family: 'Northwoods-Regular';
         font-size: px-to-rem(21px);
         line-height: 1.29;
         margin-top: px-to-rem(10px);
@@ -98,28 +97,16 @@ $ns: c-banner-coming-soon;
             text-align: left;
         }
 
-        .c-button--pill {
+        a {
             margin: px-to-rem(35px) auto 0 auto;
-            min-width: px-to-rem(233px);
 
             @media ($breakpoint-ml) {
                 margin: px-to-rem(29px) 0 0 0;
-                min-width: px-to-rem(243px);
             }
         }
 
         .pt_storefront & {
             font-weight: 400;
-        }
-
-        .c-button--pill.orange-on-white{
-            margin-left: auto !important;
-            margin-right: auto !important;
-
-            @media ($breakpoint-ml) {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
         }
     }
 
@@ -130,42 +117,6 @@ $ns: c-banner-coming-soon;
 
         ul {
             @include pxl-list-flat();
-        }
-
-        // Targeting Content Asset Links
-        a, span {
-            @extend .c-button;
-            background-color: $hibiscus;
-            border: 0;
-            font-size: px-to-rem(20px);
-            font-weight: 700;
-            letter-spacing: px-to-em(0.6px);
-            position: absolute;
-            top: initial;
-            bottom: px-to-rem(30px);
-            left: px-to-rem(15px);
-            transition: background-color .25s ease;
-            width: calc(100% - #{px-to-rem(30px)});
-
-            &:hover {
-                @media ($breakpoint-ml) {
-                    background-color: $maroon-flush;
-                    border: 3px solid $maroon-flush;
-                }
-            }
-
-            @media ($breakpoint-ml) {
-                position: relative;
-                bottom: 0;
-                left: 0;
-                width: auto;
-            }
-
-            &:hover {
-                @media ($breakpoint-ml) {
-                    left: px-to-rem(3px);
-                }
-            }
         }
     }
 

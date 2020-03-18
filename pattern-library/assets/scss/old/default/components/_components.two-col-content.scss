@@ -26,10 +26,9 @@ $ns: c-two-col-content;
     }
 
     &__title {
-        font-family: 'Northwoods-Bold';
         font-size: px-to-rem(30px);
         line-height: 1.1;
-        color: #034e26;
+        color: $zuccini;
         text-align: center;
         text-transform: uppercase;
         padding-bottom: 1.5625rem;
@@ -43,11 +42,9 @@ $ns: c-two-col-content;
     }
 
     &__body {
-        font-family: 'Montserrat', sans-serif;
+        @include secondary-font(400);
         font-size: px-to-rem(16px);
         line-height: 1.5;
-        letter-spacing: px-to-em(-0.3px);
-        font-weight: 500;
         color: #636363;
         text-align: center;
         max-width: px-to-rem(643px);
@@ -59,24 +56,15 @@ $ns: c-two-col-content;
             margin: 0;
         }
 
-        .c-button--pill {
-            @media ($breakpoint-ml) {
-                margin: 0;
-                margin-top: 2.125rem;
-            }
-
-            &:hover {
-                max-width: 14rem;
-            }
+        a {
+            @include button();
         }
     }
 
     &__body-three {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
+        @include secondary-font(500);
         font-size: px-to-rem(14px);
         line-height: 1.5;
-        letter-spacing: px-to-em(-0.2px);
         padding-top: 3.125rem;
         max-width: px-to-rem(635px);
         text-align: center;

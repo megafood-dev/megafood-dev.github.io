@@ -49,6 +49,11 @@
     position: relative;
     width: auto;
 
+    .c-form-search__submit {
+        @include remove-button();
+        top: calc(50% - #{px-to-rem(17px)});
+    }
+
     @media ($breakpoint-ml) {
         width: px-to-rem(260px);
     }
@@ -62,11 +67,9 @@
 
 .tab-view {
     color: $jumbo;
-    font-family: $font-family-primary;
     font-size: px-to-rem(15px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 2;
-    letter-spacing: px-to-em(0.9px);
     margin-bottom: px-to-rem(30px);
     text-align: left;
 
@@ -112,11 +115,8 @@
     color: $kaitoke-green;
     display: inline-flex;
     align-items: center;
-    font-family: $font-family-secondary;
     font-size: px-to-rem(20px);
-    font-weight: 700;
     line-height: 1.35;
-    letter-spacing: px-to-em(1.18px);
     margin-top: px-to-rem(36px);
     position: relative;
     text-align: center;
@@ -146,11 +146,8 @@
         border-radius: px-to-rem(3px);
         color: $mine-shaft;
         cursor: pointer;
-        font-family: $font-family-primary;
         font-size: px-to-rem(18px);
-        font-weight: 600;
         height: px-to-rem(45px);
-        letter-spacing: px-to-em(0.4px);
         line-height: 2.5;
         padding: 0 px-to-rem(20px);
         width: 100%;
@@ -161,7 +158,6 @@
             display: inline-block;
             float: right;
             font-size: px-to-rem(24px);
-            font-weight: 400;
             height: px-to-rem(20px);
             line-height: 0.833;
             margin-top: px-to-rem(14px);
@@ -219,10 +215,8 @@
             .products-size {
                 color: $jumbo;
                 display: inline-block;
-                font-family: $font-family-primary;
                 font-size: px-to-rem(13px);
                 float: right;
-                letter-spacing: px-to-em(0.3px);
                 margin-top: px-to-rem(40px);
                 text-transform: lowercase;
             }
@@ -399,21 +393,16 @@
     .category-content-title {
         text-align: center;
         text-transform: uppercase;
-        font-family: 'Northwoods-Bold';
         font-size: px-to-rem(21px);
         line-height: 1.14;
-        letter-spacing: px-to-em(-0.5px);
 
         @media ($breakpoint-sm) {
             font-size: px-to-rem(39px);
             line-height: 1.1;
-            letter-spacing: px-to-em(-1px);
         }
     }
 
     .category-content-subtitle {
-        font-family: $font-family-quaternary;
-        font-weight: 500;
         font-size: px-to-rem(14px);
         text-align: center;
         padding-top: px-to-rem(5px);
@@ -427,11 +416,9 @@
     }
 
     .category-content-link {
-        font-family: $font-family-quaternary;
         text-align: center;
         padding-top: px-to-rem(5px);
         font-size: px-to-rem(13px);
-        font-weight: 700;
         line-height: 1.15;
 
         @media ($breakpoint-sm) {
@@ -466,20 +453,16 @@
     .category-content-title {
         text-align: center;
         text-transform: uppercase;
-        font-family: 'Northwoods-Bold';
         font-size: px-to-rem(21px);
         line-height: 1.14;
-        letter-spacing: px-to-em(-0.5px);
 
         @media ($breakpoint-sm) {
             font-size: px-to-rem(39px);
             line-height: 1.1;
-            letter-spacing: px-to-em(-1px);
         }
     }
 
     .category-content-subtitle {
-        font-family: $font-family-quaternary;
         text-align: center;
         padding-top: px-to-rem(5px);
         font-size: px-to-rem(14px);
@@ -494,7 +477,6 @@
     }
 
     .category-content-link {
-        font-family: $font-family-quaternary;
         text-align: center;
         padding-top: px-to-rem(5px);
         font-size: px-to-rem(13px);
@@ -579,9 +561,7 @@
 
 .category-tile-title {
     color: #4e3829;
-    font-family: 'Northwoods', sans-serif;
     font-size: px-to-rem(35px);
-    font-weight: 600;
     line-height: 1.2;
     text-transform: none;
 }
@@ -595,9 +575,7 @@
 
 .category-tile-link {
     color: #054b25; 
-    font-family: 'Roboto', sans-serif;
     font-size: px-to-rem(21px);
-    font-weight: 500;
     line-height: 1.2;
     text-transform: none;
 }
@@ -638,29 +616,21 @@
 
     .content-title {
         display: block;
-        font-family: $font-family-secondary;
         font-size: px-to-rem(24px);
-        font-weight: 500;
-        letter-spacing: px-to-em(1px);
         margin-bottom: px-to-rem(20px);
     }
 
     .content-desc {
         color: $jumbo;
-        font-family: $font-family-primary;
         font-size: px-to-rem(16px);
         line-height: 1.69;
-        letter-spacing: px-to-em(0.3px);
         margin-bottom: px-to-rem(15px);
     }
 
     .readmore {
         color: $mango-tango;
-        font-family: $font-family-secondary;
         font-size: px-to-rem(20px);
-        font-weight: bold;
         line-height: 1.35;
-        letter-spacing: px-to-em(0.6px);
 
         &::after {
             content: '';

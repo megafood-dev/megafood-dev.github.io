@@ -38,7 +38,6 @@ $ns: c-content-call-out;
 
     &__heading {
         color: $white;
-        font-family: 'Northwoods-Bold', $font-family-secondary;
         font-size: px-to-rem(39px);
         line-height: 1.15;
         display: block;
@@ -54,7 +53,6 @@ $ns: c-content-call-out;
         }
 
         em {
-            font-family: $font-family-tertiary;
             font-size: px-to-rem(70px);
             font-style: normal;
             text-transform: none;
@@ -87,7 +85,6 @@ $ns: c-content-call-out;
         color: $white;
         font-size: px-to-rem(21px);
         margin-top: px-to-rem(27px);
-        font-family: 'Northwoods-Regular';
         text-align: center;
         max-width: px-to-rem(1000px);
         line-height: 1.29;
@@ -98,17 +95,6 @@ $ns: c-content-call-out;
             width: 100%;
             clear: right;
             line-height: normal;
-        }
-
-        .c-button--pill {
-            display: block;
-            width: 100%;
-            margin-bottom: 2em;
-
-            @media ($breakpoint-ml) {
-                display: inline-block;
-                margin-bottom: 0;
-            }
         }
     }
 

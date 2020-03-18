@@ -29,9 +29,7 @@ $ns: c-mini-cart-count;
         @media ($breakpoint-ml) {
             color: $mine-shaft;
             display: inline-block;
-            font-family: $font-family-primary;
             font-size: px-to-rem(17px);
-            font-weight: 600;
             margin-left: px-to-rem(12px);
         }
     }
@@ -41,9 +39,7 @@ $ns: c-mini-cart-count;
         border: 2px solid white;
         border-radius: 100%;
         color: white;
-        font-family: $font-family-primary;
         font-size: px-to-rem(12px);
-        font-weight: 700;
         height: px-to-rem(19px);
         line-height: 1.25;
         position: absolute;

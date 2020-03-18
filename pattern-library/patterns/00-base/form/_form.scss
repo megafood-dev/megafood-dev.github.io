@@ -20,8 +20,7 @@ fieldset {
 
 legend, label {
     display: block;
-    font-family: 'Source Sans Pro', arial, sans-serif;
-    font-weight: 600;
+    @include primary-font(600);
     font-size: px-to-rem(16px);
     line-height: 1.5;
     color: $mine-shaft;
@@ -43,7 +42,7 @@ legend {
     line-height: 1.5;
     color: $mine-shaft;
     background-color: $white;
-    padding: px-to-rem(14px) px-to-rem(16px);
+    padding: px-to-rem(15px) px-to-rem(16px);
     border: 1px solid $dusty-gray;
     margin-bottom: px-to-rem(32px);
     border-radius: px-to-rem(3px);
@@ -162,11 +161,11 @@ select {
         }
     }
 
-    // &:last-of-type {
-    //     + label {
-    //         margin-bottom: px-to-rem(32px);
-    //     }
-    // }
+    &:last-of-type {
+        + label {
+            margin-bottom: px-to-rem(32px);
+        }
+    }
 }
 
 [type="checkbox"] {
@@ -267,24 +266,6 @@ select {
     }
 }
 
-// [type="submit"], [type="button"] {
-//     @include button();
-//     text-transform: none;
-//     letter-spacing: normal;
-//     border-radius: px-to-rem(3px);
-
-//     &:disabled {
-//         color: $emperor;
-//         background-color: $alabaster;
-//     }
-// }
-
-// [type="submit"] {
-//     font-size: px-to-rem(18px);
-//     background-color: $zuccini;
-//     padding: px-to-rem(18.5px) px-to-rem(40px);
-
-//     &:hover, &:focus {
-//         background-color: $county-green;
-//     }
-// }
+[type="submit"], [type="button"] {
+    @include button();
+}

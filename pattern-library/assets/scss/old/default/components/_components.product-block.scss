@@ -39,9 +39,7 @@ $ns: c-product-block;
 
     // Product Block Header
     &__header {
-        font-family: $font-family-secondary;
         font-size: px-to-rem(17px);
-        font-weight: 500;
         line-height: 1.2;
 
         &-link {

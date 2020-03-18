@@ -12,7 +12,6 @@ $ns: c-accordion-consumer-landing;
     display: block;
     padding-top: px-to-rem(31px);
     padding-bottom: px-to-rem(16px);
-    font-family: 'Montserrat', sans-serif;
     position: relative;
     counter-reset: section; 
 
@@ -21,54 +20,17 @@ $ns: c-accordion-consumer-landing;
         padding-bottom: px-to-rem(45px);
     }
 
-    a {
-        color: #636363;
-        text-decoration: underline;
-        -webkit-text-decoration-color: #60AB0B;
-        text-decoration-color: #60AB0B;
-    }
-
     b {
-        color: black;
-        font-weight: 500;
-        font-size: px-to-rem(18px);
-        line-height: 1.5;
-
         &.header, &.green{
             display: block;
             margin-bottom: 1rem;
-
         }
 
         &.green{
-            color: #2f7532;
+            color: $zuccini;
             margin-top: 1rem;
             margin-bottom: 0;
-            font-size: px-to-rem(16px);
-            font-family: Northwoods-Bold;
-            font-weight: initial;
-            line-height: 1.5;
-
-            a {
-                color: #2f7532; 
-            }
         }
-
-        a {
-            text-decoration: underline;
-            -webkit-text-decoration-color: #60AB0B;
-            text-decoration-color: #60AB0B;
-            color: black;
-        }
-    }
-
-    h2 {
-        font-size: px-to-rem(18px);
-        color: #000;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-family: Montserrat;
-        margin-bottom: 0.5rem;
     }
     
     hr {
@@ -82,26 +44,25 @@ $ns: c-accordion-consumer-landing;
     }
 
     div.answer {
-        padding: .25em 1em 0 0;
+        padding: 0.25rem 1rem 0 0;
     }
 
     .innerVideo {
-        background-color: #4c851b;
-        color: white;
+        background-color: $vidaLoca;
+        color: $white;
         margin: 1rem 0 2rem;
 
         img {
             width: 100%;
             vertical-align: top;
         }
+
         .videoFooter {
             padding: px-to-rem(28px) px-to-rem(30px) px-to-rem(14px);
             position: relative;
-            font-family: Northwoods-Bold;
             font-size: px-to-rem(16px);
             line-height: 1;
             text-align: center;
-
 
             @media ($breakpoint-ml) {
                 padding: px-to-rem(14px) px-to-rem(30px);
@@ -109,38 +70,11 @@ $ns: c-accordion-consumer-landing;
                 text-align: left;
             }
 
-            sub {
-                display: block;
-                font-size: px-to-rem(13px);
-                line-height: px-to-rem(21px);
-                font-weight: normal;
-
-                @media ($breakpoint-ml) {
-                    font-size: px-to-rem(16px);
-                }
-            }
-
             .watchBtn {
                 position: absolute;
                 right: px-to-rem(50px);
                 top: px-to-rem(-33px);
-                padding: 0 2rem;
-                z-index: 3;
-                background: white;
-                color: #4c851b;
-                border-radius: px-to-rem(25px);
-                height: px-to-rem(50px);
                 box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
-                font-family: Dosis;
-                font-size: px-to-rem(19px);
-                font-weight: bold;
-                font-style: normal;
-                font-stretch: normal;
-                line-height: px-to-rem(50px);
-                letter-spacing: normal;
-                color: #417505;
-                text-transform: uppercase;
-                text-decoration: none;
 
                 &:before {
                     display: inline-block;
@@ -159,80 +93,27 @@ $ns: c-accordion-consumer-landing;
                 }
             }
         }
-
     }
 
     ul, ol{
         list-style: initial;
         margin-left: 1.1rem;
 
-        &.checkboxList {
-            list-style: none;
-            margin-left: 0;
-            margin-bottom: px-to-rem(24px);
+        // &.checkboxList {
+        //     list-style: none;
+        //     margin-left: 0;
+        //     margin-bottom: px-to-rem(24px);
 
-            @media ($breakpoint-ml) {
-                margin-left: px-to-rem(24px);
-            }
+        //     @media ($breakpoint-ml) {
+        //         margin-left: px-to-rem(24px);
+        //     }
 
-            li {
-                position: relative;
-                margin: 1.5em 0;
-                padding-left: px-to-rem(15px);
-                font-size: px-to-rem(16px);
-                color: #636363;
-                padding-left: px-to-rem(10px);
-
-                &::before{
-                    content: none;
-                }
-
-                input[type=checkbox] {
-                    position: absolute;
-                    left: 0;
-                    top: px-to-rem(4px);
-                    cursor: pointer;
-                    height: px-to-rem(24px);
-                    width: px-to-rem(24px);
-                    border-radius: 50%;
-                    background: white;
-                    border: 2px solid #dedede;
-                    background-position: 0px;
-                    background-repeat: no-repeat;
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    -o-appearance:none;
-                    appearance: none;
-
-                    @media ($breakpoint-ml) {
-                        left: px-to-rem(-24px);
-                        top: px-to-rem(4px);
-                    }
-
-                    &.is-active, &:checked {
-                        background-image: url(../images/interface/accordion-consumer-landing/filled.svg);
-                        border-width: 0;
-                    }
-                }
-                label {
-                    font-family: 'Montserrat', sans-serif;
-                    font-weight: 500;
-                    font-size: px-to-rem(16px);
-                    line-height: 1.5;
-                    cursor: pointer;
-                    color: #636363;
-                    display: inline-block;
-                    width: calc(100% - 21px);
-                    margin-left: px-to-rem(21px);
-                    margin-top: px-to-rem(5px);
-
-                    @media ($breakpoint-ml) {
-                        margin-left: 0;
-                    }
-                }
-            }
-
-        }
+        //     li {
+        //         &::before {
+        //             content: '';
+        //         }
+        //     }
+        // }
 
         &.healthyGutList {
             list-style:none;
@@ -275,16 +156,12 @@ $ns: c-accordion-consumer-landing;
                 }
 
                 a {
-                    color: #d47600;
+                    color: $turmeric;
                     text-decoration: none;
-                    font-weight: 600;
-                    line-height: 1.5;
                     padding-top: 0.5rem;
 
                     &:hover {
                         text-decoration: underline;
-                        -webkit-text-decoration-color: #60AB0B;
-                        text-decoration-color: #60AB0B;
                     }
 
                     &.recipeLink {
@@ -330,8 +207,6 @@ $ns: c-accordion-consumer-landing;
 
                     b {
                         display: block;
-                        color: #2f7532;
-                        font-weight: 600;
                         margin-bottom: .5rem;
                         font-size: px-to-rem(16px);
                     }
@@ -400,30 +275,6 @@ $ns: c-accordion-consumer-landing;
                 top: px-to-rem(3px);
                 position: relative;
             }
-        }
-    }
-}
-
-#{ns} {
-    &__title {
-        font-family: 'Montserrat', sans-serif;
-        font-size: px-to-rem(42px);
-        line-height: 1.14;
-
-        @media ($breakpoint-ml) {
-            font-size: px-to-rem(60px);
-            line-height: 1.2;
-        }
-    }
-
-    &__subTitle {
-        font-family: 'Montserrat', sans-serif;
-        font-size: px-to-rem(21px);
-        line-height: 1.29;
-
-        @media ($breakpoint-ml) {
-            font-size: px-to-rem(30px);
-            line-height: 1.5;
         }
     }
 }

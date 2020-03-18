@@ -23,24 +23,12 @@
     }
 
     &__section-header {
-        font-family: $font-family-secondary;
-        font-size: px-to-rem(21px);
-        font-weight: 700;
-        letter-spacing: 0;
-        margin-bottom: px-to-rem(15px);
-
-        @media ($breakpoint-ml) {
-            font-size: px-to-rem(24px);
-        }
-
         & + .mini-address {
             margin-top: px-to-rem(14px);
         }
     }
 
     &__actions {
-        font-size: px-to-rem(14px);
-        font-weight: 600;
         margin-top: px-to-rem(20px);
         margin-left: px-to-rem(-6px);
 
@@ -52,43 +40,16 @@
         }
 
         button {
-            background-color: transparent;
-            font-weight: 600;
-            padding: 0;
-            height: px-to-rem(14px);
-            line-height: 1 !important;
-
-            &:hover {
-                cursor: pointer;
-            }
+            @include button-to-link();
         }
     }
 
     &__link {
-        color: $mango-tango;
         margin-right: px-to-rem(4px);
         margin-left: px-to-rem(6px);
-
-        &:hover {
-            color: $mango-tango-hover;
-            text-decoration: none;
-        }
     }
 
-    a,
-    .button-text {
-        line-height: 2rem;
-        padding-right: 0.2rem;
-    }
-
-    .mini-address {
-
-        &__title {
-            font-weight: 700;
-        }
-    }
-
-    .cc-type {
-        font-weight: 700;
+    a, .button-text {
+        margin-right: 0.2rem;
     }
 }

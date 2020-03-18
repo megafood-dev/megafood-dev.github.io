@@ -3,12 +3,6 @@ main, #main {
     z-index: $z-index-main;
 }
 
-html,
-body {
-    // Needed for drawer menu
-    overflow-x: hidden;
-}
-
 body {
     right: 0;
     transition: right 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -23,14 +17,13 @@ body {
         display: none;
         height: 100%;
         position: absolute;
-            z-index: 10000;
+        z-index: 10000;
         width: 100%;
 
         @media ($breakpoint-lxl) {
             display: none;
         }
     }
-
 }
 
 

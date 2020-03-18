@@ -1,0 +1,14 @@
+.reverse-btn {
+    color: $vidaLoca;
+    background-color: $white;
+
+    &:hover, &:focus {
+        color: $black;
+        background-color: $alabaster;
+    }
+
+    &[disabled] {
+        color: $dove-gray;
+        background-color: $white; 
+    }
+}

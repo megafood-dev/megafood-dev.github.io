@@ -5,11 +5,5 @@
 }
 
 .ui-dialog .ui-dialog-title {
-    @extend .beta;
-}
-
-.ui-dialog .ui-dialog-buttonpane button {
-    @extend .c-button;
-    @extend .c-button--small;
-    margin-top: 0;
+    @extend h2;
 }

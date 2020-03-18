@@ -22,7 +22,6 @@ $ns: c-sweet-certifications;
         color: $kaitoke-green;
         display: flex;
         flex-direction: column-reverse;
-        font-family: $font-family-primary;
         padding-bottom: px-to-rem(23px);
         position: relative;
         text-align: left;
@@ -116,10 +115,7 @@ $ns: c-sweet-certifications;
     }
 
     &__links {
-        font-family: $font-family-secondary;
         font-size: px-to-rem(20px);
-        font-weight: 700;
-        letter-spacing: px-to-em(0.6px);
         line-height: 1.35;
         position: relative;
         top: px-to-rem(-10px);

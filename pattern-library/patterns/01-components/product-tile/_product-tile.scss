@@ -1,6 +1,6 @@
 .product-tile {
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    @include secondary-font(400);
 
     .product-img {
         display: inline-block;
@@ -11,15 +11,14 @@
     }
 
     h2, h3 {
-        font-family: 'Montserrat', sans-serif;
+        @include secondary-font(600);
         font-size: px-to-rem(21px);
-        font-weight: 600;
+        color: $zuccini;
         margin-bottom: px-to-rem(8px);
     }
 
     .desc {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: px-to-rem(16px);
+        font-weight: normal;
         color: $emperor;
         margin-bottom: px-to-rem(8px);
     }
@@ -28,7 +27,7 @@
         position: absolute;
         top: px-to-rem(8px);
         left: 0;
-        font-family: 'Source Sans Pro', sans-serif;
+        @include primary-font();
         font-size: px-to-rem(16px);
         text-transform: uppercase;
         color: $white;
@@ -42,7 +41,7 @@
         flex-wrap: wrap;
         font-size: px-to-rem(21px);
         font-weight: 600;
-        color: $black;
+        color: $mine-shaft;
         margin-bottom: px-to-rem(16px);
 
         li {
@@ -63,7 +62,7 @@
     }
 
     .product-promo {
-        font-family: 'Source Sans Pro', sans-serif;
+        @include primary-font();
         font-size: px-to-rem(16px);
         color: $emperor;
         margin-bottom: px-to-rem(8px);

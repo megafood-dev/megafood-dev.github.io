@@ -8,19 +8,16 @@ $ns: c-content-slider;
     padding-bottom: 2rem;
 
     &__section-title {
-        font-family: Montserrat;
+        @include secondary-font(600);
         font-size: px-to-rem(24px);
-        font-weight: 600;
         line-height: 1.81;
-        letter-spacing: px-to-em(2.4px);
         text-align: center;
-        color: #074b26;
+        color: $zuccini;
         padding-bottom: px-to-rem(39px);
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(36px);
             line-height: 1.5;
-            letter-spacing: px-to-em(3.6px);
             padding-bottom: px-to-rem(69px);
         }
     }
@@ -29,7 +26,7 @@ $ns: c-content-slider;
         text-align: center;
         text-transform: uppercase;
         padding-top: 1rem;
-        color: #074b26;
+        color: $zuccini;
     }
 
     &__foreground-img {
