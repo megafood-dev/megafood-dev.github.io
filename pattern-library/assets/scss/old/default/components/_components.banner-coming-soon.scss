@@ -116,7 +116,7 @@ $ns: c-banner-coming-soon;
         }
 
         ul {
-            @include pxl-list-flat();
+            @include remove-list();
         }
     }
 

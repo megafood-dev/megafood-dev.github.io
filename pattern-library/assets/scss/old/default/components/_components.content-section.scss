@@ -48,33 +48,6 @@ $ns: c-content-section;
         }
     }
 
-    &__introText {
-        @include secondary-font(500);
-        font-size: px-to-rem(16px);
-        color: #636363;
-        line-height: 1.5;
-
-        @media ($breakpoint-ml) {
-            font-size: px-to-rem(18px);
-        }
-
-        li {
-            display: flex;
-        }
-
-        li:not(:last-child) {
-          padding-bottom: .5rem;
-        }
-    }
-
-    &__bullet {
-        color: #4c851b;
-    }
-
-    &__bullet-text {
-        padding-left: px-to-rem(10px);
-    }
-
     &__body {
         display: flex;
         flex-wrap: wrap;

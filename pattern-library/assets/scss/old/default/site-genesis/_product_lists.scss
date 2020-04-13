@@ -23,6 +23,10 @@
         color: $kaitoke-green;
         font-size: px-to-rem(16px);
 
+        a {
+            text-decoration: none;
+        }
+
         @media ($breakpoint-ml) {
             font-size: px-to-rem(18px);
         }
@@ -30,7 +34,6 @@
 }
 
 .item-quantity-details ul {
-	list-style: none outside none;
+	@include remove-list();
 	margin: 0;
-	padding: 0;
 }

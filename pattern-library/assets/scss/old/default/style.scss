@@ -88,7 +88,6 @@
 @import 'helpers/helpers.is-even';
 @import 'helpers/helpers.breakpoint-classes';
 @import 'helpers/helpers.media';
-@import 'helpers/helpers.lists';
 @import 'helpers/helpers.aspect-image';
 
 
@@ -251,7 +250,6 @@
  */
 
  @import "scopes/_scopes.navigation-utility";
- @import "scopes/_scopes.content";
  @import "scopes/_scopes.bazaarvoice";
 
 

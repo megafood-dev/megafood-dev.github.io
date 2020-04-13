@@ -37,7 +37,7 @@
 
     &:hover, &:focus {
         color: $white;
-        background-color: $county-green;
+        background-color: $black;
         cursor: pointer;
     }
 
@@ -46,6 +46,8 @@
         background-color: $alabaster;
 
         &:hover, &:focus {
+            color: $emperor;
+            background-color: $alabaster;
             text-decoration: none;
             cursor: not-allowed;
         }
@@ -74,10 +76,10 @@
 
 @mixin button-to-link(){//should match link base styles
     @include remove-button();
-    @include primary-font(600);//change font-weight when add underline
+    @include primary-font(400);
     color: $vidaLoca;
     text-decoration: none;
-    // text-decoration: underline;//add when do link base styles
+    text-decoration: underline;
     transition: all .25s ease;
 
     &:hover, &:focus {
@@ -88,6 +90,23 @@
 
     &[disabled] {
         color: $dove-gray;
+    }
+}
+
+
+//------------------------------------------------------------------------------
+// List Helpers
+//------------------------------------------------------------------------------
+@mixin remove-list() {//use on ul or ol elements
+    list-style: none;
+    padding-left: 0;
+}
+
+@mixin inline-list() {//use on ul or ol elements
+    @include remove-list();
+
+    & > li {
+        display: inline-block;
     }
 }
 

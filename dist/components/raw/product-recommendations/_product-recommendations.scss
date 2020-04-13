@@ -1,5 +1,5 @@
 .product-recommendations {
-    padding: px-to-rem(48px) $gutter-sm 0 $gutter-sm;
+    padding: px-to-rem(48px) $gutter-sm px-to-rem(32px) $gutter-sm;
 
     .slider {
         .slick-arrow {
@@ -58,7 +58,7 @@
     }
 
     @media ($breakpoint-ml) {
-        padding: px-to-rem(80px) $gutter-xl 0 $gutter-xl;
+        padding: px-to-rem(80px) $gutter-xl px-to-rem(64px) $gutter-xl;
 
         h2 {
             text-align: center;

@@ -21,6 +21,7 @@
 
     &__primary {
         padding-bottom: px-to-rem(19px);
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             padding-bottom: px-to-rem(28px);
@@ -45,6 +46,7 @@
 
     &__quaternary {
         padding-bottom: px-to-rem(39px);
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             padding-bottom: px-to-rem(91px);
@@ -62,12 +64,13 @@
 .block-title {
     &__primary {
         @include secondary-font(600);
-        font-size: px-to-rem(12px);
+        font-size: px-to-rem(14px);
         line-height: 1.33;
         color: $zuccini;
         text-align: center;
         padding-bottom: px-to-rem(20px);
         padding-top: px-to-rem(7px);
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(24px);
@@ -78,11 +81,12 @@
 
     &__secondary {
         @include secondary-font(500);
-        font-size: px-to-rem(11px);
+        font-size: px-to-rem(14px);
         line-height: 1.33;
         color: $zuccini;
         text-align: center;
         padding-top: px-to-rem(13px);
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(22px);
@@ -99,6 +103,7 @@
         color: #393737;
         padding-bottom: px-to-rem(20px);
         text-transform: uppercase;
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(19.5px);
@@ -110,10 +115,11 @@
 
 .block-subtitle {
     @include secondary-font(500);
-    font-size: px-to-rem(8px);
+    font-size: px-to-rem(12px);
     color: #4f4f4f;
     text-align: center;
     line-height: 1.33;
+    margin-bottom: 0;
 
     @media ($breakpoint-ml) {
         font-size: px-to-rem(16px);
@@ -130,6 +136,7 @@
         padding-left: px-to-rem(60px);
         padding-right: px-to-rem(60px);
         line-height: 1.33;
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(22px);
@@ -143,11 +150,12 @@
 
     &__secondary {
         @include secondary-font(500);
-        font-size: px-to-rem(8px);
+        font-size: px-to-rem(12px);
         color: #4f4f4f;
         padding-top: px-to-rem(15px);
         line-height: 1.33;
         max-width: px-to-rem(250px);
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(16px);
@@ -156,12 +164,13 @@
 
         &-bold {
             @include secondary-font(600);
-            font-size: px-to-rem(8px);
+            font-size: px-to-rem(12px);
             line-height: 1.33;
             color: #4f4f4f;
             text-align: left;
             width: 100%;
             max-width: px-to-rem(316px);
+            margin-bottom: 0;
 
             @media ($breakpoint-ml) {
                 font-size: px-to-rem(16px);
@@ -177,6 +186,7 @@
 
 .six-block-row {
     padding-bottom: px-to-rem(40px);
+    padding-left: 0;
 
     @media ($breakpoint-ml) {
         padding-bottom: px-to-rem(82px);
@@ -198,7 +208,7 @@
 .explore-our-stories-block {
     padding-right: 0.53125rem;
     padding-left: 0.53125rem;
-    
+
     @media ($breakpoint-ml) {
         padding-right: 1.09375rem;
         padding-left: 1.09375rem;
@@ -206,7 +216,7 @@
 
     img {
         max-width: px-to-rem(160px);
-        
+
         @media ($breakpoint-ml) {
             max-width: 100%;
         }
@@ -216,15 +226,19 @@
 .meet-our-experts-block {
     padding-right: 0.375rem;
     padding-left: 0.375rem;
-    
+
     @media ($breakpoint-ml) {
         padding-right: 1.1rem;
         padding-left: 1.1rem;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     img {
         max-width: px-to-rem(110px);
-        
+
         @media ($breakpoint-ml) {
             max-width: 100%;
         }
@@ -237,7 +251,7 @@
 
     img {
         max-width: px-to-rem(160px);
-        
+
         @media ($breakpoint-ml) {
             max-width: 100%;
         }
@@ -246,7 +260,7 @@
 
 .four-block-container {
     padding-bottom: px-to-rem(20px);
-    
+
     @media ($breakpoint-ml) {
         padding-bottom: px-to-rem(100px);
     }
@@ -255,7 +269,7 @@
 .block-header-body-container {
     padding-bottom: px-to-rem(20px);
     padding-top: px-to-rem(25px);
-    
+
     @media ($breakpoint-ml) {
         padding-bottom: px-to-rem(130px);
         padding-top: px-to-rem(60px);

@@ -9,6 +9,10 @@ $ns: c-alert;
     text-align: center;
     padding: px-to-rem(10px);
 
+    p {
+        margin-bottom: 0;
+    }
+
     & + & {
         margin-top: px-to-rem(10px);
     }

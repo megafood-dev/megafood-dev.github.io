@@ -24,7 +24,7 @@
     }
 
     ul {
-        list-style-type: none;
+        @include remove-list();
         max-width: px-to-rem(400px);
         margin: 0 auto;
     }

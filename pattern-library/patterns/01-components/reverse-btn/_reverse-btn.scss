@@ -1,10 +1,10 @@
 .reverse-btn {
-    color: $vidaLoca;
+    color: $zuccini;
     background-color: $white;
 
     &:hover, &:focus {
-        color: $black;
-        background-color: $alabaster;
+        color: $white;
+        background-color: $vidaLoca;
     }
 
     &[disabled] {

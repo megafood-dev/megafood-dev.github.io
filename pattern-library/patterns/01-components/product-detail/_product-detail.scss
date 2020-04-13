@@ -25,10 +25,10 @@
     }
 
     .pricing {
+        @include remove-list();
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        list-style: none;
         margin-left: 0;
         @include secondary-font(400);
         color: $mine-shaft;
@@ -87,8 +87,10 @@
                 border-radius: px-to-rem(3px);
             }
         }
-        
+
         a {
+            text-decoration: none;
+
             &:hover, &:focus {
                 border-color: $vidaLoca;
             }
@@ -123,6 +125,12 @@
     .pdpForm {
         input {
             max-width: px-to-rem(175px);
+
+            &.error {
+                color: $error-color;
+                border-color: $error-color;
+                border-radius: px-to-rem(3px) px-to-rem(3px) 0 0;
+            }
         }
 
         [type="submit"] {
@@ -130,20 +138,32 @@
             max-width: px-to-rem(443px);
             margin-bottom: px-to-rem(32px);//change to 16 when get facts link
         }
+
+        > div {
+            &:last-of-type {
+                margin-top: px-to-rem(24px);
+            }
+        }
+
+        p.error {
+            background-color: $error-color;
+            color: $white;
+            display: block;
+            font-size: .9rem;
+            padding: 0.5625rem;
+            width: 100%;
+            margin-top: px-to-rem(-32px);
+            max-width: px-to-rem(175px);
+        }
     }
 
     .facts {
         display: block;
         text-align: center;
-        color: $vidaLoca;
         width: 100%;
         padding: px-to-rem(16px) px-to-rem(40px);
         max-width: px-to-rem(443px);
         margin-bottom: px-to-rem(32px);
-
-        &:hover, &:focus {
-            text-decoration: underline;
-        }
     }
 
     @media ($breakpoint-ml) {
@@ -151,7 +171,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        
+
         > div {
             width: 50%;
 
@@ -205,20 +225,26 @@
         .pdpForm {
             display: flex;
             flex-wrap: wrap;
-            align-items: flex-end;
+            align-items: flex-start;
 
             > div {
                 margin-right: 1rem;
+                max-width: calc((100% - 1rem) / 2);
 
                 &:last-of-type {
                     flex-grow: 1;
                     margin-right: 0;
+                    margin-top: px-to-rem(24px);
                 }
             }
 
             input {
                 width: 100%;
                 min-width: px-to-rem(175px);
+                max-width: none;
+            }
+
+            p.error {
                 max-width: none;
             }
         }

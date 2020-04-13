@@ -17,8 +17,10 @@ $ns: c-navigation-global;
 
     // Global Navigation Wrapper
     &__wrapper {
+        @include remove-list();
         display: block;
         padding-top: px-to-rem(15px);
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
             display: inline-flex;
@@ -82,7 +84,7 @@ $ns: c-navigation-global;
             }
         }
 
-        &:hover {
+        &:hover, &:focus {
             .#{$ns}__link {
                 color: $mango-tango-hover;
             }
@@ -113,7 +115,6 @@ $ns: c-navigation-global;
             visibility: hidden;
         }
 
-
         &--secondary {
             left: initial;
             right: 0;
@@ -127,6 +128,9 @@ $ns: c-navigation-global;
             }
         }
 
+        &__item-wrapper {
+            padding-left: 0;
+        }
     }
 
 

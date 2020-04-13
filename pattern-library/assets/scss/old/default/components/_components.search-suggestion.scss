@@ -66,13 +66,11 @@ $ns: c-search-suggestion;
     }
 
     &__search-phrase {
-        color: $kaitoke-green;
         font-size: px-to-rem(18px);
         margin: 0 0 px-to-rem(20px) 0;
 
         a {
-            color: $tundora;
-            text-decoration: underline;
+            text-decoration: underline !important;
         }
     }
 

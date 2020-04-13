@@ -62,10 +62,10 @@ $ns: c-grid-graphical-asset;
 
     &__links {
         ul {
-            @include pxl-list-flat();
+            @include remove-list();
 
             @media ($breakpoint-ml) {
-                @include pxl-list-inline();
+                @include inline-list();
                 text-align: center;
             }
         }

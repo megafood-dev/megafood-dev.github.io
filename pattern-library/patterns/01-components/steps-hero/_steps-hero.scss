@@ -37,7 +37,7 @@
     }
 
     ol {
-        list-style: none;
+        @include remove-list();
         margin-top: px-to-rem(-205px);
     }
 

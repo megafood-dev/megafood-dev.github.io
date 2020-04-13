@@ -67,12 +67,11 @@ $ns: st-footer;
             top: px-to-rem(89px);
         }
 
-        // Targeting HTML elements due to content asset
         ul {
-            @include pxl-list-flat();
+            @include remove-list();
 
             @media ($breakpoint-ml) {
-                @include pxl-list-inline();
+                @include inline-list();
             }
         }
 
@@ -80,23 +79,15 @@ $ns: st-footer;
             @media ($breakpoint-ml) {
                 margin-left: px-to-rem(26px);
             }
-
-            @media ($breakpoint-lg) {
-                margin-left: px-to-rem(26px);
-            }
         }
 
         a {
             border-bottom: 1px solid $athens-gray;
-            color: $kaitoke-green;
             display: block;
             font-size: px-to-rem(18px);
+            text-decoration: none;
             padding-top: px-to-rem(15px);
             padding-bottom: px-to-rem(15px);
-
-            &:hover {
-                color: $vida-loca;
-            }
 
             @media ($breakpoint-ml) {
                 border-bottom: 0;
@@ -130,7 +121,7 @@ $ns: st-footer;
         }
 
         ul {
-            @include pxl-list-inline();
+            @include inline-list();
             text-align: center;
         }
 
@@ -148,7 +139,7 @@ $ns: st-footer;
     }
 
     &__copyright {
-        color: $jumbo;
+        color: $emperor;
         font-size: px-to-rem(13px);
         margin-top: px-to-rem(12px);
         text-align: center;
@@ -159,7 +150,7 @@ $ns: st-footer;
         }
 
         a {
-            color: $jumbo;
+            color: $emperor;
         }
 
         div + div {

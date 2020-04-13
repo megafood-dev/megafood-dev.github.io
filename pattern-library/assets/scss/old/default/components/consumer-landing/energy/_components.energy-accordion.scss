@@ -117,18 +117,6 @@ $ns: c-energy-accordion;
         }
     }
 
-    &__text-reg-green,
-    &__text-reg-green a {
-        font-size: px-to-rem(14px);
-        line-height: 1.71;
-        text-align: left;
-        color: $vidaLoca;
-
-        @media ($breakpoint-ml) {
-            max-width: px-to-rem(570px);
-        }
-    }
-
     &__text-italic-dark-green {
         font-size: px-to-rem(48px);
         font-style: italic;
@@ -196,7 +184,7 @@ $ns: c-energy-accordion;
     }
 
     ol {
-        list-style: none;
+        @include remove-list();
         counter-reset: counter;
 
         li {

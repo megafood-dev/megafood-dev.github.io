@@ -95,4 +95,8 @@ $ns: c-content-slider;
             margin: 0 px-to-rem(15px);
         }
     }
+
+    &__link-group {
+        text-decoration: none;
+    }
 }

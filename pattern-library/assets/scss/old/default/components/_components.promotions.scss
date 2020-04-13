@@ -20,7 +20,7 @@ $ns: c-promotions;
         font-weight: 700;
         text-decoration: none;
 
-        &:hover {
+        &:hover, &:focus {
             color: white;
         }
     }

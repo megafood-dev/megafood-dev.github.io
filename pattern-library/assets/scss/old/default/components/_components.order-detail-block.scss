@@ -32,16 +32,6 @@ $ns: c-order-detail-block;
         }
     }
 
-    &__items {
-        margin-left: px-to-rem(17px);
-    }
-
-    &__list-item {
-        & + & {
-            margin-top: px-to-rem(12px);
-        }
-    }
-
     &__order-details {
         background-color: $wild-sand;
         margin: px-to-rem(15px) px-to-rem(-20px) 0;

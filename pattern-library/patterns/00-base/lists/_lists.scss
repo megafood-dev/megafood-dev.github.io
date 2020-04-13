@@ -1,0 +1,27 @@
+ul {
+    list-style: disc;
+    padding-left: px-to-rem(32px);
+    margin-bottom: $bottom-margin;
+}
+
+ol {
+    list-style: decimal;
+    padding-left: px-to-rem(32px);
+    margin-bottom: $bottom-margin;
+}
+
+li {
+    font-size: px-to-rem(16px);
+}
+
+dl {
+    margin-bottom: $bottom-margin;
+}
+
+dt {
+    font-weight: 600;
+}
+
+dd {
+    @extend p;
+}

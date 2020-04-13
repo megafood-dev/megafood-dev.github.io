@@ -34,8 +34,7 @@
 
     .serving-info {
         ul {
-            list-style: none;
-            padding-left: 0;
+            @include remove-list();
         }
 
         span {
@@ -66,10 +65,9 @@
 
     a {
         color: $white;
-        text-decoration: underline;
 
         &:hover, &:focus {
-            text-decoration: none;
+            color: $vidaLoca;
         }
     }
 

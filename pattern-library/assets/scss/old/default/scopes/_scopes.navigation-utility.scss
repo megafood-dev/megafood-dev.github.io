@@ -25,10 +25,11 @@ $ns: s-navigation-utility;
     }
 
     ul {
-        @include pxl-list-flat();
+        @include remove-list();
+        margin-bottom: 0;
 
         @media ($breakpoint-ml) {
-            @include pxl-list-inline();
+            @include inline-list();
             display: inline-block;
         }
     }
@@ -40,13 +41,14 @@ $ns: s-navigation-utility;
             border-bottom: 0;
             margin-left: px-to-rem(21px);
         }
+        
         a {
-            color: $white-85;
+            color: $alabaster;
             display: block;
             padding: px-to-rem(15px) 0;
             
             &:hover, &:focus {
-                color: white;
+                color: $white;
             }
 
             &:focus {

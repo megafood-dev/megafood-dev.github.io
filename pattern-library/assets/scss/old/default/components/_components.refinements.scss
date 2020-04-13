@@ -24,7 +24,12 @@ $ns: c-refinement;
     }
 
     ul {
-        list-style: none;
+        @include remove-list();
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     &.category-refinement:last-child {
@@ -34,11 +39,7 @@ $ns: c-refinement;
     }
 
     &.category-refinement,
-    .category-header {        
-        @media ($breakpoint-ml) {
-            margin-bottom: 0;
-        }
-
+    .category-header {
         & .refinement-link.active {
             color: $mango-tango;
             cursor: pointer;
@@ -52,7 +53,8 @@ $ns: c-refinement;
 
     .category-header {
         font-weight: 600;
-        padding: px-to-rem(16px) 0;
+        padding: px-to-rem(16px) 0 0 0;
+        margin-bottom: px-to-rem(16px);
     }
 
     &:not(.category-refinement) {
@@ -67,13 +69,10 @@ $ns: c-refinement;
                 a {
                     position: relative;
                     display: block;
-                    font-size: px-to-rem(16px);
                     line-height: 1.5;
                     color: $dove-gray;
-                    font-weight: 400;
                     padding: 0 0 0 px-to-rem(29px);
                     margin-bottom: px-to-rem(20px);
-                    cursor: pointer;
 
                     &::before {
                         content: '';
@@ -84,6 +83,12 @@ $ns: c-refinement;
                         width: px-to-rem(20px);
                         background-color: $white;
                         border: 1px solid $emperor;
+                    }
+
+                    &:hover, &:focus {
+                        &::before {
+                            border: 2px solid $vidaLoca;
+                        }
                     }
                 }
 

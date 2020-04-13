@@ -87,6 +87,10 @@ $ns: o-layout;
     flex-direction: column;
 }
 
+a.o-layout--flex-column {
+    text-decoration: none;
+}
+
 .o-layout--flex-no-wrap {
     flex-wrap: nowrap;
 }

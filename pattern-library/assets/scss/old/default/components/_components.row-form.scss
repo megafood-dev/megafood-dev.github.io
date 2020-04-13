@@ -33,6 +33,14 @@ $ns: c-row-form;
         position: absolute;
         right: 0;
 
+        > a {
+            color: $emperor;
+
+            &:hover, &:focus {
+                color: $vidaLoca;
+            }
+        }
+
         & + .#{$ns}__caption {
             right: initial;
             bottom: 0;
@@ -40,7 +48,7 @@ $ns: c-row-form;
         }
     }
 
-    span.error,
+    p.error,
     &__error {
         background-color: $error-color;
         color: $white;

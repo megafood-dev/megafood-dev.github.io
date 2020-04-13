@@ -2,6 +2,10 @@
     position: relative;
     @include secondary-font(400);
 
+    a {
+        text-decoration: none;
+    }
+
     .product-img {
         display: inline-block;
         padding: px-to-rem(24px);
@@ -36,7 +40,7 @@
     }
 
     .pricing {
-        list-style: none;
+        @include remove-list();
         display: flex;
         flex-wrap: wrap;
         font-size: px-to-rem(21px);

@@ -34,6 +34,8 @@ $form-search-input-height: px-to-rem(40px);
     // Search Form Submit Button
     [type="submit"] {
         @include remove-button();
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     &__submit {

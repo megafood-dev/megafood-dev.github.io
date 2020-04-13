@@ -5,47 +5,13 @@
 $ns: c-form-block;
 
 .#{$ns} {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    &__header {
-        margin-bottom: px-to-rem(18px);
-    }
-
-    &__body {
-        font-size: px-to-rem(12px);
-
-        @media ($breakpoint-ml) {
-            font-size: px-to-rem(13px);
-        }
-    }
-
-    &__form {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-
-        @media ($breakpoint-ml) {
-            max-width: 90%;
-        }
-    }
-
-    &__content {
-
-        ul {
-            margin-top: px-to-rem(20px);
-            margin-left: px-to-rem(38px);
-        }
-    }
-
     &__row {
         position: relative;
     }
 
     &__tooltip {
         display: block;
-        color: $scorpion;
+        color: $emperor;
         font-size: px-to-rem(13px);
         font-weight: 400;
         margin-top: px-to-rem(-24px);
@@ -53,16 +19,6 @@ $ns: c-form-block;
 
         &:hover, &:focus {
             color: $vida-loca;
-            text-decoration: none;
         }
-    }
-
-    &__message {
-        margin-bottom: px-to-rem(20px);
-    }
-
-    &__button-row {
-        margin-top: auto;
-        padding-top: px-to-rem(24px);
     }
 }

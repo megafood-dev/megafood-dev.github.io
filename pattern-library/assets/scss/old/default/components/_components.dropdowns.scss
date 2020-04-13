@@ -145,17 +145,13 @@ $ns: c-dropdown;
         }
 
         a {
-            color: $mango-tango;
             display: block;
             font-size: px-to-rem(20px);
             font-weight: bold;
             text-align: center;
             white-space: normal !important;
-
-            &:hover {
-                color: $mango-tango-hover;
-            }
         }
+
         p {
             color: $gray;
             font-size: px-to-rem(20px);
@@ -167,13 +163,7 @@ $ns: c-dropdown;
     // Dropdown Link
     &__link,
     a {
-        color: $kaitoke-green;
         font-size: px-to-rem(17px);
-        font-weight: 500;
-
-        &:hover {
-            color: $mango-tango-hover;
-        }
 
         @media ($breakpoint-ml) {
             white-space: nowrap;

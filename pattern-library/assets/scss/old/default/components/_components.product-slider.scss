@@ -137,7 +137,7 @@ $ns: c-product-slider;
 
     &__link-group {
         font-size: px-to-rem(16px);
-        color: #d47600;
+        text-decoration: none;
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(18px);

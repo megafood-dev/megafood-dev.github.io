@@ -8,13 +8,12 @@
         color: $zuccini;
     }
 
+    .btn {
+        margin-bottom: 0;
+    }
+
     @media ($breakpoint-ml) {
         padding: px-to-rem(40px) $gutter-sm;
-
-        .primary-cta {
-            font-size: px-to-rem(24px);
-            padding: px-to-rem(24px) px-to-rem(40px);
-        }
     }
 
     @media ($breakpoint-lg) {

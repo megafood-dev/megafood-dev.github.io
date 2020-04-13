@@ -1,8 +1,7 @@
 a {
-    font-weight: 600;//remove when add underline
     color: $vidaLoca;
     text-decoration: none;
-    // text-decoration: underline;//add when do link base styles
+    text-decoration: underline;
     transition: all .25s ease;
 
     &:hover, &:focus {
@@ -13,5 +12,6 @@ a {
 
     &[disabled] {
         color: $dove-gray;
+        cursor: not-allowed;
     }
 }

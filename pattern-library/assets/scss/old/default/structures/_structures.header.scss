@@ -17,6 +17,10 @@ $st-header__padding-top: px-to-rem(22px) !default;
             margin-bottom: 0;
         }
 
+        a {
+            text-decoration: underline;
+        }
+
         button {
             @include remove-button();
             text-indent: -999999rem;
@@ -31,6 +35,10 @@ $st-header__padding-top: px-to-rem(22px) !default;
 .#{$ns} {
     position: relative;
     z-index: 100;
+
+    a {
+        text-decoration: none;
+    }
 
     @media ($breakpoint-ml) {
         margin-bottom: px-to-rem(-6px);

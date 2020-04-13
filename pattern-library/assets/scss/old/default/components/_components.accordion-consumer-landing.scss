@@ -96,28 +96,9 @@ $ns: c-accordion-consumer-landing;
     }
 
     ul, ol{
-        list-style: initial;
-        margin-left: 1.1rem;
-
-        // &.checkboxList {
-        //     list-style: none;
-        //     margin-left: 0;
-        //     margin-bottom: px-to-rem(24px);
-
-        //     @media ($breakpoint-ml) {
-        //         margin-left: px-to-rem(24px);
-        //     }
-
-        //     li {
-        //         &::before {
-        //             content: '';
-        //         }
-        //     }
-        // }
-
         &.healthyGutList {
             list-style:none;
-            margin-left: 0;
+            padding-left: 0;
 
             li {
                 clear: both;
@@ -149,20 +130,8 @@ $ns: c-accordion-consumer-landing;
                     }
                 }
 
-                b.gutHeader {
-                    color: #2f7532;
-                    font-weight: 600;
-                    font-size: px-to-rem(16px);
-                }
-
                 a {
-                    color: $turmeric;
-                    text-decoration: none;
                     padding-top: 0.5rem;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
 
                     &.recipeLink {
                         display: block;
@@ -208,72 +177,8 @@ $ns: c-accordion-consumer-landing;
                     b {
                         display: block;
                         margin-bottom: .5rem;
-                        font-size: px-to-rem(16px);
                     }
                 }
-            }
-        }
-    }
-
-    ol {
-        list-style-type: decimal;
-    }
-
-    ul {
-        list-style: none; /* Remove default bullets */
-        margin-left: 0;
-        font-size: px-to-rem(16px);
-        line-height: 1.5;
-
-        @media ($breakpoint-ml) {
-            margin-left: px-to-rem(29px);
-        }
-
-        &.indented {
-            margin-left: px-to-rem(28px);
-
-            @media ($breakpoint-ml) {
-                margin-left: px-to-rem(44px);
-            }
-
-            li::before {
-                width: px-to-rem(26px);
-                margin-left: px-to-rem(-26px);
-
-                @media ($breakpoint-ml) {
-                    width: px-to-rem(34px);
-                    margin-left: px-to-rem(-34px);
-                }
-            }
-        }
-        
-        li {
-            margin-bottom: px-to-rem(5px);
-
-            &:last-child{
-                margin-bottom: 0;
-            }
-
-            b {
-                font-size: px-to-rem(16px);
-            }
-        }
-
-        li::before {
-            content: "\2022";
-            color: #4c851b;
-            font-size: px-to-rem(22px);
-            font-weight: bold;
-            display: inline-block;
-            width: px-to-rem(26px);
-            margin-left: 0;
-
-            @media ($breakpoint-ml) {
-                font-size: px-to-rem(28px);
-                width: px-to-rem(29px);
-                margin-left: px-to-rem(-29px);
-                top: px-to-rem(3px);
-                position: relative;
             }
         }
     }

@@ -6,9 +6,9 @@
     border: 2px solid $zuccini;
 
     &:hover, &:focus {
-        color: $vidaLoca;
-        background-color: $white;
-        border-color: $vidaLoca;
+        color: $white;
+        background-color: $zuccini;
+        border-color: $zuccini;
     }
 
     &[disabled] {

@@ -6,9 +6,14 @@ $ns: c-store-finder-block;
     flex-direction: column;
     position: relative;
 
-    @media ($breakpoint-ml) {
+    @media ($breakpoint-xs) {
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @media ($breakpoint-ml) {
+        flex-wrap: nowrap;
     }
 
     &::after {
@@ -32,7 +37,12 @@ $ns: c-store-finder-block;
         margin-bottom: px-to-rem(12px);
         text-align: center;
 
+        @media ($breakpoint-xs) {
+            min-width: 100%;
+        }
+
         @media ($breakpoint-ml) {
+            min-width: auto;
             margin-bottom: 0;
             margin-right: px-to-rem(30px);
         }
@@ -45,6 +55,21 @@ $ns: c-store-finder-block;
         height: px-to-rem(40px);
         max-width: px-to-rem(173px);
         padding-left: px-to-rem(40px);
-        margin-bottom: 0;
+        margin-bottom: px-to-rem(12px);
+
+        @media ($breakpoint-xs) {
+            border-radius: px-to-rem(3px) 0 0 px-to-rem(3px);
+            margin-bottom: 0;
+        }
+    }
+
+    &__button[type="submit"] {
+        padding: px-to-rem(7px) px-to-rem(24px) px-to-rem(6px);
+        margin: 0;
+        border-radius: 0;
+
+        @media ($breakpoint-sm) {
+            padding: px-to-rem(7px) px-to-rem(32px) px-to-rem(6px);
+        }
     }
 }

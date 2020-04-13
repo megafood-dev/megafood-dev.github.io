@@ -47,7 +47,7 @@ legend {
     margin-bottom: px-to-rem(32px);
     border-radius: px-to-rem(3px);
 
-    &:disabled {
+    &[disabled] {
         cursor: not-allowed;
         border: 1px solid $alabaster;
         color: $dove-gray;

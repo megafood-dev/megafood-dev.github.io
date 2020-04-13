@@ -1,0 +1,1 @@
+The purpose of this component is to turn the search submit button into a search icon.

@@ -11,6 +11,7 @@
         transform: translateY(-50%);
         border-radius: px-to-rem(3px);
         opacity: 0.5;
+        margin-bottom: 0;
         transition: all .25s ease;
 
         &:hover, &:focus {
@@ -38,6 +39,7 @@
         list-style: none;
         display: flex;
         align-items: center;
+        margin-bottom: 0;
 
         li {
             height: px-to-rem(6px);
@@ -55,6 +57,7 @@
             width: px-to-rem(6px);
             background-color: $gray;
             border-radius: 50%;
+            margin-bottom: 0;
         }
 
         .slick-active {
