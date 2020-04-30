@@ -148,64 +148,6 @@
     }
 }
 
-#product-search-result-cols {
-    display: flex;
-    flex-direction: column;
-
-    .filter {
-        background-color: $gallery;
-        border-radius: px-to-rem(3px);
-        color: $mine-shaft;
-        cursor: pointer;
-        font-size: px-to-rem(18px);
-        height: px-to-rem(45px);
-        line-height: 2.5;
-        padding: 0 px-to-rem(20px);
-        width: 100%;
-
-        &::after {
-            content: '+';
-            color: $mine-shaft;
-            display: inline-block;
-            float: right;
-            font-size: px-to-rem(24px);
-            height: px-to-rem(20px);
-            line-height: 0.833;
-            margin-top: px-to-rem(14px);
-            width: px-to-rem(12px);
-        }
-
-        &.is-active {
-            background-color: $mango-tango;
-            color: $white;
-
-            &::after {
-                content: '-';
-                color: $white;
-                font-size: px-to-rem(40px);
-                font-weight: 100;
-                margin-top: px-to-rem(10px);
-            }
-        }
-    }
-
-    #primary {
-        margin-top: 0;
-    }
-
-    #secondary {
-        margin-bottom: px-to-rem(10px);
-    }
-
-    @media ($breakpoint-ml) {
-        display: block;
-
-        .filter:not(.arrow) {
-            display: none;
-        }
-    }
-}
-
 .search-result-options {
     padding: 0;
 

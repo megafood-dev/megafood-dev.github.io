@@ -5,9 +5,116 @@
 $ns: c-cart-table;
 
 .#{$ns} {
+    display: block;
+    width: 100%;
     border-top: 2px solid $wild-sand;
     padding-bottom: px-to-rem(20px);
     table-layout: fixed;
+
+    @media ($breakpoint-lg) {
+        border-top: 2px solid rgb(245, 245, 245);
+        display: table;
+    }
+
+    thead {
+        display: block;
+
+        @media ($breakpoint-lg) {
+            display: table-header-group;
+        }
+    }
+
+    tbody {
+        display: block;
+
+        @media ($breakpoint-lg) {
+            display: table-row-group;
+        }
+    }
+
+    th {
+        display: none;
+        font-weight: 600;
+        padding-top: px-to-rem(15px);
+        padding-right: px-to-rem(20px);
+        text-align: left;
+        vertical-align: top;
+        background-color: $white;
+        border: none;
+
+        @media ($breakpoint-lg) {
+            display: table-cell;
+            padding-left: 0;
+        }
+
+        &:last-child {
+            @media ($breakpoint-lg) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    tr {
+        display: block;
+        margin-top: px-to-rem(20px);
+
+        @media ($breakpoint-lg) {
+            display: table-row;
+            margin-top: 0;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            td {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    tr + tr {
+        border-top: 1px solid rgb(245, 245, 245);
+
+        @media ($breakpoint-lg) {
+            border-top: 0;
+        }
+    }
+
+    td {
+        border: none;
+        display: block;
+        padding-top: px-to-rem(20px);
+        vertical-align: top;
+
+        @media ($breakpoint-lg) {
+            border-bottom: 1px solid rgb(245, 245, 245);
+            display: table-cell;
+            padding: px-to-rem(15px) px-to-rem(20px) px-to-rem(15px) 0;
+        }
+
+        &::before {
+            color: rgb(0, 76, 36);
+            content: attr(data-header);
+            display: block;
+            font-weight: 600;
+
+            @media ($breakpoint-lg) {
+                display: none;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            @media ($breakpoint-lg) {
+                padding-right: 0;
+            }
+        }
+    }
 
     &__cell {
         padding-top: px-to-rem(10px);
@@ -43,6 +150,20 @@ $ns: c-cart-table;
                 text-align: right;
             }
         }
+
+        p.error {
+            width: 100%;
+            background-color: $error-color;
+            color: $white;
+            display: block;
+            font-size: .9rem;
+            padding: px-to-rem(9px);
+            margin-top: -1rem;
+
+            @media ($breakpoint-lg) {
+                width: 200%;
+            }
+        }
     }
 
     &__total {
@@ -57,7 +178,7 @@ $ns: c-cart-table;
     @media ($breakpoint-ml) {
         border-top: none;
 
-        tr {            
+        tr {
             &:nth-last-child(2), &:last-child {
                 td {
                     border-bottom: 0;
@@ -109,7 +230,10 @@ $ns: c-cart-table;
 
         .cart-order-block__section {
             display: flex;
-            justify-content: flex-end;
+
+            .secondary & {
+                justify-content: flex-end;
+            }
         }
     }
 }
@@ -122,6 +246,10 @@ $ns: c-cart-table;
             }
         }
     }
+}
+
+#cart-items-form-submit {
+    display: none;//Temporary fix to hide from everyone. Ideally, we would want the submit button to be shown for all users and be at the bottom of the form.
 }
 
 .cart {
@@ -163,6 +291,7 @@ $ns: c-cart-table;
 
         .secondary {
             width: columns(4,12);
+            padding-top: px-to-rem(8px);
         }
     }
 }

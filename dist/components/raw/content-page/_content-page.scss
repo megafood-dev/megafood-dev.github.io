@@ -1,0 +1,17 @@
+.content-page {
+    .primary {
+        padding: px-to-rem(32px) $gutter-sm 0 $gutter-sm;
+    }
+
+    @media ($breakpoint-ms) {
+        .primary {
+            padding: px-to-rem(40px) 8.33% 0 8.33%;
+        }
+    }
+
+    @media ($breakpoint-m) {
+        .primary {
+            padding: px-to-rem(56px) 16.66% 0 16.66%;
+        }
+    }
+}

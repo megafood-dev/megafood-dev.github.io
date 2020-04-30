@@ -13,6 +13,10 @@ $ns: c-order-total;
         margin-top: px-to-rem(-7px);
     }
 
+    th, td {
+        border: none;
+    }
+
     &__body {
         display: table-row-group;
     }
@@ -25,7 +29,6 @@ $ns: c-order-total;
             display: table-row;
             padding-top: 0;
         }
-
     }
 
     &__cell {
@@ -39,15 +42,20 @@ $ns: c-order-total;
 
         &--large {
             color: $mine-shaft;
-            font-weight: 700;
+            font-weight: 600;
             padding-top: px-to-rem(20px);
         }
-
     }
 
     &__label {
+        font-weight: normal;
         padding-right: px-to-rem(10px);
         width: 75%;
+        background-color: transparent;
+
+        &.#{$ns}__cell--large {
+            font-weight: 600;
+        }
     }
 
     &__value {

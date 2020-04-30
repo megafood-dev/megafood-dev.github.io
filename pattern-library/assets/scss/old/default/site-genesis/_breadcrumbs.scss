@@ -1,15 +1,11 @@
-.breadcrumb {
-    color: $jumbo;
-    @include primary-font(400);
-    font-size: px-to-rem(13px);
-    line-height: 1.8;
-    margin: 0;
-    padding-bottom: px-to-rem(18px);
-    text-align: left;
+.breadcrumbs {
+    margin-bottom: px-to-rem(24px);
+}
 
-    @media ($breakpoint-ml) {
-        padding-top: px-to-rem(36px);
-    }
+.breadcrumb {
+    color: $dove-gray;
+    @include primary-font(400);
+    font-size: px-to-rem(16px);
 
     li {
         display: inline;
@@ -17,13 +13,13 @@
     }
 
     a {
-        color: $emperor;
+        color: $dove-gray;
     }
 }
 
 .breadcrumb-refined-by {
     &:before {
-        color: $emperor;
+        color: $dove-gray;
         content: ' / ';
     }
 }
@@ -33,7 +29,8 @@
 }
 
 .breadcrumb-refinement-value {
-    background-color: #f3f3f3;
+    color: $dove-gray;
+    background-color: $alabaster;
     border-radius: px-to-rem(10px);
     display: inline-block;
     font-size: px-to-rem(12px);

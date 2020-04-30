@@ -2,6 +2,7 @@ $ns: st-footer;
 
 .#{$ns} {
     padding-bottom: px-to-rem(27px);
+    margin-top: 4rem;
 
     &__store-finder {
         background-color: $wild-sand;

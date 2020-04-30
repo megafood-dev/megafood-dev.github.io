@@ -3,3 +3,15 @@
         margin-bottom: 0;
     }
 }
+
+.og-shipment-footer {
+    table {
+        th, td {
+            border: none;
+        }
+
+        th {
+            background-color: transparent;
+        }
+    }
+}

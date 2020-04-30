@@ -4,19 +4,8 @@
     @media ($breakpoint-ml) {
         margin-bottom: 0;
     }
-}
 
-#shipping-method-list {
-    [type="radio"] {
-        + label {
-            font-weight: 600;
-            margin-bottom: px-to-rem(24px);
-        }
-    }
-
-    .radio-description {
-        color: $dove-gray;
-        padding-left: px-to-rem(29px);//to match radio btn positioning
-        margin: px-to-rem(-20px) 0 px-to-rem(24px) 0;
+    .privacy-policy { // Temp fix until o-layout is updated
+        font-size: 1rem;
     }
 }

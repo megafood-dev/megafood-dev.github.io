@@ -1,6 +1,11 @@
 .product-recommendations {
     padding: px-to-rem(48px) $gutter-sm px-to-rem(32px) $gutter-sm;
 
+    .primary & {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .slider {
         .slick-arrow {
             top: 30%;

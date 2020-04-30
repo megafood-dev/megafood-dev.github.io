@@ -43,6 +43,19 @@
         }
     }
 
+    .shipping-promo-container {
+        margin-top: px-to-rem(-32px);
+        margin-bottom: px-to-rem(32px);
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .strong {
+            font-weight: 600;
+        }
+    }
+
     .sales-price {
         font-size: px-to-rem(26px);
         font-weight: 600;

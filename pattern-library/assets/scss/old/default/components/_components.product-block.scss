@@ -41,15 +41,6 @@ $ns: c-product-block;
     &__header {
         font-size: px-to-rem(17px);
         line-height: 1.2;
-
-        &-link {
-            color: $kaitoke-green;
-
-            &:hover {
-                color: $vida-loca;
-                text-decoration: none;
-            }
-        }
     }
 
     &__variants,
@@ -76,13 +67,6 @@ $ns: c-product-block;
         &-right {
             margin-left: auto;
         }
-    }
-
-    // Product Block Price
-    &__price {
-        color: $vida-loca;
-        font-size: px-to-rem(15px);
-        font-weight: 600;
     }
 
     .og-offer {

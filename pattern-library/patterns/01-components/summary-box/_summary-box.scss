@@ -1,7 +1,7 @@
 .summary-box {
     padding: px-to-rem(16px) $gutter-sm;
     background-color: $alabaster;
-    margin-bottom: $bottom-margin;
+    margin-bottom: px-to-rem(16px);
 
     header {
         display: flex;
@@ -13,12 +13,7 @@
         margin-bottom: px-to-rem(16px);
 
         a {
-            color: $emperor;
             margin-left: $gutter-sm;
-
-            &:hover, &:focus {
-                color: $dove-gray;
-            }
         }
     }
 
@@ -34,6 +29,14 @@
 
         &:last-of-type {
             margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: $zuccini;
+
+        &:hover, &:focus {
+            color: $black;
         }
     }
 }

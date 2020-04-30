@@ -1,4 +1,4 @@
-[type="text"], [type="email"], [type="password"], [type="tel"], [type="url"], [type="number"], [type="search"], [type="date"], textarea, select, .custom-select, [type="file"], .error {
+[type="text"], label, [type="email"], [type="password"], [type="tel"], [type="url"], [type="number"], [type="search"], [type="date"], textarea, select, .custom-select, [type="file"], .error {
     + [id^="hint-"] {
         font-size: px-to-rem(16px);
         color: $dove-gray;
@@ -8,6 +8,29 @@
             .u-width-50\@lg-up & {//when in this container, adjust spacing
                 margin: px-to-rem(-32px) 0 px-to-rem(16px) 0;
             }
+        }
+    }
+}
+
+label {
+    + [id^="hint-"] {
+        padding-left: px-to-rem(29px);//to align with radio/checkbox label
+        margin: px-to-rem(-8px) 0 px-to-rem(16px) 0;//use same bottom margin as checkbox & radio rather than paragraph
+    }
+}
+
+fieldset {
+    &.has-desc {
+        label {
+            font-weight: 600;//if any radio or checkbox labels in a field set have hint text, make all labels bold to distinguish
+        }
+    }
+}
+
+[type="radio"], [type="checkbox"] {
+    &:last-of-type + label {
+        + [id^="hint-"] {
+            margin-top: px-to-rem(-24px);
         }
     }
 }

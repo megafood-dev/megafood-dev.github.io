@@ -1,0 +1,14 @@
+.order-details {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding-left: 0;
+        border: none;
+    }
+
+    th {
+        background-color: $white;
+    }
+}

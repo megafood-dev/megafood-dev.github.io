@@ -1,111 +1,26 @@
 table {
-    display: block;
-    width: 100%;
+    margin-bottom: $bottom-margin;
 
-    @media ($breakpoint-lg) {
-        border-top: 2px solid rgb(245, 245, 245);
-        display: table;
+    caption {
+        @include secondary-font(600);
+        font-size: px-to-rem(16px);
+        text-align: left;
+        margin-bottom: 0.5rem;
     }
 
-    table {
-        border-top: 0;
-    }
-
-    thead {
-        display: block;
-
-        @media ($breakpoint-lg) {
-            display: table-header-group;
-        }
-    }
-
-    tbody {
-        display: block;
-
-        @media ($breakpoint-lg) {
-            display: table-row-group;
-        }
+    th, td {
+        padding: 0.5rem;
+        border: 1px solid $dusty-gray;
     }
 
     th {
-        color: rgb(0, 76, 36);
-        display: none;
         font-weight: 600;
-        padding-top: px-to-rem(15px);
-        padding-right: px-to-rem(20px);
+        color: $mine-shaft;
         text-align: left;
-        vertical-align: top;
+        background-color: $alabaster;
 
-        @media ($breakpoint-lg) {
-            display: table-cell;
-        }
-
-        &:last-child {
-            @media ($breakpoint-lg) {
-                padding-right: 0;
-            }
-        }
-    }
-
-    tr {
-        display: block;
-        margin-top: px-to-rem(20px);
-
-        @media ($breakpoint-lg) {
-            display: table-row;
-            margin-top: 0;
-        }
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            td {
-                border-bottom: 0;
-            }
-        }
-    }
-
-    tr + tr {
-        border-top: 1px solid rgb(245, 245, 245);
-
-        @media ($breakpoint-lg) {
-            border-top: 0;
-        }
-    }
-
-    td {
-        border-bottom: 0;
-        display: block;
-        padding: px-to-rem(20px) 0 0;
-        vertical-align: top;
-
-        @media ($breakpoint-lg) {
-            border-bottom: 1px solid rgb(245, 245, 245);
-            display: table-cell;
-            padding: px-to-rem(15px) px-to-rem(20px) px-to-rem(15px) 0;
-        }
-
-        &::before {
-            color: rgb(0, 76, 36);
-            content: attr(data-header);
-            display: block;
-            font-weight: 600;
-
-            @media ($breakpoint-lg) {
-                display: none;
-            }
-        }
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            @media ($breakpoint-lg) {
-                padding-right: 0;
-            }
+        &[scope="colgroup"] {
+            text-align: center;
         }
     }
 }

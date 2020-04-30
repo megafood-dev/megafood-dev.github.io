@@ -1,0 +1,22 @@
+.shipping-promo {
+    padding: px-to-rem(8px) px-to-rem(16px);
+    border: 2px solid $vidaLoca;
+    display: inline-block;
+    font-size: px-to-rem(21px);
+    font-weight: 600;
+    color: $zuccini;
+    text-align: center;
+    border-radius: px-to-rem(3px);
+    width: auto;
+    max-width: 100%;
+    margin-bottom: px-to-rem(16px);
+
+    @media ($breakpoint-ml) {
+        margin-bottom: 0;
+    }
+
+    @media ($breakpoint-xl) {
+        display: block;
+        max-width: columns(6,12);
+    }
+}

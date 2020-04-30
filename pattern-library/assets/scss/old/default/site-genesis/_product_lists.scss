@@ -20,12 +20,7 @@
 
 .product-list-item {
     .name {
-        color: $kaitoke-green;
         font-size: px-to-rem(16px);
-
-        a {
-            text-decoration: none;
-        }
 
         @media ($breakpoint-ml) {
             font-size: px-to-rem(18px);

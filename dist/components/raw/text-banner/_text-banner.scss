@@ -29,9 +29,7 @@
     }
 
     @media ($breakpoint-m) {
-        padding: px-to-rem(72px) calc(100% + #{$gutter-lg});
-        margin-left: -100%;
-        margin-right: -100%;
+        padding: px-to-rem(72px) $gutter-lg;
 
         h1, .header {
             font-size: px-to-rem(48px);

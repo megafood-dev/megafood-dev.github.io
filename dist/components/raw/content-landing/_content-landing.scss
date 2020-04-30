@@ -1,0 +1,11 @@
+.content-landing {
+    .primary {
+        padding: px-to-rem(32px) $gutter-sm 0 $gutter-sm;
+    }
+
+    @media ($breakpoint-m) {
+        .primary {
+            padding: px-to-rem(32px) $gutter-lg 0 $gutter-lg;
+        }
+    }
+}

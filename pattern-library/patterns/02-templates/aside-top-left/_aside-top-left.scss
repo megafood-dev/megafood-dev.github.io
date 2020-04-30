@@ -1,0 +1,26 @@
+.aside-top-left {
+    padding: 0 $gutter-sm;
+
+    @media ($breakpoint-m) {
+        padding: 0 $gutter-lg;
+    }
+
+    @media ($breakpoint-ml) {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: px-to-rem(32px);
+
+        .breadcrumbs {
+            width: 100%;
+        }
+
+        .secondary {
+            width: 25%;
+            padding-right: $gutter-lg;
+        }
+
+        .primary {
+            width: 75%;
+        }
+    }
+}
